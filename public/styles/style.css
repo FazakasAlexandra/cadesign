@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+body {
+  font-family: "PT Serif", serif;
+  margin: 0px;
+  background-color: #B4BBB0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #CAAE88;
+}
+
+ul {
+  list-style: none;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.cards-container .card {
+  width: fit-content;
+  margin: 2rem;
+  margin-bottom: 0px;
+  padding: 1rem;
+  padding-bottom: 0.5rem;
+  background-color: white;
+  box-shadow: 0px 4px 4px 1px rgba(23, 23, 23, 0.13);
+  border-radius: 10px;
+  color: #4f4f4f;
+}
+.cards-container .card-calculator {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0rem;
+}
+.cards-container .card-calculator-price {
+  margin-left: 1rem;
+}
+.cards-container .card-calculator-price p:nth-child(1) {
+  margin-bottom: 0rem;
+  color: #8d8d8d;
+  font-size: 14px;
+}
+.cards-container .card-calculator-price p {
+  margin: 0px;
+}
+.cards-container .card-calculator-quantity {
+  width: 100px;
+}
+.cards-container .card-info ul {
+  display: flex;
+  flex-direction: column;
+}
+.cards-container .card-info ul li p {
+  margin: 0.5rem;
+}
+.cards-container .card-info ul li p:nth-child(1), .cards-container .card-info ul li span {
+  margin-bottom: 0rem;
+  color: #8d8d8d;
+  font-size: 14px;
+}
+.cards-container .card-info ul li p:nth-child(2) {
+  margin-top: 0.2rem;
+}
+.cards-container .card .fa-grip-lines {
+  cursor: pointer;
+  margin-top: 0.5rem;
+  color: #B4BBB0;
+  font-size: 1.8rem;
+  margin-top: 0.5rem;
+  color: #9DA499;
+  margin-left: 0.5rem;
+}
+
+.card-envelope-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0rem;
+}
+.card-envelope-footer .colors-container {
+  display: flex;
+}
+.card-envelope-footer .colors-container .color {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  margin-left: 0.3rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.card-envelope-footer .colors-container .color:hover {
+  width: 35px;
+  height: 35px;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 6rem 2rem 6rem;
+  align-items: center;
+}
+.main-nav ul {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  width: 250px;
+  justify-content: space-evenly;
+}
+.main-nav .logo {
+  width: 270px;
+}
+
+.sec-nav {
+  padding: 1rem 0rem 4rem;
+}
+.sec-nav .menu-circle {
+  cursor: pointer;
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  overflow: hidden;
+  position: relative;
+  transition: all 1s ease-in-out;
+  animation: ungrow 1s ease-in;
+  animation-direction: alternate;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.sec-nav .menu-circle img {
+  width: 100%;
+}
+.sec-nav .menu-circle .title {
+  position: absolute;
+  left: -15px;
+  width: 100%;
+  background-color: white;
+  padding: 1rem;
+  font-size: 18px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: 60px;
+  background-position-y: 26%;
+}
+.sec-nav .menu-circle:hover {
+  box-shadow: 0px 1px 12px 0px #caae88;
+}
+.sec-nav .menu-circle:hover .title {
+  animation: grow 1s ease-in;
+  animation-direction: alternate;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+#icon-papetarie {
+  background-image: url(../assets/navbar/flower1.jpg);
+}
+
+#icon-modele {
+  background-image: url(../assets/navbar/flower2.jpg);
+}
+
+#icon-meniuri {
+  background-image: url(../assets/navbar/flower3.jpg);
+}
+
+#icon-carti-vizita {
+  background-image: url(../assets/navbar/flower4.jpg);
+}
+
+@keyframes grow {
+  from {
+    top: 76%;
+  }
+  to {
+    top: 54%;
+  }
+}
+@keyframes ungrow {
+  from {
+    top: 54%;
+  }
+  to {
+    top: 76%;
+  }
+}
+@media (max-width: 1600px) {
+  .main-nav {
+    padding: 1rem 2rem 2rem 2rem;
+  }
+}
+@media (max-width: 1000px) {
+  .main-nav {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .main-nav ul {
+    margin-top: 4rem;
+    font-size: 18px;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 600px) {
+  .card {
+    margin: 1rem;
+  }
+}
+@media (max-width: 998px) {
+  body {
+    display: flex;
+  }
+}
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background-color: white;
+}
+
+/*# sourceMappingURL=style.css.map */

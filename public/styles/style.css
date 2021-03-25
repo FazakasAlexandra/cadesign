@@ -34,6 +34,17 @@ ul {
   box-shadow: 0px 4px 4px 1px rgba(23, 23, 23, 0.13);
   border-radius: 10px;
   color: #4f4f4f;
+  height: fit-content;
+  position: relative;
+}
+.cards-container .card .progress {
+  position: absolute;
+  z-index: 1;
+  top: 40%;
+  left: 45%;
+}
+.cards-container .card hr {
+  color: #c7c7c7;
 }
 .cards-container .card-calculator {
   display: flex;
@@ -78,17 +89,10 @@ ul {
   color: #9DA499;
   margin-left: 0.5rem;
 }
-
-.card-envelope-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 0rem;
-}
-.card-envelope-footer .colors-container {
+.cards-container .card .colors-container {
   display: flex;
 }
-.card-envelope-footer .colors-container .color {
+.cards-container .card .colors-container .color {
   width: 30px;
   height: 30px;
   border-radius: 100%;
@@ -96,9 +100,23 @@ ul {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
-.card-envelope-footer .colors-container .color:hover {
+.cards-container .card .colors-container .color:hover {
   width: 35px;
   height: 35px;
+}
+
+.card-envelope-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0rem;
+}
+
+.card-seal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 0rem 0.5rem;
 }
 
 .main-nav {
@@ -209,8 +227,19 @@ ul {
   }
 }
 @media (max-width: 600px) {
-  .card {
-    margin: 1rem;
+  .cards-container .card {
+    margin: 0.5rem 0.5rem;
+  }
+
+  .card.seal {
+    width: 91%;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card.seal div:first-child {
+    align-self: center;
   }
 }
 @media (max-width: 998px) {
@@ -223,6 +252,11 @@ nav {
   justify-content: space-evenly;
   flex-wrap: wrap;
   background-color: white;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */

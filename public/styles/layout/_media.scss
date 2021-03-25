@@ -18,8 +18,18 @@
 }
 
 @media (max-width: 600px) {
-    .card {
-        margin: 1rem;
+    .cards-container .card {
+        margin: 0.5rem 0.5rem;
+    }
+
+    .card.seal{
+        width: 91%;
+        justify-content: flex-end;
+        display: flex;
+        flex-direction: column;
+    }
+    .card.seal div:first-child{
+        align-self: center;
     }
 }
 

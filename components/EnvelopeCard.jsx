@@ -3,33 +3,41 @@ import TextField from '@material-ui/core/TextField';
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGripLines } from '@fortawesome/free-solid-svg-icons'
+import CircularProgress from '@material-ui/core/CircularProgress';
 const envelopes = require('../db/envelopes.json');
 
-export default function EnvelopeCard(props) {
+export default function EnvelopeCard() {
     const [envelope, setEnvelope] = useState(envelopes[0]);
     const [open, setOpen] = useState(false);
     const [quantity, setQuantity] = useState(1)
     const [price, setPrice] = useState(2.7)
+    const [loading, setLoading] = useState(false)
 
     const handleColorClick = (e) => {
-        console.log(e.target.id)
+        if (envelope.id != e.target.id) setLoading(true)
+
         const chosenEnvelope = envelopes.find((envelope) => envelope.id == e.target.id)
         setEnvelope(chosenEnvelope)
     }
 
     useEffect(() => {
-        console.log(quantity)
         setPrice(quantity * 2.7)
     }, [quantity])
 
+
+    useEffect(() => {
+        setLoading(false)
+    }, [envelope])
+
     const envelopeColors = () => {
         return envelopes.map(envelope => {
-            return <div id={envelope.id} onClick={(e) => handleColorClick(e)} className="color" style={{ backgroundColor: envelope.hex }}></div>
+            return <div key={envelope.id} id={envelope.id} onClick={(e) => handleColorClick(e)} className="color" style={{ backgroundColor: envelope.hex }}></div>
         })
     }
 
     return (
         <div className="card envelope">
+            {loading ? <CircularProgress className="progress" /> : null}
             <Image
                 src={`/assets/envelopes/${envelope.src}`}
                 height={359}
@@ -57,13 +65,11 @@ export default function EnvelopeCard(props) {
                             </li>
                             <li>
                                 <p>Dimensiune</p>
-                                <p><span>Mica </span>{envelope.smallWeight}</p>
-                                <p><span>Mare </span>{envelope.largeWeight}</p>
+                                <p>{envelope.smallWeight} / {envelope.largeWeight}</p>
                             </li>
                             <li>
                                 <p>Gramaj</p>
-                                <p><span>Mic </span>{envelope.smallSize}</p>
-                                <p><span>Mare </span>{envelope.bigSize}</p>
+                                <p>{envelope.smallSize} / {envelope.bigSize}</p>
                             </li>
                         </ul>
                         <hr />
@@ -83,7 +89,7 @@ export default function EnvelopeCard(props) {
                             <div className="card-calculator-price">
                                 <p>Pret</p>
                                 <hr />
-                                <p><b>{price}</b> lei</p>
+                                <p><b>{price.toFixed(2)}</b> lei</p>
                             </div>
                         </div>
                     </div> : null

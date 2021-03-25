@@ -8,8 +8,8 @@ const envelopes = require('../db/envelopes.json');
 export default function HomePage() {
   console.log(envelopes)
   return (
-    <>
-    <h1>home page</h1>
-    </>
+    <div className="page home">
+      <h1>home page (coming soon...)</h1>
+    </div>
   )
 }

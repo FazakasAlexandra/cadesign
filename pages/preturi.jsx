@@ -1,6 +1,6 @@
 export default function preturi() {
-    return (<>
-        <h1>Prices</h1>
-    </>
+    return (<div className="page preturi">
+        <h1>Preturi ( coming soon... )</h1>
+    </div>
     )
 }

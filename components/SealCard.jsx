@@ -17,7 +17,7 @@ export default function SealCard() {
 
     const [open, setOpen] = useState(false);
     const [quantity, setQuantity] = useState(1)
-    const [price, setPrice] = useState(2.7)
+    const [price, setPrice] = useState(1.5)
 
     useEffect(() => {
         const newSeal = seals[hex].find((seal) => seal.model === model)
@@ -25,7 +25,7 @@ export default function SealCard() {
     }, [hex])
 
     useEffect(() => {
-        setPrice(quantity * 2.7)
+        setPrice(quantity * 1.5)
     }, [quantity])
 
     const sealColors = () => {

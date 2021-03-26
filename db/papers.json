@@ -1,0 +1,114 @@
+{
+    "handmade": [
+        {
+            "id": 1,
+            "src": "",
+            "color": "alb",
+            "hex": "",
+            "weights_price": [
+                {
+                    "weight": "270g",
+                    "price": 2.7
+                },
+                {
+                    "weight": "280g",
+                    "price": 2.8
+                },
+                {
+                    "weight": "290g",
+                    "price": 2.8
+                },
+                {
+                    "weight": "300g",
+                    "price": 3.0
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "src": "",
+            "color": "gri",
+            "hex": "",
+            "weights_price": [
+                {
+                    "weight": "270g",
+                    "price": 2.7
+                },
+                {
+                    "weight": "280g",
+                    "price": 2.8
+                },
+                {
+                    "weight": "290g",
+                    "price": 2.8
+                },
+                {
+                    "weight": "300g",
+                    "price": 3.0
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "src": "",
+            "color": "verde_olive",
+            "hex": "",
+            "weights_price": [
+                {
+                    "weight": "270g",
+                    "price": 2.7
+                },
+                {
+                    "weight": "280g",
+                    "price": 2.8
+                },
+                {
+                    "weight": "290g",
+                    "price": 2.8
+                },
+                {
+                    "weight": "300g",
+                    "price": 3.0
+                }
+            ]
+        }
+    ],
+    "industrial": [
+        {
+            "id": 1,
+            "src": "",
+            "texture": "smooth",
+            "color": "alb"
+        },
+        {
+            "id": 2,
+            "src": "",
+            "texture": "smooth",
+            "color": "gris"
+        },
+        {
+            "id": 3,
+            "src": "",
+            "texture": "coarse",
+            "color": "alb"
+        },
+        {
+            "id": 4,
+            "src": "",
+            "texture": "coarse",
+            "color": "gris"
+        },
+        {
+            "id": 5,
+            "src": "",
+            "texture": "inserti_auri",
+            "color": "auri"
+        },
+        {
+            "id": 6,
+            "src": "",
+            "texture": "inserti_copac",
+            "color": "copac"
+        }
+    ]
+}

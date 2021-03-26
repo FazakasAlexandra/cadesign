@@ -1,7 +1,7 @@
-export default function OptionSelection() {
+export default function OptionSelection(props) {
     const { Component } = props
     return <div>
-        <Component />
+        Component here
         <p>Prev - Next</p>
     </div>
 } 

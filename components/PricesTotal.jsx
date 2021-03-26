@@ -1,10 +1,12 @@
-export default function PricesTotal() {
+import { useState } from 'react'
+
+export default function PricesTotal(props) {
     const { itemPrices } = props
     const [totalPrice, setTotalPrice] = useState(0)
 
     const displayPrices = itemPrices.map(item => {
         const { itemName, price } = item
-        setTotalPrice(totalPrice + price)
+        
         return <li>{itemName} - {price}</li>
     })
 

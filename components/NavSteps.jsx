@@ -1,7 +1,7 @@
-export default function NavSteps() {
+export default function NavSteps(props) {
     const { steps } = props
     const showSteps = steps.map(step => {
-        return <span className={currentSelection ? 'selected' : 'normal' }>{step.id}</span>
+        return <span className={step.currentSelection ? 'selected' : 'normal' }>{step.id} | </span>
     })
     return <div>
         {showSteps}

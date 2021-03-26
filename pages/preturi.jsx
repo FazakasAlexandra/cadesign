@@ -10,6 +10,12 @@ export default function Preturi() {
         { id: 3, currentSelection: false },
         { id: 4, currentSelection: false }
     ]
+    const itemPrices = [
+        {
+            itemName: 'awesome paper', price: 2.7,
+            itemName: 'shitty paper', price: 1.7
+        }
+    ]
     const component = <EnvelopeCard />
 
     return (<div className="page preturi row">
@@ -19,7 +25,7 @@ export default function Preturi() {
             <OptionSelection component={component} />
         </div>
         <div className="column">
-            <PricesTotal />
+            <PricesTotal itemPrices={itemPrices} />
         </div>
     </div>
     )

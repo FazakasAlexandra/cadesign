@@ -1,0 +1,133 @@
+[
+    {
+        "id": 1,
+        "src": "handmade_white.png",
+        "type": "handmade",
+        "color": "alb",
+        "hex": "",
+        "weights_price": [
+            {
+                "weight": "270g",
+                "price": 2.7
+            },
+            {
+                "weight": "280g",
+                "price": 2.8
+            },
+            {
+                "weight": "290g",
+                "price": 2.8
+            },
+            {
+                "weight": "300g",
+                "price": 3.0
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "src": "handmade_gris.png",
+        "type": "handmade",
+        "color": "gri",
+        "hex": "",
+        "weights_price": [
+            {
+                "weight": "270g",
+                "price": 2.7
+            },
+            {
+                "weight": "280g",
+                "price": 2.8
+            },
+            {
+                "weight": "290g",
+                "price": 2.8
+            },
+            {
+                "weight": "300g",
+                "price": 3.0
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "src": "handmade_pink.png",
+        "type": "handmade",
+        "color": "pink",
+        "hex": "",
+        "weights_price": [
+            {
+                "weight": "270g",
+                "price": 2.7
+            },
+            {
+                "weight": "280g",
+                "price": 2.8
+            },
+            {
+                "weight": "290g",
+                "price": 2.8
+            },
+            {
+                "weight": "300g",
+                "price": 3.0
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "src": "cartonata_pink.png",
+        "type": "industrial",
+        "color": "pink",
+        "hex": "",
+        "weights_price": []
+    },
+    {
+        "id": 5,
+        "src": "cartonata_green.png",
+        "type": "industrial",
+        "color": "green",
+        "hex": "",
+        "weights_price": []
+    },
+    {
+        "id": 6,
+        "src": "cartonata_brown.png",
+        "type": "industrial",
+        "color": "brown",
+        "hex": "",
+        "weights_price": []
+    },
+    {
+        "id": 7,
+        "src": "cartonata_blue.png",
+        "type": "industrial",
+        "color": "blue",
+        "hex": "",
+        "weights_price": []
+    },
+    {
+        "id": 8,
+        "src": "cartonata_texturata.png",
+        "type": "industrial",
+        "color": "texturata",
+        "hex": "",
+        "weights_price": []
+    },
+    {
+        "id": 9,
+        "src": "cartonata_insertii.png",
+        "type": "industrial",
+        "color": "auri",
+        "hex": "",
+        "weights_price": []
+    },
+    {
+        "id": 10,
+        "src": "cartonata_white.png",
+        "type": "industrial",
+        "color": "alb",
+        "hex": "",
+        "weights_price": []
+    }
+]

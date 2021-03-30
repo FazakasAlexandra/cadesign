@@ -17,24 +17,60 @@
     }
 }
 
+@media (max-width : 998px) {
+    body {
+        display: flex;
+    }
+}
+
+@media(max-width: 829px) {
+    .navstepts.pagination .prev {
+        margin-right: 1rem;
+    }
+
+    .step-component {
+        width: fit-content;
+        margin-bottom: 1rem;
+    }
+
+    .price-calculator {
+        margin-bottom: 1rem;
+    }
+}
+
 @media (max-width: 600px) {
     .cards-container .card {
         margin: 0.5rem 0.5rem;
     }
 
-    .card.seal{
+    .card.seal {
         width: 91%;
         justify-content: flex-end;
         display: flex;
         flex-direction: column;
     }
-    .card.seal div:first-child{
+
+    .card.seal div:first-child {
         align-self: center;
     }
 }
 
-@media (max-width : 998px) {
-    body {
-        display: flex;
+@media(max-width:550px) {
+    .navstepts.pagination .prev {
+        margin-right: 0.6rem;
+    }
+
+    .price-calculator {
+        margin: 0rem;
+        width: 100%;
+    }
+    .navsteps-component-wraper{
+        width: 100%;
+        .step-component{
+            width: 100%;
+        }
+        .navsteps-wraper{
+            width: 100%;
+        }
     }
 }

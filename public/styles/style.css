@@ -2,7 +2,7 @@
 body {
   font-family: "PT Serif", serif;
   margin: 0px;
-  background-color: #B4BBB0;
+  background-color: #b4bbb0b5;
 }
 
 a {
@@ -15,6 +15,10 @@ a:hover {
 }
 
 ul {
+  list-style: none;
+}
+
+li {
   list-style: none;
 }
 
@@ -210,6 +214,125 @@ ul {
     top: 76%;
   }
 }
+.page.preturi {
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.navstepts.numbers {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.navstepts.numbers .number-wraper {
+  cursor: pointer;
+  padding: 1.7rem 0.6rem;
+  background-color: white;
+  border-radius: 100%;
+  background-color: #CAAE88;
+}
+.navstepts.numbers .number-wraper .number {
+  padding: 1rem 1.7rem;
+  border-radius: 100%;
+  border-style: solid;
+  border-color: white;
+  font-size: 2rem;
+}
+.navstepts.numbers .number-wraper .number.selected {
+  background-color: #CAAE88;
+  color: white;
+}
+.navstepts.numbers .number-wraper .number.normal {
+  background-color: white;
+  color: #CAAE88;
+}
+.navstepts.numbers .number-wraper .number.selected:hover {
+  background-color: white;
+  color: #CAAE88;
+}
+.navstepts.numbers .number-wraper .number.normal:hover {
+  background-color: #CAAE88;
+  color: white;
+}
+
+.navstepts.pagination {
+  display: flex;
+  justify-content: space-between;
+}
+.navstepts.pagination .pagination-button {
+  padding: 1rem;
+  color: #000000ab;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 1px 4px 1px rgba(23, 23, 23, 0.13);
+  margin: 1rem 0rem;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+.navstepts.pagination .next span {
+  margin: 0rem 1rem;
+}
+.navstepts.pagination .next .fa-angle-right {
+  font-size: 1.5em;
+}
+.navstepts.pagination .next:hover,
+.navstepts.pagination .prev:hover {
+  color: #CAAE88;
+}
+.navstepts.pagination .prev {
+  margin-right: 3rem;
+}
+.navstepts.pagination .prev span {
+  margin: 0rem 1rem;
+}
+.navstepts.pagination .prev .fa-angle-left {
+  font-size: 1.5em;
+}
+
+.price-calculator {
+  min-width: 300px;
+  height: fit-content;
+  background-color: white;
+  padding: 1rem;
+  margin: 0rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px 1px rgba(23, 23, 23, 0.13);
+}
+.price-calculator h4 {
+  font-weight: 100;
+  font-size: 20px;
+}
+
+.receipt-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+
+.receipt-price {
+  border-left-style: solid;
+  border-left-width: thin;
+  padding-left: 0.5rem;
+  margin-left: 0.3rem;
+}
+
+.navsteps-component-wraper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step-component {
+  background-color: white;
+  min-width: 20.7rem;
+  width: 100%;
+  min-height: 10rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px 1px rgba(23, 23, 23, 0.13);
+}
+
 @media (max-width: 1600px) {
   .main-nav {
     padding: 1rem 2rem 2rem 2rem;
@@ -224,6 +347,25 @@ ul {
     margin-top: 4rem;
     font-size: 18px;
     margin-bottom: 2rem;
+  }
+}
+@media (max-width: 998px) {
+  body {
+    display: flex;
+  }
+}
+@media (max-width: 829px) {
+  .navstepts.pagination .prev {
+    margin-right: 1rem;
+  }
+
+  .step-component {
+    width: fit-content;
+    margin-bottom: 1rem;
+  }
+
+  .price-calculator {
+    margin-bottom: 1rem;
   }
 }
 @media (max-width: 600px) {
@@ -242,9 +384,24 @@ ul {
     align-self: center;
   }
 }
-@media (max-width: 998px) {
-  body {
-    display: flex;
+@media (max-width: 550px) {
+  .navstepts.pagination .prev {
+    margin-right: 0.6rem;
+  }
+
+  .price-calculator {
+    margin: 0rem;
+    width: 100%;
+  }
+
+  .navsteps-component-wraper {
+    width: 100%;
+  }
+  .navsteps-component-wraper .step-component {
+    width: 100%;
+  }
+  .navsteps-component-wraper .navsteps-wraper {
+    width: 100%;
   }
 }
 nav {

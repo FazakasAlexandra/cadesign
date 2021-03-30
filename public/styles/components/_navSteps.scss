@@ -1,0 +1,138 @@
+.page.preturi {
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.navstepts.numbers {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    .number-wraper {
+        cursor: pointer;
+        padding: 1.7rem 0.6rem;
+        //margin-top: 1rem;
+        background-color: white;
+        border-radius: 100%;
+        background-color: $gold;
+
+        .number {
+            padding: 1rem 1.7rem;
+            border-radius: 100%;
+            border-style: solid;
+            border-color: white;
+            font-size: 2rem;
+        }
+
+        .number.selected {
+            background-color: $gold;
+            color: white;
+        }
+
+        .number.normal {
+            background-color: white;
+            color: $gold;
+        }
+
+        .number.selected:hover {
+            background-color: white;
+            color: $gold;
+        }
+
+        .number.normal:hover {
+            background-color: $gold;
+            color: white;
+        }
+    }
+}
+
+.navstepts.pagination {
+    display: flex;
+    justify-content: space-between;
+
+    .pagination-button {
+        padding: 1rem;
+        color: $fontblack;
+        cursor: pointer;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0px 1px 4px 1px rgb(23 23 23 / 13%);
+        margin: 1rem 0rem;
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+    }
+
+    .next {
+        span {
+            margin: 0rem 1rem;
+        }
+
+        .fa-angle-right {
+            font-size: 1.5em;
+        }
+    }
+
+    .next:hover,
+    .prev:hover {
+       color: $gold;
+    }
+
+    .prev {
+        margin-right: 3rem;
+
+        span {
+            margin: 0rem 1rem;
+        }
+
+        .fa-angle-left {
+            font-size: 1.5em;
+        }
+    }
+
+}
+
+
+.price-calculator {
+    min-width: 300px;
+    height: fit-content;
+    background-color: white;
+    padding: 1rem;
+    margin: 0rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 1px rgb(23 23 23 / 13%);
+
+    h4 {
+        font-weight: 100;
+        font-size: 20px;
+    }
+
+}
+
+.receipt-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+}
+
+.receipt-price {
+    border-left-style: solid;
+    border-left-width: thin;
+    padding-left: 0.5rem;
+    margin-left: 0.3rem;
+}
+
+.navsteps-component-wraper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step-component {
+    background-color: white;
+    min-width: 20.7rem;
+    width: 100%;
+    min-height: 10rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 1px rgb(23 23 23 / 13%);
+}

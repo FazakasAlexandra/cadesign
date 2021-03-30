@@ -12,19 +12,19 @@ export default function Preturi() {
     ]
     const itemPrices = [
         {
-            itemName: 'awesome paper', price: 2.7,
-            itemName: 'shitty paper', price: 1.7
+            itemName: 'hartie handmade', price: 2.7,
+            itemName: 'hartie cartonata', price: 1.7
         }
     ]
     const component = <EnvelopeCard />
 
     return (<div className="page preturi row">
-        <h1>Preturi ( in progress... )</h1>
-        <div className="column">
+        <div className="navsteps-component-wraper">
             <NavSteps steps={steps} />
             <OptionSelection component={component} />
         </div>
-        <div className="column">
+        <div className="price-calculator">
+            <h3>Pret invitatie</h3>
             <PricesTotal itemPrices={itemPrices} />
         </div>
     </div>

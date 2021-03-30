@@ -6,13 +6,16 @@ export default function PricesTotal(props) {
 
     const displayPrices = itemPrices.map(item => {
         const { itemName, price } = item
-        
-        return <li>{itemName} - {price}</li>
+
+        return <li className="receipt-item"><span>{itemName}</span>  <span>{price}</span></li>
     })
 
-    return <div>
-        {displayPrices}
-        <hr />
-        {totalPrice}
+    return <div className="receipt">
+        <div className="receipt-items">
+            {displayPrices}
+            <hr />
+        </div>
+        <span>Total <span className="receipt-price">{totalPrice}</span></span>
     </div>
+
 }

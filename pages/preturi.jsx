@@ -24,7 +24,6 @@ export default function Preturi() {
             <OptionSelection component={component} />
         </div>
         <div className="price-calculator">
-            <h3>Pret invitatie</h3>
             <PricesTotal itemPrices={itemPrices} />
         </div>
     </div>

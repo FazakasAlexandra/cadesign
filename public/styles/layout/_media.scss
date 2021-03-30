@@ -62,15 +62,30 @@
 
     .price-calculator {
         margin: 0rem;
-        width: 100%;
+        max-width: 100%;
     }
-    .navsteps-component-wraper{
+
+    .navsteps-component-wraper {
         width: 100%;
-        .step-component{
+
+        .step-component {
             width: 100%;
         }
-        .navsteps-wraper{
+
+        .navsteps-wraper {
             width: 100%;
         }
+    }
+}
+
+@media(max-width:394px) {
+    .navstepts.pagination .next {
+        text-align: end;
+    }
+    .number-wraper{
+        margin-top: 1rem;
+    }
+    .page.preturi{
+        margin-top: 0rem !important;
     }
 }

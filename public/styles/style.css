@@ -22,13 +22,15 @@ li {
   list-style: none;
 }
 
-.cards-container {
+.cards-container,
+.preturi {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 1rem;
 }
-.cards-container .card {
+.cards-container .card,
+.preturi .card {
   width: fit-content;
   margin: 2rem;
   margin-bottom: 0px;
@@ -41,50 +43,63 @@ li {
   height: fit-content;
   position: relative;
 }
-.cards-container .card .progress {
+.cards-container .card .progress,
+.preturi .card .progress {
   position: absolute;
   z-index: 1;
   top: 40%;
   left: 45%;
 }
-.cards-container .card hr {
+.cards-container .card hr,
+.preturi .card hr {
   color: #c7c7c7;
 }
-.cards-container .card-calculator {
+.cards-container .card-calculator,
+.preturi .card-calculator {
   display: flex;
   align-items: center;
   padding: 1rem 0rem;
 }
-.cards-container .card-calculator-price {
+.cards-container .card-calculator-price,
+.preturi .card-calculator-price {
   margin-left: 1rem;
 }
-.cards-container .card-calculator-price p:nth-child(1) {
+.cards-container .card-calculator-price p:nth-child(1),
+.preturi .card-calculator-price p:nth-child(1) {
   margin-bottom: 0rem;
   color: #8d8d8d;
   font-size: 14px;
 }
-.cards-container .card-calculator-price p {
+.cards-container .card-calculator-price p,
+.preturi .card-calculator-price p {
   margin: 0px;
 }
-.cards-container .card-calculator-quantity {
+.cards-container .card-calculator-quantity,
+.preturi .card-calculator-quantity {
   width: 100px;
 }
-.cards-container .card-info ul {
+.cards-container .card-info ul,
+.preturi .card-info ul {
   display: flex;
   flex-direction: column;
 }
-.cards-container .card-info ul li p {
+.cards-container .card-info ul li p,
+.preturi .card-info ul li p {
   margin: 0.5rem;
 }
-.cards-container .card-info ul li p:nth-child(1), .cards-container .card-info ul li span {
+.cards-container .card-info ul li p:nth-child(1), .cards-container .card-info ul li span,
+.preturi .card-info ul li p:nth-child(1),
+.preturi .card-info ul li span {
   margin-bottom: 0rem;
   color: #8d8d8d;
   font-size: 14px;
 }
-.cards-container .card-info ul li p:nth-child(2) {
+.cards-container .card-info ul li p:nth-child(2),
+.preturi .card-info ul li p:nth-child(2) {
   margin-top: 0.2rem;
 }
-.cards-container .card .fa-grip-lines {
+.cards-container .card .fa-grip-lines,
+.preturi .card .fa-grip-lines {
   cursor: pointer;
   margin-top: 0.5rem;
   color: #B4BBB0;
@@ -93,10 +108,12 @@ li {
   color: #9DA499;
   margin-left: 0.5rem;
 }
-.cards-container .card .colors-container {
+.cards-container .card .colors-container,
+.preturi .card .colors-container {
   display: flex;
 }
-.cards-container .card .colors-container .color {
+.cards-container .card .colors-container .color,
+.preturi .card .colors-container .color {
   width: 30px;
   height: 30px;
   border-radius: 100%;
@@ -104,7 +121,8 @@ li {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
-.cards-container .card .colors-container .color:hover {
+.cards-container .card .colors-container .color:hover,
+.preturi .card .colors-container .color:hover {
   width: 35px;
   height: 35px;
 }
@@ -214,14 +232,50 @@ li {
     top: 76%;
   }
 }
-.page.preturi {
-  margin-top: 2rem;
-  flex-wrap: wrap;
+.price-calculator {
+  min-width: 300px;
+  max-width: 300px;
+  height: fit-content;
+  background-color: white;
+  margin: 0rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px 1px rgba(23, 23, 23, 0.13);
+}
+.price-calculator h4 {
+  font-weight: 100;
+  font-size: 20px;
+}
+.price-calculator .receipt .prices-info {
+  background-color: #9DA499;
+  padding: 1.5rem;
+  border-radius: 10px 10px 0px 0px;
+}
+.price-calculator .receipt .prices-info p {
+  margin: 0px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.53);
+}
+.price-calculator .receipt-content {
+  padding: 0rem 1rem 1rem;
+}
+.price-calculator .receipt-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+.price-calculator .receipt-price {
+  border-left-style: solid;
+  border-left-width: thin;
+  padding-left: 0.5rem;
+  margin-left: 0.3rem;
 }
 
 .navstepts.numbers {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 .navstepts.numbers .number-wraper {
@@ -291,46 +345,17 @@ li {
   font-size: 1.5em;
 }
 
-.price-calculator {
-  min-width: 300px;
-  height: fit-content;
-  background-color: white;
-  padding: 1rem;
-  margin: 0rem 2rem;
-  border-radius: 10px;
-  box-shadow: 0px 4px 4px 1px rgba(23, 23, 23, 0.13);
-}
-.price-calculator h4 {
-  font-weight: 100;
-  font-size: 20px;
-}
-
-.receipt-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0px;
-}
-
-.receipt-price {
-  border-left-style: solid;
-  border-left-width: thin;
-  padding-left: 0.5rem;
-  margin-left: 0.3rem;
-}
-
 .navsteps-component-wraper {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-.step-component {
-  background-color: white;
-  min-width: 20.7rem;
+.navsteps-component-wraper .navsteps-wraper {
   width: 100%;
-  min-height: 10rem;
-  border-radius: 10px;
-  box-shadow: 0px 4px 4px 1px rgba(23, 23, 23, 0.13);
+}
+
+.preturi .card {
+  margin: 0rem;
 }
 
 @media (max-width: 1600px) {
@@ -391,7 +416,7 @@ li {
 
   .price-calculator {
     margin: 0rem;
-    width: 100%;
+    max-width: 100%;
   }
 
   .navsteps-component-wraper {
@@ -404,6 +429,19 @@ li {
     width: 100%;
   }
 }
+@media (max-width: 394px) {
+  .navstepts.pagination .next {
+    text-align: end;
+  }
+
+  .number-wraper {
+    margin-top: 1rem;
+  }
+
+  .page.preturi {
+    margin-top: 0rem !important;
+  }
+}
 nav {
   display: flex;
   justify-content: space-evenly;
@@ -414,6 +452,11 @@ nav {
 .page {
   display: flex;
   justify-content: center;
+}
+
+.page.preturi {
+  margin-top: 2rem;
+  flex-wrap: wrap;
 }
 
 /*# sourceMappingURL=style.css.map */

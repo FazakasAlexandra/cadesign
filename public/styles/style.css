@@ -127,6 +127,50 @@ li {
   height: 35px;
 }
 
+.page.home {
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.slogan-container {
+  align-items: flex-end;
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.slogan {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 7rem;
+  margin-left: 4rem;
+}
+.slogan i {
+  font-size: 40px;
+  color: #777771;
+}
+.slogan h1 {
+  font-size: 50px;
+  color: #777771;
+  margin-top: 0px;
+}
+.slogan a {
+  padding: 2rem 4rem;
+  font-size: 30px;
+  color: #777771;
+  background-color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  width: fit-content;
+}
+.slogan a:hover {
+  color: #CAAE88;
+}
+
 .card-envelope-footer {
   display: flex;
   justify-content: space-between;
@@ -139,6 +183,61 @@ li {
   justify-content: space-between;
   align-items: center;
   padding: 3rem 0rem 0.5rem;
+}
+
+.order-steps-cards {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.order-step-card {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+.order-step-card .header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #80827A;
+  padding: 3rem 2rem;
+  border-radius: 10px;
+  z-index: 1;
+}
+.order-step-card .header h1 {
+  color: white;
+  font-size: 30px;
+}
+.order-step-card .text-container {
+  height: 100%;
+  background-color: white;
+  min-height: 200px;
+  margin-top: -2rem;
+  z-index: 0;
+  padding: 2rem;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 10px;
+}
+.order-step-card .text-container p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: rgba(0, 0, 0, 0.73);
+}
+.order-step-card .text-container a {
+  color: #CAAE88;
+}
+.order-step-card .text-container a:hover {
+  text-decoration: underline;
 }
 
 .main-nav {
@@ -156,6 +255,7 @@ li {
 }
 .main-nav .logo {
   width: 270px;
+  cursor: pointer;
 }
 
 .sec-nav {
@@ -278,33 +378,32 @@ li {
   justify-content: space-around;
   flex-wrap: wrap;
 }
-.navstepts.numbers .number-wraper {
+
+.number-wraper {
+  width: fit-content;
   cursor: pointer;
   padding: 1.7rem 0.6rem;
   background-color: white;
   border-radius: 100%;
   background-color: #CAAE88;
 }
-.navstepts.numbers .number-wraper .number {
+.number-wraper .number {
   padding: 1rem 1.7rem;
   border-radius: 100%;
   border-style: solid;
   border-color: white;
   font-size: 2rem;
 }
-.navstepts.numbers .number-wraper .number.selected {
+.number-wraper .number.selected {
   background-color: #CAAE88;
   color: white;
+  cursor: default;
 }
-.navstepts.numbers .number-wraper .number.normal {
+.number-wraper .number.normal {
   background-color: white;
   color: #CAAE88;
 }
-.navstepts.numbers .number-wraper .number.selected:hover {
-  background-color: white;
-  color: #CAAE88;
-}
-.navstepts.numbers .number-wraper .number.normal:hover {
+.number-wraper .number.normal:hover {
   background-color: #CAAE88;
   color: white;
 }
@@ -373,10 +472,26 @@ li {
     font-size: 18px;
     margin-bottom: 2rem;
   }
+
+  .slogan {
+    margin-left: 1rem;
+  }
+  .slogan h1 {
+    font-size: 35px;
+  }
+  .slogan a {
+    font-size: 25px;
+  }
 }
 @media (max-width: 998px) {
   body {
     display: flex;
+  }
+}
+@media (max-width: 805px) {
+  .slogan {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 }
 @media (max-width: 829px) {

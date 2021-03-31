@@ -2,42 +2,39 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+}
 
-    .number-wraper {
-        cursor: pointer;
-        padding: 1.7rem 0.6rem;
-        //margin-top: 1rem;
-        background-color: white;
+.number-wraper{
+    width: fit-content;
+    cursor: pointer;
+    padding: 1.7rem 0.6rem;
+    //margin-top: 1rem;
+    background-color: white;
+    border-radius: 100%;
+    background-color: $gold;
+
+    .number {
+        padding: 1rem 1.7rem;
         border-radius: 100%;
+        border-style: solid;
+        border-color: white;
+        font-size: 2rem;
+    }
+
+    .number.selected {
         background-color: $gold;
+        color: white;
+        cursor: default;
+    }
 
-        .number {
-            padding: 1rem 1.7rem;
-            border-radius: 100%;
-            border-style: solid;
-            border-color: white;
-            font-size: 2rem;
-        }
+    .number.normal {
+        background-color: white;
+        color: $gold;
+    }
 
-        .number.selected {
-            background-color: $gold;
-            color: white;
-        }
-
-        .number.normal {
-            background-color: white;
-            color: $gold;
-        }
-
-        .number.selected:hover {
-            background-color: white;
-            color: $gold;
-        }
-
-        .number.normal:hover {
-            background-color: $gold;
-            color: white;
-        }
+    .number.normal:hover {
+        background-color: $gold;
+        color: white;
     }
 }
 
@@ -92,11 +89,11 @@
     flex-direction: column;
     align-items: center;
 
-    .navsteps-wraper{
+    .navsteps-wraper {
         width: 100%;
     }
 }
 
-.preturi .card{
+.preturi .card {
     margin: 0rem;
 }

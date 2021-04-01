@@ -67,7 +67,8 @@ export default function HomePage() {
         loggedInGreeting="Buna, suntem aici pentru a raspunde la orice intrebari !"
         loggedOutGreeting="Buna, suntem aici pentru a raspunde la orice intrebari !"
         message={{
-          text: "hello, world!"
+          text: "Hello !",
+          quick_replies: []
         }}
       />
     </div>

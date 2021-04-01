@@ -64,6 +64,7 @@ export default function HomePage() {
       <MessengerCustomerChat
         pageId="102131698653081"
         appId="3205299383049134"
+        logged_in_greeting="Suntem aici pentru a raspunde la orice intrebari !"
       />
     </div>
   )

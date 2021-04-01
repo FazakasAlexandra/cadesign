@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar'
 import OrderStepCard from '../components/OrderStepCard'
 const envelopes = require('../db/envelopes.json');
 import Image from 'next/image'
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 export default function HomePage() {
   console.log(envelopes)
@@ -60,6 +61,10 @@ export default function HomePage() {
           title={"Mostre si livrare"}
         />
       </div>
+      <MessengerCustomerChat
+        pageId="102131698653081"
+        appId="3205299383049134"
+      />
     </div>
   )
 }

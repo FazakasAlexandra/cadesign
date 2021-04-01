@@ -1,5 +1,5 @@
 export default function OrderStepCard(props) {
-    return (<div className="order-step-card">
+    return (<div className="order-step-card" id={props.id}>
         <div className="header">
             <div className="number-wraper">
                 <span className="number selected">{props.number}</span>

@@ -4,7 +4,7 @@ import SealCard from '../../components/SealCard'
 export default function Papetarie() {
     return (
         <>
-            <div className="cards-container">
+            <div className="cards-container" id="produse">
                 <EnvelopeCard/>
                 <SealCard/>
             </div>

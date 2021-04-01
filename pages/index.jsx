@@ -8,13 +8,6 @@ import Image from 'next/image'
 import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 export default function HomePage() {
-  console.log(envelopes)
-  const client = new MessengerClient({
-    accessToken: 102131698653081,
-    appId: 3205299383049134,
-    version: '6.0',
-  })
-
   return (
     <div className="page home">
       <div className="slogan-container">

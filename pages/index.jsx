@@ -66,10 +66,7 @@ export default function HomePage() {
         appId="3205299383049134"
         loggedInGreeting="Buna, suntem aici pentru a raspunde la orice intrebari !"
         loggedOutGreeting="Buna, suntem aici pentru a raspunde la orice intrebari !"
-        message={{
-          text: "Hello !",
-          quick_replies: []
-        }}
+        onCustomerChatDialogShow={()=>{console.log('dialog shows')}}
       />
     </div>
   )

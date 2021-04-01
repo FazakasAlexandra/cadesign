@@ -6,7 +6,6 @@ import OrderStepCard from '../components/OrderStepCard'
 const envelopes = require('../db/envelopes.json');
 import Image from 'next/image'
 import MessengerCustomerChat from 'react-messenger-customer-chat';
-const { MessengerClient } = require('messaging-api-messenger');
 
 export default function HomePage() {
   console.log(envelopes)
@@ -15,17 +14,6 @@ export default function HomePage() {
     appId: 3205299383049134,
     version: '6.0',
   })
-
-  async function api() {
-    await client.sendText(102131698653081, 'Pick a color:', {
-      quickReplies: [
-        {
-          contentType: 'text',
-          title: 'Red',
-        },
-      ],
-    });
-  }
 
   return (
     <div className="page home">
@@ -84,8 +72,6 @@ export default function HomePage() {
         appId="3205299383049134"
         loggedInGreeting="Buna, suntem aici pentru a raspunde la orice intrebari !"
         loggedOutGreeting="Buna, suntem aici pentru a raspunde la orice intrebari !"
-        onCustomerChatDialogShow={() => { api() }}
-        language="ro_"
       />
     </div>
   )

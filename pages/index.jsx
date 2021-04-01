@@ -64,9 +64,11 @@ export default function HomePage() {
       <MessengerCustomerChat
         pageId="102131698653081"
         appId="3205299383049134"
-        loggedInGreeting="Buna, suntem aici pentru a raspunde la orice intrebari! :)"
-        loggedOutGreeting="Buna, suntem aici pentru a raspunde la orice intrebari! :)"
-        sdk="ro_RO"
+        loggedInGreeting="Buna, suntem aici pentru a raspunde la orice intrebari !"
+        loggedOutGreeting="Buna, suntem aici pentru a raspunde la orice intrebari !"
+        message={{
+          text: "hello, world!"
+        }}
       />
     </div>
   )

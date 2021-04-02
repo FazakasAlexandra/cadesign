@@ -69,7 +69,7 @@ export default function HomePage() {
           />
         </div>
         <MessengerCustomerChat
-          pageId="102131698653081"
+          pageId="2204227486254620"
           appId="3205299383049134"
           loggedInGreeting="Buna, suntem aici pentru a raspunde la orice intrebari !"
           loggedOutGreeting="Buna, suntem aici pentru a raspunde la orice intrebari !"

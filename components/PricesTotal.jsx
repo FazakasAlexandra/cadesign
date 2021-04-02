@@ -1,13 +1,11 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
-export default function PricesTotal(props) {
-    const { itemPrices } = props
-    const [totalPrice, setTotalPrice] = useState(6)
-
-    const displayPrices = itemPrices.map(item => {
+export default function PricesTotal({ selectedItems, totalPrice }) {
+    const displayPrices = selectedItems.map((item, i) => {
         const { itemName, price } = item
-
-        return <li className="receipt-item"><span>{itemName}</span>  <span>{price} lei</span></li>
+        // setTotalPrice(currentTotal)
+        // add remove feature for each
+        return <li key={i} id={itemName} className="receipt-item"><span>{itemName}</span>  <span>{price.toFixed(2)} lei</span></li>
     })
 
     return <div className="receipt">
@@ -20,7 +18,7 @@ export default function PricesTotal(props) {
             {displayPrices}
             <hr />
         </div>
-        <span>Total <span className="receipt-price">{totalPrice} lei</span></span>
+        <span>Total <span className="receipt-price">{totalPrice.toFixed(2)} lei</span></span>
         </div>
     </div>
 

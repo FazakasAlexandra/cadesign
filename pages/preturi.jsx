@@ -1,30 +1,31 @@
+import { useState } from 'react'
 import NavSteps from "../components/NavSteps";
 import EnvelopeCard from "../components/EnvelopeCard";
-import OptionSelection from "../components/OptionSelection";
+import SealCard from '../components/SealCard'
 import PricesTotal from "../components/PricesTotal";
 
-export default function Preturi() {
-    const steps = [
-        { id: 1, currentSelection: true },
-        { id: 2, currentSelection: false },
-        { id: 3, currentSelection: false },
-        { id: 4, currentSelection: false }
-    ]
-    const itemPrices = [
-        {
-            itemName: 'hartie handmade', price: 2.7,
-            itemName: 'hartie cartonata', price: 1.7
-        }
-    ]
-    const component = <EnvelopeCard />
+const optionsComponents = [EnvelopeCard, SealCard]
+
+export default function Preturi(props) {
+    const [selectedItems, setSelectedItems] = useState([])
+    const [totalPrice, setTotalPrice] = useState(0)
+    const CurrentComponent = optionsComponents[0]
+    const [steps, setSteps] = useState([
+        { id: 1, product: 'envelopes', currentSelection: true },
+        { id: 2, product: 'paper', currentSelection: false },
+        { id: 3, product: 'menus', currentSelection: false },
+        { id: 4, product: 'addons', currentSelection: false }
+    ])
 
     return (<div className="page preturi row">
         <div className="navsteps-component-wraper">
-            <NavSteps steps={steps} />
-            <OptionSelection component={component} />
+            <NavSteps steps={steps} setSteps={setSteps}/>
+        <div className="step-component">
+            <CurrentComponent selectedItems={selectedItems} setSelectedItems={setSelectedItems} totalPrice={totalPrice} setTotalPrice={setTotalPrice} />
+        </div>
         </div>
         <div className="price-calculator">
-            <PricesTotal itemPrices={itemPrices} />
+            <PricesTotal totalPrice={totalPrice} selectedItems={selectedItems} />
         </div>
     </div>
     )

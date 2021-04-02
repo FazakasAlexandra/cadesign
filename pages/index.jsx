@@ -9,7 +9,7 @@ import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 export default function HomePage() {
   return (
-    <html lang="ro">
+    <html lang="ro-RO">
       <Head>
         <title>CAdesign invitatii handmade pentru nunta</title>
         <meta name="keywords" content="invitatii pentru nunti, hartie handmade, anvelope, siginii, nunta, plicuri"></meta>
@@ -69,7 +69,7 @@ export default function HomePage() {
           />
         </div>
         <MessengerCustomerChat
-          pageId="102131698653081"
+          pageId="2204227486254620"
           appId="3205299383049134"
           loggedInGreeting="Buna, suntem aici pentru a raspunde la orice intrebari !"
           loggedOutGreeting="Buna, suntem aici pentru a raspunde la orice intrebari !"

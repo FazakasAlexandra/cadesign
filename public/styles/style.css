@@ -130,7 +130,6 @@ li {
 .page.home {
   flex-direction: column;
   align-items: center;
-  margin-bottom: 2rem;
 }
 
 .slogan-container {
@@ -210,9 +209,10 @@ li {
   border-radius: 10px;
   z-index: 1;
 }
-.order-step-card .header h1 {
+.order-step-card .header h2 {
   color: white;
   font-size: 30px;
+  margin-bottom: 0px;
 }
 .order-step-card .text-container {
   height: 100%;

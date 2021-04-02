@@ -4,7 +4,7 @@ export default function OrderStepCard(props) {
             <div className="number-wraper">
                 <span className="number selected">{props.number}</span>
             </div>
-            <h1>{props.title}</h1>
+            <h2>{props.title}</h2>
         </div>
         <div className="text-container">
             <div>{props.text}</div>

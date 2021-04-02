@@ -52,7 +52,7 @@ export default function SealCard() {
                 src={`/assets/seals/${seal.src}`}
                 height={300}
                 width={300}
-                alt="imagine plic"
+                alt="imagine sigiliu"
             />
             <div className="card-seal-footer">
                 <FontAwesomeIcon icon={faGripLines} onClick={() => setOpen(!open)} />

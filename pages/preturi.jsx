@@ -6,7 +6,7 @@ import PricesTotal from "../components/PricesTotal";
 
 const optionsComponents = [EnvelopeCard, SealCard]
 
-export default function Preturi(props) {
+export default function Preturi() {
     const [selectedItems, setSelectedItems] = useState([])
     const [totalPrice, setTotalPrice] = useState(0)
     const CurrentComponent = optionsComponents[0]
@@ -25,7 +25,7 @@ export default function Preturi(props) {
         </div>
         </div>
         <div className="price-calculator">
-            <PricesTotal totalPrice={totalPrice} selectedItems={selectedItems} />
+            <PricesTotal selectedItems={selectedItems} totalPrice={totalPrice} setTotalPrice={setTotalPrice} />
         </div>
     </div>
     )

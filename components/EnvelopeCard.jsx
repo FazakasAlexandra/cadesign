@@ -6,7 +6,7 @@ import { faGripLines } from '@fortawesome/free-solid-svg-icons'
 import CircularProgress from '@material-ui/core/CircularProgress';
 const envelopes = require('../db/envelopes.json');
 
-export default function EnvelopeCard({ selectedItems, setSelectedItems, totalPrice, setTotalPrice }) {
+export default function EnvelopeCard({ selectedItems, setSelectedItems }) {
     const [envelope, setEnvelope] = useState(envelopes[0]);
     const [open, setOpen] = useState(false);
     const [quantity, setQuantity] = useState(1)
@@ -39,10 +39,10 @@ export default function EnvelopeCard({ selectedItems, setSelectedItems, totalPri
         if (itemAlreadyInOrder) {
             return setSelectedItems(selectedItems.map(item => {
                 if (itemName === item.itemName) return { itemName, price: price + item.price }
-                return { itemName, price }
+                return { itemName: item.itemName, price: item.price } // update price if item exists, else keep it the same
             }))
         }
-        return setSelectedItems([...selectedItems, { itemName, price }])
+        setSelectedItems([...selectedItems, { itemName, price }])
     }
 
     return (

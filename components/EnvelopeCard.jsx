@@ -55,7 +55,7 @@ export default function EnvelopeCard({ selectedItems, setSelectedItems }) {
                 alt="imagine plic"
             />
             <div className="card-envelope-footer">
-                <FontAwesomeIcon icon={faGripLines} onClick={() => setOpen(!open)} />
+                <FontAwesomeIcon icon={faGripLines} size="lg" onClick={() => setOpen(!open)} />
                 <div className="colors-container">
                     {envelopeColors()}
                 </div>

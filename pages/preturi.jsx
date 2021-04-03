@@ -11,10 +11,11 @@ export default function Preturi() {
         { id: 2, product: 'paper', currentSelection: false, component: 'PaperCard' },
         { id: 3, product: 'menus', currentSelection: false, component: 'MenuCard' },
         { id: 4, product: 'seals', currentSelection: false, component: SealCard },
-        { id: 4, product: 'addons', currentSelection: false, component: 'AddonsCard' }
+        { id: 5, product: 'addons', currentSelection: false, component: 'AddonsCard' }
     ])
 
-    const CurrentComponent = steps[0].component
+    const currentStep = steps.find(({currentSelection}) => currentSelection === true)
+    const CurrentComponent = currentStep.component
 
     return (<div className="page preturi row">
         <div className="navsteps-component-wraper">

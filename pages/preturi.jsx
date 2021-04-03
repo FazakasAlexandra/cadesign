@@ -1,30 +1,31 @@
+import { useState } from 'react'
 import NavSteps from "../components/NavSteps";
 import EnvelopeCard from "../components/EnvelopeCard";
-import OptionSelection from "../components/OptionSelection";
+import SealCard from '../components/SealCard'
 import PricesTotal from "../components/PricesTotal";
 
 export default function Preturi() {
-    const steps = [
-        { id: 1, currentSelection: true },
-        { id: 2, currentSelection: false },
-        { id: 3, currentSelection: false },
-        { id: 4, currentSelection: false }
-    ]
-    const itemPrices = [
-        {
-            itemName: 'hartie handmade', price: 2.7,
-            itemName: 'hartie cartonata', price: 1.7
-        }
-    ]
-    const component = <EnvelopeCard />
+    const [selectedItems, setSelectedItems] = useState([])
+    const [steps, setSteps] = useState([
+        { id: 1, product: 'envelopes', currentSelection: true, component: EnvelopeCard },
+        { id: 2, product: 'paper', currentSelection: false, component: 'PaperCard' },
+        { id: 3, product: 'menus', currentSelection: false, component: 'MenuCard' },
+        { id: 4, product: 'seals', currentSelection: false, component: SealCard },
+        { id: 5, product: 'addons', currentSelection: false, component: 'AddonsCard' }
+    ])
+
+    const currentStep = steps.find(({currentSelection}) => currentSelection === true)
+    const CurrentComponent = currentStep.component
 
     return (<div className="page preturi row">
         <div className="navsteps-component-wraper">
-            <NavSteps steps={steps} />
-            <OptionSelection component={component} />
+            <NavSteps steps={steps} setSteps={setSteps}/>
+        <div className="step-component">
+            <CurrentComponent selectedItems={selectedItems} setSelectedItems={setSelectedItems} />
+        </div>
         </div>
         <div className="price-calculator">
-            <PricesTotal itemPrices={itemPrices} />
+            <PricesTotal selectedItems={selectedItems} />
         </div>
     </div>
     )

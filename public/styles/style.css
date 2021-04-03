@@ -373,7 +373,7 @@ li {
   margin-left: 0.3rem;
 }
 
-.navstepts.numbers {
+.navsteps.numbers {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -408,11 +408,11 @@ li {
   color: white;
 }
 
-.navstepts.pagination {
+.navsteps.pagination {
   display: flex;
   justify-content: space-between;
 }
-.navstepts.pagination .pagination-button {
+.navsteps.pagination .pagination-button {
   padding: 1rem;
   color: #000000ab;
   cursor: pointer;
@@ -424,23 +424,23 @@ li {
   align-items: center;
   font-size: 18px;
 }
-.navstepts.pagination .next span {
+.navsteps.pagination .next span {
   margin: 0rem 1rem;
 }
-.navstepts.pagination .next .fa-angle-right {
+.navsteps.pagination .next .fa-angle-right {
   font-size: 1.5em;
 }
-.navstepts.pagination .next:hover,
-.navstepts.pagination .prev:hover {
+.navsteps.pagination .next:hover,
+.navsteps.pagination .prev:hover {
   color: #CAAE88;
 }
-.navstepts.pagination .prev {
+.navsteps.pagination .prev {
   margin-right: 3rem;
 }
-.navstepts.pagination .prev span {
+.navsteps.pagination .prev span {
   margin: 0rem 1rem;
 }
-.navstepts.pagination .prev .fa-angle-left {
+.navsteps.pagination .prev .fa-angle-left {
   font-size: 1.5em;
 }
 

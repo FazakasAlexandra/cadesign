@@ -6,7 +6,7 @@ import { faGripLines } from '@fortawesome/free-solid-svg-icons'
 import CircularProgress from '@material-ui/core/CircularProgress';
 const envelopes = require('../db/envelopes.json');
 
-export default function EnvelopeCard() {
+export default function EnvelopeCard({ selectedItems, setSelectedItems }) {
     const [envelope, setEnvelope] = useState(envelopes[0]);
     const [open, setOpen] = useState(false);
     const [quantity, setQuantity] = useState(1)
@@ -24,7 +24,6 @@ export default function EnvelopeCard() {
         setPrice(quantity * 2.7)
     }, [quantity])
 
-
     useEffect(() => {
         setLoading(false)
     }, [envelope])
@@ -33,6 +32,17 @@ export default function EnvelopeCard() {
         return envelopes.map(envelope => {
             return <div key={envelope.id} id={envelope.id} onClick={(e) => handleColorClick(e)} className="color" style={{ backgroundColor: envelope.hex }}></div>
         })
+    }
+
+    const addToOrder = (itemName, price) => {
+        const itemAlreadyInOrder = selectedItems.find(item => itemName === item.itemName)
+        if (itemAlreadyInOrder) {
+            return setSelectedItems(selectedItems.map(item => {
+                if (itemName === item.itemName) return { itemName, price: price + item.price }
+                return { itemName: item.itemName, price: item.price } // update price if item exists, else keep it the same
+            }))
+        }
+        setSelectedItems([...selectedItems, { itemName, price }])
     }
 
     return (
@@ -45,7 +55,7 @@ export default function EnvelopeCard() {
                 alt="imagine plic"
             />
             <div className="card-envelope-footer">
-                <FontAwesomeIcon icon={faGripLines} onClick={() => setOpen(!open)} />
+                <FontAwesomeIcon icon={faGripLines} size="lg" onClick={() => setOpen(!open)} />
                 <div className="colors-container">
                     {envelopeColors()}
                 </div>
@@ -91,6 +101,7 @@ export default function EnvelopeCard() {
                                 <hr />
                                 <p><b>{price.toFixed(2)}</b> lei</p>
                             </div>
+                            <button onClick={() => addToOrder(`Hartie ${envelope.papper} - ${envelope.color}`, price)}>Add to Order</button>
                         </div>
                     </div> : null
             }

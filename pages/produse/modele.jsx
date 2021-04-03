@@ -1,6 +1,5 @@
 import NavSteps from '../../components/NavSteps'
 import OrderStepCard from '../../components/OrderStepCard'
-import OptionSelection from '../../components/OptionSelection'
 import PricesTotal from '../../components/PricesTotal'
 
 export default function Modele() {

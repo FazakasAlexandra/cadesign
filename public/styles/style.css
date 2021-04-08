@@ -183,6 +183,33 @@ li {
   padding: 3rem 0rem 0.5rem;
 }
 
+.card.paper {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
+.card.paper .card-paper-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card.paper .model-container {
+  margin: 1rem 0rem 0.5rem 0rem;
+}
+.card.paper .card-info .gramaje-container {
+  cursor: pointer;
+  margin-left: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.card.paper .card-info .gramaje-container i {
+  font-style: normal;
+  margin: 0.2rem 0rem 0.2rem 0rem;
+}
+.card.paper .card-info .gramaje-container i:hover {
+  color: #CAAE88;
+}
+
 .order-steps-cards {
   display: flex;
   justify-content: space-evenly;

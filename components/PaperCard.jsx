@@ -10,7 +10,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import CircularProgress from '@material-ui/core/CircularProgress';
 const papers = require('../db/papersB.json');
 
-export default function EnvelopeCard() {
+export default function PaperCard() {
     const [type, setType] = useState('cartonata')
     const [paper, setPaper] = useState(papers['cartonata'].papers[0])
     const [open, setOpen] = useState(false)
@@ -37,20 +37,20 @@ export default function EnvelopeCard() {
     }
 
     const getWeights = () => {
-        return papers[type].weights.map((w)=>{
-            return <p style={{ color: "#4f4f4f", fontSize: "16px", margin: "0.5rem", marginLeft: "0rem"}}>{w.weight}</p>
+        return papers[type].weights.map((w,idx)=>{
+            return <i key={idx}>{w.weight}</i>
         })
     }
 
     return (
-        <div className="card envelope">
+        <div className="card paper">
             <Image
                 src={`/assets/papers/${paper.src}`}
                 height={509}
                 width={300}
                 alt="imagine hartie"
             />
-            <div className="card-envelope-footer">
+            <div className="card-paper-footer">
                 <FontAwesomeIcon icon={faGripLines} size="2x" onClick={() => setOpen(!open)} />
                 <div className="colors-container">
                     {paperColors()}
@@ -84,7 +84,7 @@ export default function EnvelopeCard() {
                             </li>
                             <li>
                                 <p>Gramaje</p>
-                                <p>{getWeights()}</p>
+                                <div className="gramaje-container">{getWeights()}</div>
                             </li>
                         </ul>
                         <hr />

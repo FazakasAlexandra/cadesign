@@ -1,17 +1,18 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMinusCircle } from '@fortawesome/free-solid-svg-icons'
+import _ from 'lodash'
 
-export default function PricesTotal({ selectedItems }) {
-    const displayPrices = selectedItems.map((item, i) => {
-        const { itemName, price } = item
+export default function PricesTotal({ selectedItems, setSelectedItems }) {
+    const displayPrices = Object.keys(selectedItems).map((productType, i) => {
+        const { itemName, price } = selectedItems[productType] || []
         return (
             <li key={i} id={itemName} className="receipt-item">
                 <span>{itemName}</span>  <span>{price.toFixed(2)} lei</span>
-                <FontAwesomeIcon icon={faMinusCircle} onClick={() => {}} />
+                <FontAwesomeIcon icon={faMinusCircle} onClick={e => setSelectedItems(_.omit(selectedItems, productType))} />
             </li>
         )
     })
-    const totalPrice = selectedItems.reduce((acc, { price }) => acc + price, 0)
+    const totalPrice = 0
 
     return <div className="receipt">
         <div className="prices-info">

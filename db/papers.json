@@ -4,7 +4,7 @@
         "src": "handmade_white.png",
         "type": "handmade",
         "color": "alb",
-        "hex": "",
+        "hex": "#e4e4da",
         "weights_price": [
             {
                 "weight": "270g",
@@ -29,7 +29,7 @@
         "src": "handmade_gris.png",
         "type": "handmade",
         "color": "gri",
-        "hex": "",
+        "hex": "#bbbab6",
         "weights_price": [
             {
                 "weight": "270g",
@@ -53,8 +53,8 @@
         "id": 3,
         "src": "handmade_pink.png",
         "type": "handmade",
-        "color": "pink",
-        "hex": "",
+        "color": "roz",
+        "hex": "#cca4a1",
         "weights_price": [
             {
                 "weight": "270g",
@@ -77,57 +77,176 @@
     {
         "id": 4,
         "src": "cartonata_pink.png",
-        "type": "industrial",
-        "color": "pink",
-        "hex": "",
-        "weights_price": []
+        "type": "cartonata",
+        "color": "roz",
+        "hex": "#cca4a1",
+        "weights_price": [
+            {
+                "weight": "270g",
+                "price": 2.7
+            },
+            {
+                "weight": "280g",
+                "price": 2.8
+            },
+            {
+                "weight": "290g",
+                "price": 2.8
+            },
+            {
+                "weight": "300g",
+                "price": 3.0
+            }
+        ]
     },
     {
         "id": 5,
         "src": "cartonata_green.png",
-        "type": "industrial",
-        "color": "green",
-        "hex": "",
-        "weights_price": []
+        "type": "cartonata",
+        "color": "verde",
+        "hex": "#54b29c",
+        "weights_price": [
+            {
+                "weight": "270g",
+                "price": 2.7
+            },
+            {
+                "weight": "280g",
+                "price": 2.8
+            },
+            {
+                "weight": "290g",
+                "price": 2.8
+            },
+            {
+                "weight": "300g",
+                "price": 3.0
+            }
+        ]
     },
     {
         "id": 6,
         "src": "cartonata_brown.png",
-        "type": "industrial",
-        "color": "brown",
-        "hex": "",
-        "weights_price": []
+        "type": "cartonata",
+        "color": "crem",
+        "hex": "#d4c4ac",
+        "weights_price": [
+            {
+                "weight": "270g",
+                "price": 2.7
+            },
+            {
+                "weight": "280g",
+                "price": 2.8
+            },
+            {
+                "weight": "290g",
+                "price": 2.8
+            },
+            {
+                "weight": "300g",
+                "price": 3.0
+            }
+        ]
     },
     {
         "id": 7,
         "src": "cartonata_blue.png",
-        "type": "industrial",
-        "color": "blue",
-        "hex": "",
-        "weights_price": []
+        "type": "cartonata",
+        "color": "albastru",
+        "hex": "#94aba8",
+        "weights_price": [
+            {
+                "weight": "270g",
+                "price": 2.7
+            },
+            {
+                "weight": "280g",
+                "price": 2.8
+            },
+            {
+                "weight": "290g",
+                "price": 2.8
+            },
+            {
+                "weight": "300g",
+                "price": 3.0
+            }
+        ]
     },
     {
         "id": 8,
         "src": "cartonata_texturata.png",
-        "type": "industrial",
-        "color": "texturata",
-        "hex": "",
-        "weights_price": []
+        "type": "cartonata",
+        "color": "gri",
+        "hex": "#bbbab6",
+        "weights_price": [
+            {
+                "weight": "270g",
+                "price": 2.7
+            },
+            {
+                "weight": "280g",
+                "price": 2.8
+            },
+            {
+                "weight": "290g",
+                "price": 2.8
+            },
+            {
+                "weight": "300g",
+                "price": 3.0
+            }
+        ]
     },
     {
         "id": 9,
         "src": "cartonata_insertii.png",
-        "type": "industrial",
-        "color": "auri",
-        "hex": "",
-        "weights_price": []
+        "type": "cartonata",
+        "color": "insertii aurii",
+        "hex": "#b5ac88",
+        "weights_price": [
+            {
+                "weight": "270g",
+                "price": 2.7
+            },
+            {
+                "weight": "280g",
+                "price": 2.8
+            },
+            {
+                "weight": "290g",
+                "price": 2.8
+            },
+            {
+                "weight": "300g",
+                "price": 3.0
+            }
+        ]
     },
     {
         "id": 10,
         "src": "cartonata_white.png",
-        "type": "industrial",
+        "type": "cartonata",
         "color": "alb",
-        "hex": "",
-        "weights_price": []
+        "hex": "#e4e4da",
+        "weights_price": [
+            {
+                "weight": "270g",
+                "price": 2.7
+            },
+            {
+                "weight": "280g",
+                "price": 2.8
+            },
+            {
+                "weight": "290g",
+                "price": 2.8
+            },
+            {
+                "weight": "300g",
+                "price": 3.0
+            }
+        ]
     }
 ]

@@ -3,51 +3,57 @@ import TextField from '@material-ui/core/TextField';
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGripLines } from '@fortawesome/free-solid-svg-icons'
+import InputLabel from '@material-ui/core/InputLabel';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
 import CircularProgress from '@material-ui/core/CircularProgress';
-const envelopes = require('../db/envelopes.json');
+const papers = require('../db/papersB.json');
 
 export default function EnvelopeCard() {
-    const [envelope, setEnvelope] = useState(envelopes[0]);
-    const [open, setOpen] = useState(false);
+    const [type, setType] = useState('cartonata')
+    const [paper, setPaper] = useState(papers['cartonata'].papers[0])
+    const [open, setOpen] = useState(false)
     const [quantity, setQuantity] = useState(1)
     const [price, setPrice] = useState(2.7)
-    const [loading, setLoading] = useState(false)
 
     const handleColorClick = (e) => {
-        if (envelope.id != e.target.id) setLoading(true)
-
-        const chosenEnvelope = envelopes.find((envelope) => envelope.id == e.target.id)
-        setEnvelope(chosenEnvelope)
+        const chosenPapper = papers[type].papers.find((paper) => paper.hex === e.target.id)
+        setPaper(chosenPapper)
     }
+
+    useEffect(()=>{
+        setPaper(papers[type].papers[0])
+    }, [type])
 
     useEffect(() => {
         setPrice(quantity * 2.7)
     }, [quantity])
 
+    const paperColors = () => {
+        return papers[type].colors.map((color, idx) => {
+            return <div key={idx} id={color} onClick={(e) => handleColorClick(e)} className="color" style={{ backgroundColor: color }}></div>
+        })
+    }
 
-    useEffect(() => {
-        setLoading(false)
-    }, [envelope])
-
-    const envelopeColors = () => {
-        return envelopes.map(envelope => {
-            return <div key={envelope.id} id={envelope.id} onClick={(e) => handleColorClick(e)} className="color" style={{ backgroundColor: envelope.hex }}></div>
+    const getWeights = () => {
+        return papers[type].weights.map((w)=>{
+            return <p style={{ color: "#4f4f4f", fontSize: "16px", margin: "0.5rem", marginLeft: "0rem"}}>{w.weight}</p>
         })
     }
 
     return (
         <div className="card envelope">
-            {loading ? <CircularProgress className="progress" /> : null}
             <Image
-                src={`/assets/envelopes/${envelope.src}`}
-                height={359}
-                width={500}
-                alt="imagine plic"
+                src={`/assets/papers/${paper.src}`}
+                height={509}
+                width={300}
+                alt="imagine hartie"
             />
             <div className="card-envelope-footer">
                 <FontAwesomeIcon icon={faGripLines} size="2x" onClick={() => setOpen(!open)} />
                 <div className="colors-container">
-                    {envelopeColors()}
+                    {paperColors()}
                 </div>
             </div>{
                 open ?
@@ -56,20 +62,29 @@ export default function EnvelopeCard() {
                         <span>Compozitie</span>
                         <ul>
                             <li>
-                                <p>Hartie</p>
-                                <p>{envelope.papper}</p>
+                                <div className="model-container">
+                                    <FormControl variant="outlined">
+                                        <InputLabel id="demo-simple-select-outlined-label">Tip de hartie</InputLabel>
+                                        <Select
+                                            labelId="demo-simple-select-outlined-label"
+                                            id="demo-simple-select-outlined"
+                                            value={type}
+                                            onChange={(e) => setType(e.target.value)}
+                                            label="Tip de hartie"
+                                        >
+                                            <MenuItem value='cartonata'>Cartonata</MenuItem>
+                                            <MenuItem value='handmade'>Handmade</MenuItem>
+                                        </Select>
+                                    </FormControl>
+                                </div>
                             </li>
                             <li>
                                 <p>Culoare</p>
-                                <p>{envelope.color}</p>
+                                <p>{paper.color}</p>
                             </li>
                             <li>
-                                <p>Dimensiune</p>
-                                <p>{envelope.smallSize} / {envelope.bigSize}</p>
-                            </li>
-                            <li>
-                                <p>Gramaj</p>
-                                <p>{envelope.smallWeight} / {envelope.largeWeight}</p>
+                                <p>Gramaje</p>
+                                <p>{getWeights()}</p>
                             </li>
                         </ul>
                         <hr />

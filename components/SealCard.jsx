@@ -55,7 +55,7 @@ export default function SealCard() {
                 alt="imagine sigiliu"
             />
             <div className="card-seal-footer">
-                <FontAwesomeIcon icon={faGripLines} onClick={() => setOpen(!open)} />
+                <FontAwesomeIcon icon={faGripLines} size="2x" onClick={() => setOpen(!open)} />
                 <div className="colors-container">
                     {sealColors()}
                 </div>

@@ -12,8 +12,8 @@ export default function NavSteps(props) {
             {showSteps}
         </div>
         <div className="navstepts pagination">
-            <div className="pagination-button prev"><FontAwesomeIcon icon={faAngleLeft}/><span>Pasul Anterior</span></div>
-            <div className="pagination-button next"><span>Pasul Urmator</span><FontAwesomeIcon icon={faAngleRight}/></div>
+            <div className="pagination-button prev"><FontAwesomeIcon size="2x" icon={faAngleLeft}/><span>Pasul Anterior</span></div>
+            <div className="pagination-button next"><span>Pasul Urmator</span><FontAwesomeIcon size="2x" icon={faAngleRight}/></div>
         </div>
     </div>
 }

@@ -103,7 +103,6 @@ li {
   cursor: pointer;
   margin-top: 0.5rem;
   color: #B4BBB0;
-  font-size: 1.8rem;
   margin-top: 0.5rem;
   color: #9DA499;
   margin-left: 0.5rem;
@@ -427,9 +426,6 @@ li {
 .navstepts.pagination .next span {
   margin: 0rem 1rem;
 }
-.navstepts.pagination .next .fa-angle-right {
-  font-size: 1.5em;
-}
 .navstepts.pagination .next:hover,
 .navstepts.pagination .prev:hover {
   color: #CAAE88;
@@ -439,9 +435,6 @@ li {
 }
 .navstepts.pagination .prev span {
   margin: 0rem 1rem;
-}
-.navstepts.pagination .prev .fa-angle-left {
-  font-size: 1.5em;
 }
 
 .navsteps-component-wraper {

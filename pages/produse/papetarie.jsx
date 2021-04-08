@@ -1,5 +1,6 @@
 import EnvelopeCard from '../../components/EnvelopeCard'
 import SealCard from '../../components/SealCard'
+import PaperCard from '../../components/PaperCard'
 
 export default function Papetarie() {
     return (
@@ -7,6 +8,7 @@ export default function Papetarie() {
             <div className="cards-container" id="produse">
                 <EnvelopeCard/>
                 <SealCard/>
+                <PaperCard/>
             </div>
         </>
     )

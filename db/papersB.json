@@ -1,0 +1,130 @@
+{
+    "handmade" : {
+        "colors" : [
+            "#e4e4da",
+            "#bbbab6",
+            "#cca4a1"
+        ],
+        "weights": [
+            {
+                "weight": "270 g",
+                "price": 2.7
+            },
+            {
+                "weight": "280 g",
+                "price": 2.8
+            },
+            {
+                "weight": "290 g",
+                "price": 2.8
+            },
+            {
+                "weight": "300 g",
+                "price": 3.0
+            }
+        ],
+        "papers" : [
+            {
+                "id": 1,
+                "src": "handmade_white.png",
+                "type": "handmade",
+                "color": "alb",
+                "hex": "#e4e4da"
+            },
+            {
+                "id": 2,
+                "src": "handmade_gris.png",
+                "type": "handmade",
+                "color": "gri",
+                "hex": "#bbbab6"
+            },
+            {
+                "id": 3,
+                "src": "handmade_pink.png",
+                "type": "handmade",
+                "color": "roz",
+                "hex": "#cca4a1"
+            }
+        ]
+    },
+    "cartonata" : {
+        "colors" : [
+            "#cca4a1",
+            "#54b29c",
+            "#94aba8",
+            "#d4c4ac",
+            "#bbbab6",
+            "#b5ac88",
+            "#e4e4da"
+        ],
+        "weights": [
+            {
+                "weight": "270 g",
+                "price": 2.7
+            },
+            {
+                "weight": "280 g",
+                "price": 2.8
+            },
+            {
+                "weight": "290 g",
+                "price": 2.8
+            },
+            {
+                "weight": "300 g",
+                "price": 3.0
+            }
+        ],
+        "papers" : [
+            {
+                "id": 4,
+                "src": "cartonata_pink.png",
+                "type": "cartonata",
+                "color": "roz",
+                "hex": "#cca4a1"
+            },
+            {
+                "id": 5,
+                "src": "cartonata_green.png",
+                "type": "cartonata",
+                "color": "verde",
+                "hex": "#54b29c"
+            },
+            {
+                "id": 6,
+                "src": "cartonata_brown.png",
+                "type": "cartonata",
+                "color": "crem",
+                "hex": "#d4c4ac"
+            },
+            {
+                "id": 7,
+                "src": "cartonata_blue.png",
+                "type": "cartonata",
+                "color": "albastru",
+                "hex": "#94aba8"
+            },
+            {
+                "id": 8,
+                "src": "cartonata_texturata.png",
+                "type": "cartonata",
+                "color": "gri",
+                "hex": "#bbbab6"
+            },
+            {
+                "id": 9,
+                "src": "cartonata_insertii.png",
+                "type": "cartonata",
+                "color": "insertii aurii",
+                "hex": "#b5ac88"
+            },
+            {
+                "id": 10,
+                "src": "cartonata_white.png",
+                "type": "cartonata",
+                "color": "alb",
+                "hex": "#e4e4da"
+            }
+        ]
+    }
+}

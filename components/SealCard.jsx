@@ -10,7 +10,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 
 const seals = require('../db/seals.json');
 
-export default function SealCard() {
+export default function SealCard({ productType, selectedItems, addToOrder, quantitySelection }) {
     const [hex, setColor] = useState('#3e260f')
     const [seal, setSeal] = useState(seals['#3e260f'][0]);
     const [model, setModel] = useState(seals['#3e260f'][0]['model']);
@@ -19,9 +19,12 @@ export default function SealCard() {
     const [quantity, setQuantity] = useState(1)
     const [price, setPrice] = useState(1.5)
 
+    const productTypeAlreadyInOrder = () => selectedItems && selectedItems[productType] || false
+
     useEffect(() => {
         const newSeal = seals[hex].find((seal) => seal.model === model)
         setSeal(newSeal);
+        if (productTypeAlreadyInOrder()) addToOrder(productType, `${newSeal.model} | ${newSeal.color}`, price)
     }, [hex])
 
     useEffect(() => {
@@ -44,6 +47,7 @@ export default function SealCard() {
         const newSeal = seals[hex].find((seal) => seal.model === e.target.value)
         setSeal(newSeal);
         setModel(newSeal.model)
+        if (productTypeAlreadyInOrder()) addToOrder(productType, `${newSeal.model} | ${newSeal.color}`, price)
     }
 
     return (
@@ -78,23 +82,29 @@ export default function SealCard() {
                     <>
                         <hr />
                         <div className="card-calculator">
-                            <TextField
-                                className="card-calculator-quantity"
-                                id="outlined-number"
-                                label="Cantitate"
-                                type="number"
-                                InputLabelProps={{
-                                    shrink: true,
-                                }}
-                                variant="outlined"
-                                value={quantity}
-                                onChange={(e) => setQuantity(e.target.value)}
-                            />
+                            {quantitySelection === 'doNotShow' ?
+                                null :
+                                <TextField
+                                    className="card-calculator-quantity"
+                                    id="outlined-number"
+                                    label="Cantitate"
+                                    type="number"
+                                    InputLabelProps={{
+                                        shrink: true,
+                                    }}
+                                    variant="outlined"
+                                    value={quantity}
+                                    onChange={(e) => setQuantity(e.target.value)}
+                                />
+                            }
                             <div className="card-calculator-price">
                                 <p>Pret</p>
                                 <hr />
                                 <p><b>{price.toFixed(2)}</b> lei</p>
                             </div>
+                            {productTypeAlreadyInOrder() ?
+                                null :
+                                <button onClick={() => addToOrder(productType, `${seal.model} | ${seal.color}`, price)}>Add to order</button>}
                         </div>
                     </> : null
             }

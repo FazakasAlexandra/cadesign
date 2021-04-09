@@ -6,24 +6,25 @@ import { faGripLines } from '@fortawesome/free-solid-svg-icons'
 import CircularProgress from '@material-ui/core/CircularProgress';
 const envelopes = require('../db/envelopes.json');
 
-export default function EnvelopeCard() {
+export default function EnvelopeCard({ productType, selectedItems, addToOrder, quantitySelection }) {
     const [envelope, setEnvelope] = useState(envelopes[0]);
     const [open, setOpen] = useState(false);
     const [quantity, setQuantity] = useState(1)
     const [price, setPrice] = useState(2.7)
     const [loading, setLoading] = useState(false)
 
+    const productTypeAlreadyInOrder = () => selectedItems[productType] || false
+
     const handleColorClick = (e) => {
         if (envelope.id != e.target.id) setLoading(true)
-
         const chosenEnvelope = envelopes.find((envelope) => envelope.id == e.target.id)
         setEnvelope(chosenEnvelope)
+        if (productTypeAlreadyInOrder()) addToOrder(productType, `${chosenEnvelope.papper} | ${chosenEnvelope.color}`, price)
     }
 
     useEffect(() => {
         setPrice(quantity * 2.7)
     }, [quantity])
-
 
     useEffect(() => {
         setLoading(false)
@@ -74,23 +75,28 @@ export default function EnvelopeCard() {
                         </ul>
                         <hr />
                         <div className="card-calculator">
-                            <TextField
-                                className="card-calculator-quantity"
-                                id="outlined-number"
-                                label="Cantitate"
-                                type="number"
-                                InputLabelProps={{
-                                    shrink: true,
-                                }}
-                                variant="outlined"
-                                value={quantity}
-                                onChange={(e) => setQuantity(e.target.value)}
-                            />
+                            {quantitySelection === 'doNotShow' ?
+                                null :
+                                <TextField
+                                    className="card-calculator-quantity"
+                                    id="outlined-number"
+                                    label="Cantitate"
+                                    type="number"
+                                    InputLabelProps={{
+                                        shrink: true,
+                                    }}
+                                    variant="outlined"
+                                    value={quantity}
+                                    onChange={(e) => setQuantity(e.target.value)}
+                                />}
                             <div className="card-calculator-price">
                                 <p>Pret</p>
                                 <hr />
                                 <p><b>{price.toFixed(2)}</b> lei</p>
                             </div>
+                            {productTypeAlreadyInOrder() ?
+                                null :
+                                <button onClick={() => addToOrder(productType, `${envelope.papper} | ${envelope.color}`, price)}>Add to order</button>}
                         </div>
                     </div> : null
             }

@@ -19,14 +19,12 @@ export default function SealCard({ productType, selectedItems, addToOrder, quant
     const [quantity, setQuantity] = useState(1)
     const [price, setPrice] = useState(1.5)
 
-    const productTypeAlreadyInOrder = () => {
-        if (_.isEmpty(selectedItems)) return false
-        return selectedItems[productType]
-    }
+    const productTypeAlreadyInOrder = () => selectedItems[productType] || false
 
     useEffect(() => {
         const newSeal = seals[hex].find((seal) => seal.model === model)
         setSeal(newSeal);
+        if (productTypeAlreadyInOrder()) addToOrder(productType, `${newSeal.model} | ${newSeal.color}`, price)
     }, [hex])
 
     useEffect(() => {
@@ -49,7 +47,7 @@ export default function SealCard({ productType, selectedItems, addToOrder, quant
         const newSeal = seals[hex].find((seal) => seal.model === e.target.value)
         setSeal(newSeal);
         setModel(newSeal.model)
-        if (productTypeAlreadyInOrder()) return addToOrder(productType, `${newSeal.model} | ${newSeal.color}`, price)
+        if (productTypeAlreadyInOrder()) addToOrder(productType, `${newSeal.model} | ${newSeal.color}`, price)
     }
 
     return (

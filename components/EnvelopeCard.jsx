@@ -4,7 +4,6 @@ import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGripLines } from '@fortawesome/free-solid-svg-icons'
 import CircularProgress from '@material-ui/core/CircularProgress';
-import _ from "lodash";
 const envelopes = require('../db/envelopes.json');
 
 export default function EnvelopeCard({ productType, selectedItems, addToOrder, quantitySelection }) {
@@ -14,18 +13,13 @@ export default function EnvelopeCard({ productType, selectedItems, addToOrder, q
     const [price, setPrice] = useState(2.7)
     const [loading, setLoading] = useState(false)
 
-    console.log(quantitySelection)
-
-    const productTypeAlreadyInOrder = () => {
-        if (_.isEmpty(selectedItems)) return false
-        return selectedItems[productType]
-    }
+    const productTypeAlreadyInOrder = () => selectedItems[productType] || false
 
     const handleColorClick = (e) => {
         if (envelope.id != e.target.id) setLoading(true)
         const chosenEnvelope = envelopes.find((envelope) => envelope.id == e.target.id)
         setEnvelope(chosenEnvelope)
-        if (productTypeAlreadyInOrder()) return addToOrder(productType, `${chosenEnvelope.papper} | ${chosenEnvelope.color}`, price)
+        if (productTypeAlreadyInOrder()) addToOrder(productType, `${chosenEnvelope.papper} | ${chosenEnvelope.color}`, price)
     }
 
     useEffect(() => {

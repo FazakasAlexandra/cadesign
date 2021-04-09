@@ -12,7 +12,7 @@ export default function PricesTotal({ selectedItems, setSelectedItems }) {
             </li>
         )
     })
-    const totalPrice = 0
+    const totalPrice = 0 
 
     return <div className="receipt">
         <div className="prices-info">

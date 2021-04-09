@@ -49,7 +49,7 @@ export default function SealCard({ productType, selectedItems, addToOrder, quant
         const newSeal = seals[hex].find((seal) => seal.model === e.target.value)
         setSeal(newSeal);
         setModel(newSeal.model)
-        if (productTypeAlreadyInOrder()) return addToOrder(productType, newSeal.model, price)
+        if (productTypeAlreadyInOrder()) return addToOrder(productType, `${newSeal.model} | ${newSeal.color}`, price)
     }
 
     return (
@@ -106,7 +106,7 @@ export default function SealCard({ productType, selectedItems, addToOrder, quant
                             </div>
                             {productTypeAlreadyInOrder() ?
                                 null :
-                                <button onClick={() => addToOrder(productType, seal.model, price)}>Add to order</button>}
+                                <button onClick={() => addToOrder(productType, `${seal.model} | ${seal.color}`, price)}>Add to order</button>}
                         </div>
                     </> : null
             }

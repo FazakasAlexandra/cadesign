@@ -16,13 +16,14 @@ export default function PaperCard() {
     const [open, setOpen] = useState(false)
     const [quantity, setQuantity] = useState(1)
     const [price, setPrice] = useState(2.7)
-
+    const [weight, setWeight] = useState(papers.weights[0])
+    console.log(papers.weights)
     const handleColorClick = (e) => {
         const chosenPapper = papers[type].papers.find((paper) => paper.hex === e.target.id)
         setPaper(chosenPapper)
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         setPaper(papers[type].papers[0])
     }, [type])
 
@@ -37,19 +38,27 @@ export default function PaperCard() {
     }
 
     const getWeights = () => {
-        return papers[type].weights.map((w,idx)=>{
-            return <i key={idx}>{w.weight}</i>
+        return papers.weights.map((w, idx) => {
+            return <i
+                className={weight === w ? 'active' : null}
+                id={w}
+                key={idx}
+                onClick={() => setWeight(w)}>
+                {w}
+            </i>
         })
     }
 
     return (
         <div className="card paper">
-            <Image
-                src={`/assets/papers/${paper.src}`}
-                height={509}
-                width={300}
-                alt="imagine hartie"
-            />
+            <div className="img-container">
+                <Image
+                    src={`/assets/papers/${paper.src}`}
+                    height={509}
+                    width={300}
+                    alt="imagine hartie"
+                />
+            </div>
             <div className="card-paper-footer">
                 <FontAwesomeIcon icon={faGripLines} size="2x" onClick={() => setOpen(!open)} />
                 <div className="colors-container">

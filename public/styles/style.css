@@ -206,7 +206,8 @@ li {
   font-style: normal;
   margin: 0.2rem 0rem 0.2rem 0rem;
 }
-.card.paper .card-info .gramaje-container i:hover {
+.card.paper .card-info .gramaje-container i:hover,
+.card.paper .card-info .gramaje-container .active {
   color: #CAAE88;
 }
 
@@ -531,6 +532,14 @@ li {
 @media (max-width: 600px) {
   .cards-container .card {
     margin: 0.5rem 0.5rem;
+  }
+
+  .card.paper {
+    width: 100%;
+  }
+  .card.paper .img-container:nth-child(1) {
+    width: fit-content;
+    align-self: center;
   }
 
   .card.seal {

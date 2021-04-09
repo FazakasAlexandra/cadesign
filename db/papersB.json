@@ -1,27 +1,15 @@
 {
+    "weights": [
+        "270 g",
+        "300 g",
+        "350 g"
+    ],
+
     "handmade" : {
         "colors" : [
             "#e4e4da",
             "#bbbab6",
             "#cca4a1"
-        ],
-        "weights": [
-            {
-                "weight": "270 g",
-                "price": 2.7
-            },
-            {
-                "weight": "280 g",
-                "price": 2.8
-            },
-            {
-                "weight": "290 g",
-                "price": 2.8
-            },
-            {
-                "weight": "300 g",
-                "price": 3.0
-            }
         ],
         "papers" : [
             {
@@ -56,24 +44,6 @@
             "#bbbab6",
             "#b5ac88",
             "#e4e4da"
-        ],
-        "weights": [
-            {
-                "weight": "270 g",
-                "price": 2.7
-            },
-            {
-                "weight": "280 g",
-                "price": 2.8
-            },
-            {
-                "weight": "290 g",
-                "price": 2.8
-            },
-            {
-                "weight": "300 g",
-                "price": 3.0
-            }
         ],
         "papers" : [
             {

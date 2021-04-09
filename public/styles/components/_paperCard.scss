@@ -21,7 +21,8 @@
                 font-style: normal;
                 margin: 0.2rem 0rem 0.2rem 0rem;
             }
-            i:hover {
+            i:hover,
+            .active {
                 color: $gold;
             }
         }

@@ -8,7 +8,7 @@ export default function PricesTotal({ selectedItems, setSelectedItems }) {
         return (
             <li key={i} id={itemName} className="receipt-item">
                 <span>{itemName}</span>  <span>{price.toFixed(2)} lei</span>
-                <FontAwesomeIcon icon={faMinusCircle} onClick={e => setSelectedItems(_.omit(selectedItems, productType))} />
+                <FontAwesomeIcon icon={faMinusCircle} onClick={() => setSelectedItems(_.omit(selectedItems, productType))} />
             </li>
         )
     })

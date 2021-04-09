@@ -10,7 +10,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 
 const seals = require('../db/seals.json');
 
-export default function SealCard({ productType, selectedItems, addToOrder, quantitySelection }) {
+export default function SealCard({ productType, selectedItems, addToOrder }) {
     const [hex, setColor] = useState('#3e260f')
     const [seal, setSeal] = useState(seals['#3e260f'][0]);
     const [model, setModel] = useState(seals['#3e260f'][0]['model']);
@@ -19,7 +19,7 @@ export default function SealCard({ productType, selectedItems, addToOrder, quant
     const [quantity, setQuantity] = useState(1)
     const [price, setPrice] = useState(1.5)
 
-    const productTypeAlreadyInOrder = () => selectedItems[productType] || false
+    const productTypeAlreadyInOrder = () => selectedItems && selectedItems[productType] || false
 
     useEffect(() => {
         const newSeal = seals[hex].find((seal) => seal.model === model)
@@ -82,7 +82,7 @@ export default function SealCard({ productType, selectedItems, addToOrder, quant
                     <>
                         <hr />
                         <div className="card-calculator">
-                            {quantitySelection === 'doNotShow' ?
+                            {selectedItems !== undefined ?
                                 null :
                                 <TextField
                                     className="card-calculator-quantity"
@@ -102,7 +102,7 @@ export default function SealCard({ productType, selectedItems, addToOrder, quant
                                 <hr />
                                 <p><b>{price.toFixed(2)}</b> lei</p>
                             </div>
-                            {productTypeAlreadyInOrder() ?
+                            {productTypeAlreadyInOrder() || selectedItems === undefined ?
                                 null :
                                 <button onClick={() => addToOrder(productType, `${seal.model} | ${seal.color}`, price)}>Add to order</button>}
                         </div>

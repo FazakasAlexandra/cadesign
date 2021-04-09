@@ -23,8 +23,7 @@ export default function Preturi() {
         <div className="navsteps-component-wraper">
             <NavSteps steps={steps} setSteps={setSteps}/>
         <div className="step-component">
-            <CurrentComponent 
-                quantitySelection={'doNotShow'} 
+            <CurrentComponent
                 productType={currentStep.productType} 
                 selectedItems={selectedItems} 
                 setSelectedItems={setSelectedItems} 

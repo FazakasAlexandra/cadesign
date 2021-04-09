@@ -6,14 +6,14 @@ import { faGripLines } from '@fortawesome/free-solid-svg-icons'
 import CircularProgress from '@material-ui/core/CircularProgress';
 const envelopes = require('../db/envelopes.json');
 
-export default function EnvelopeCard({ productType, selectedItems, addToOrder, quantitySelection }) {
+export default function EnvelopeCard({ productType, selectedItems, addToOrder }) {
     const [envelope, setEnvelope] = useState(envelopes[0]);
     const [open, setOpen] = useState(false);
     const [quantity, setQuantity] = useState(1)
     const [price, setPrice] = useState(2.7)
     const [loading, setLoading] = useState(false)
 
-    const productTypeAlreadyInOrder = () => selectedItems[productType] || false
+    const productTypeAlreadyInOrder = () => selectedItems && selectedItems[productType] || false
 
     const handleColorClick = (e) => {
         if (envelope.id != e.target.id) setLoading(true)
@@ -75,7 +75,7 @@ export default function EnvelopeCard({ productType, selectedItems, addToOrder, q
                         </ul>
                         <hr />
                         <div className="card-calculator">
-                            {quantitySelection === 'doNotShow' ?
+                            {selectedItems != undefined ?
                                 null :
                                 <TextField
                                     className="card-calculator-quantity"
@@ -94,7 +94,7 @@ export default function EnvelopeCard({ productType, selectedItems, addToOrder, q
                                 <hr />
                                 <p><b>{price.toFixed(2)}</b> lei</p>
                             </div>
-                            {productTypeAlreadyInOrder() ?
+                            {productTypeAlreadyInOrder() || selectedItems === undefined ?
                                 null :
                                 <button onClick={() => addToOrder(productType, `${envelope.papper} | ${envelope.color}`, price)}>Add to order</button>}
                         </div>

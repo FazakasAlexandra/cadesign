@@ -81,28 +81,28 @@ export default function EnvelopeCard({ productType, selectedItems, addToOrder, q
                         </ul>
                         <hr />
                         <div className="card-calculator">
-                            { quantitySelection === 'doNotShow' ? 
-                            null :
-                            <TextField
-                                className="card-calculator-quantity"
-                                id="outlined-number"
-                                label="Cantitate"
-                                type="number"
-                                InputLabelProps={{
-                                    shrink: true,
-                                }}
-                                variant="outlined"
-                                value={quantity}
-                                onChange={(e) => setQuantity(e.target.value)}
-                            />}
+                            {quantitySelection === 'doNotShow' ?
+                                null :
+                                <TextField
+                                    className="card-calculator-quantity"
+                                    id="outlined-number"
+                                    label="Cantitate"
+                                    type="number"
+                                    InputLabelProps={{
+                                        shrink: true,
+                                    }}
+                                    variant="outlined"
+                                    value={quantity}
+                                    onChange={(e) => setQuantity(e.target.value)}
+                                />}
                             <div className="card-calculator-price">
                                 <p>Pret</p>
                                 <hr />
                                 <p><b>{price.toFixed(2)}</b> lei</p>
                             </div>
-                            {productTypeAlreadyInOrder() ? 
-                            null :
-                            <button onClick={() => addToOrder(productType, `${envelope.papper} | ${envelope.color}`, price)}>Add to order</button>}
+                            {productTypeAlreadyInOrder() ?
+                                null :
+                                <button onClick={() => addToOrder(productType, `${envelope.papper} | ${envelope.color}`, price)}>Add to order</button>}
                         </div>
                     </div> : null
             }

@@ -10,7 +10,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 
 const seals = require('../db/seals.json');
 
-export default function SealCard() {
+export default function SealCard({ productType, selectedItems, addToOrder, quantitySelection }) {
     const [hex, setColor] = useState('#3e260f')
     const [seal, setSeal] = useState(seals['#3e260f'][0]);
     const [model, setModel] = useState(seals['#3e260f'][0]['model']);
@@ -18,6 +18,11 @@ export default function SealCard() {
     const [open, setOpen] = useState(false);
     const [quantity, setQuantity] = useState(1)
     const [price, setPrice] = useState(1.5)
+
+    const productTypeAlreadyInOrder = () => {
+        if (_.isEmpty(selectedItems)) return false
+        return selectedItems[productType]
+    }
 
     useEffect(() => {
         const newSeal = seals[hex].find((seal) => seal.model === model)
@@ -44,6 +49,7 @@ export default function SealCard() {
         const newSeal = seals[hex].find((seal) => seal.model === e.target.value)
         setSeal(newSeal);
         setModel(newSeal.model)
+        if (productTypeAlreadyInOrder()) return addToOrder(productType, newSeal.model, price)
     }
 
     return (
@@ -100,7 +106,7 @@ export default function SealCard() {
                             </div>
                             {productTypeAlreadyInOrder() ?
                                 null :
-                                <button onClick={() => addToOrder(productType, `${envelope.papper} | ${envelope.color}`, price)}>Add to order</button>}
+                                <button onClick={() => addToOrder(productType, seal.model, price)}>Add to order</button>}
                         </div>
                     </> : null
             }

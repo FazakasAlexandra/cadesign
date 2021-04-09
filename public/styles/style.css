@@ -43,6 +43,24 @@ li {
   height: fit-content;
   position: relative;
 }
+.cards-container .card .add-button,
+.preturi .card .add-button {
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  font-size: 18px;
+  color: #777771;
+  background-color: white;
+  box-shadow: 0px 1px 4px 1px rgba(23, 23, 23, 0.13);
+  border-radius: 10px;
+  width: fit-content;
+  border-style: solid;
+  border-width: thin;
+  border-color: #c6c6bd;
+}
+.cards-container .card .add-button:hover,
+.preturi .card .add-button:hover {
+  color: #CAAE88;
+}
 .cards-container .card .progress,
 .preturi .card .progress {
   position: absolute;
@@ -87,7 +105,8 @@ li {
 .preturi .card-info ul li p {
   margin: 0.5rem;
 }
-.cards-container .card-info ul li p:nth-child(1), .cards-container .card-info ul li span,
+.cards-container .card-info ul li p:nth-child(1),
+.cards-container .card-info ul li span,
 .preturi .card-info ul li p:nth-child(1),
 .preturi .card-info ul li span {
   margin-bottom: 0rem;
@@ -209,6 +228,26 @@ li {
 .card.paper .card-info .gramaje-container i:hover,
 .card.paper .card-info .gramaje-container .active {
   color: #CAAE88;
+}
+
+.card.addons {
+  width: 500px;
+}
+.card.addons .img-wraper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card.addons .img-wraper div:nth-child(1) {
+  height: fit-content;
+}
+.card.addons .img-wraper .select-wraper {
+  margin-top: 1.3rem;
+}
+.card.addons .addons-wraper {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0rem;
 }
 
 .order-steps-cards {
@@ -360,7 +399,7 @@ li {
   }
 }
 .price-calculator {
-  min-width: 300px;
+  min-width: 350px;
   max-width: 300px;
   height: fit-content;
   background-color: white;
@@ -388,10 +427,23 @@ li {
 .price-calculator .receipt-content {
   padding: 0rem 1rem 1rem;
 }
+.price-calculator .receipt-content h3 {
+  color: #70746e;
+}
 .price-calculator .receipt-item {
   display: flex;
   justify-content: space-between;
   padding: 10px 0px;
+}
+.price-calculator .receipt-item span {
+  max-width: 220px;
+}
+.price-calculator .receipt-item .remove {
+  cursor: pointer;
+  color: #9da499;
+}
+.price-calculator .receipt-item .remove:hover {
+  color: #c73737;
 }
 .price-calculator .receipt-price {
   border-left-style: solid;
@@ -469,6 +521,7 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 530px;
 }
 .navsteps-component-wraper .navsteps-wraper {
   width: 100%;
@@ -535,7 +588,7 @@ li {
   }
 
   .card.paper {
-    width: 100%;
+    width: 94%;
   }
   .card.paper .img-container:nth-child(1) {
     width: fit-content;
@@ -543,7 +596,7 @@ li {
   }
 
   .card.seal {
-    width: 91%;
+    width: 94%;
     justify-content: flex-end;
     display: flex;
     flex-direction: column;
@@ -601,6 +654,10 @@ nav {
 .page.preturi {
   margin-top: 2rem;
   flex-wrap: wrap;
+}
+
+.page.preturi .card-calculator {
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=style.css.map */

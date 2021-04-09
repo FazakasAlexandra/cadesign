@@ -19,7 +19,7 @@ export default function EnvelopeCard({ productType, selectedItems, addToOrder })
         if (envelope.id != e.target.id) setLoading(true)
         const chosenEnvelope = envelopes.find((envelope) => envelope.id == e.target.id)
         setEnvelope(chosenEnvelope)
-        if (productTypeAlreadyInOrder()) addToOrder(productType, `${chosenEnvelope.papper} | ${chosenEnvelope.color}`, price)
+        if (productTypeAlreadyInOrder()) addToOrder(productType, `Plic | Hartie ${chosenEnvelope.papper} | Culoare ${chosenEnvelope.color}`, price)
     }
 
     useEffect(() => {
@@ -96,7 +96,7 @@ export default function EnvelopeCard({ productType, selectedItems, addToOrder })
                             </div>
                             {productTypeAlreadyInOrder() || selectedItems === undefined ?
                                 null :
-                                <button onClick={() => addToOrder(productType, `${envelope.papper} | ${envelope.color}`, price)}>Add to order</button>}
+                                <button className="add-button" onClick={() => addToOrder(productType, `Plic | Hartie ${envelope.papper} | Culoare ${envelope.color}`, price)}>Adauga</button>}
                         </div>
                     </div> : null
             }

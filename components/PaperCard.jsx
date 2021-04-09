@@ -10,18 +10,21 @@ import MenuItem from '@material-ui/core/MenuItem';
 import CircularProgress from '@material-ui/core/CircularProgress';
 const papers = require('../db/papersB.json');
 
-export default function PaperCard() {
+export default function PaperCard({ productType, selectedItems, addToOrder }) {
     const [type, setType] = useState('cartonata')
     const [paper, setPaper] = useState(papers['cartonata'].papers[0])
     const [open, setOpen] = useState(false)
     const [quantity, setQuantity] = useState(1)
     const [price, setPrice] = useState(2.7)
     const [weight, setWeight] = useState(papers.weights[0])
-    console.log(papers.weights)
+
     const handleColorClick = (e) => {
         const chosenPapper = papers[type].papers.find((paper) => paper.hex === e.target.id)
         setPaper(chosenPapper)
+        if (productTypeAlreadyInOrder()) addToOrder(productType, `${chosenEnvelope.papper} | ${chosenEnvelope.color}`, price)
     }
+
+    const productTypeAlreadyInOrder = () => selectedItems && selectedItems[productType] || false
 
     useEffect(() => {
         setPaper(papers[type].papers[0])
@@ -98,23 +101,34 @@ export default function PaperCard() {
                         </ul>
                         <hr />
                         <div className="card-calculator">
-                            <TextField
-                                className="card-calculator-quantity"
-                                id="outlined-number"
-                                label="Cantitate"
-                                type="number"
-                                InputLabelProps={{
-                                    shrink: true,
-                                }}
-                                variant="outlined"
-                                value={quantity}
-                                onChange={(e) => setQuantity(e.target.value)}
-                            />
+                            {selectedItems !== undefined ? null :
+                                <TextField
+                                    className="card-calculator-quantity"
+                                    id="outlined-number"
+                                    label="Cantitate"
+                                    type="number"
+                                    InputLabelProps={{
+                                        shrink: true,
+                                    }}
+                                    variant="outlined"
+                                    value={quantity}
+                                    onChange={(e) => setQuantity(e.target.value)}
+                                />
+                            }
                             <div className="card-calculator-price">
                                 <p>Pret</p>
                                 <hr />
                                 <p><b>{price.toFixed(2)}</b> lei</p>
                             </div>
+                            {productTypeAlreadyInOrder() || selectedItems === undefined ?
+                                null :
+                                <button
+                                    className="add-button"
+                                    onClick={() => addToOrder(productType, `Hartie ${type} | Culoare ${paper.color} | ${weight}`, price)}
+                                >
+                                    Adauga
+                                 </button>
+                            }
                         </div>
                     </div> : null
             }

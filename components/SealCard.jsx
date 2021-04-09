@@ -24,7 +24,7 @@ export default function SealCard({ productType, selectedItems, addToOrder }) {
     useEffect(() => {
         const newSeal = seals[hex].find((seal) => seal.model === model)
         setSeal(newSeal);
-        if (productTypeAlreadyInOrder()) addToOrder(productType, `${newSeal.model} | ${newSeal.color}`, price)
+        if (productTypeAlreadyInOrder()) addToOrder(productType, `Sigiliu | Model ${newSeal.model} | Culoare ${newSeal.color}`, price)
     }, [hex])
 
     useEffect(() => {
@@ -47,7 +47,7 @@ export default function SealCard({ productType, selectedItems, addToOrder }) {
         const newSeal = seals[hex].find((seal) => seal.model === e.target.value)
         setSeal(newSeal);
         setModel(newSeal.model)
-        if (productTypeAlreadyInOrder()) addToOrder(productType, `${newSeal.model} | ${newSeal.color}`, price)
+        if (productTypeAlreadyInOrder()) addToOrder(productType, `Sigiliu | Model ${newSeal.model} | Culoare ${newSeal.color}`, price)
     }
 
     return (
@@ -104,7 +104,7 @@ export default function SealCard({ productType, selectedItems, addToOrder }) {
                             </div>
                             {productTypeAlreadyInOrder() || selectedItems === undefined ?
                                 null :
-                                <button onClick={() => addToOrder(productType, `${seal.model} | ${seal.color}`, price)}>Add to order</button>}
+                                <button className="add-button" onClick={() => addToOrder(productType, `Sigiliu | Model ${seal.model} | Culoare ${seal.color}`, price)}>Adauga</button>}
                         </div>
                     </> : null
             }

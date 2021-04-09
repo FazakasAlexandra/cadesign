@@ -1,5 +1,5 @@
 .price-calculator {
-    min-width: 300px;
+    min-width: 350px;
     max-width: 300px;
     height: fit-content;
     background-color: white;
@@ -29,13 +29,27 @@
         }
 
         &-content {
-            padding: 0rem 1rem 1rem
+            padding: 0rem 1rem 1rem;
+
+            h3{
+                color: #70746e;
+            }
         }
 
         &-item {
             display: flex;
             justify-content: space-between;
             padding: 10px 0px;
+            span{
+                max-width: 220px;
+            }
+            .remove{
+                cursor:pointer;
+                color: #9da499;
+            }
+            .remove:hover{
+                color: rgb(199, 55, 55);
+            }
         }
 
         &-price {

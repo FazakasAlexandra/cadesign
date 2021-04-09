@@ -2,71 +2,83 @@
     "id": 1,
     "model": "crenguta cu flori",
     "src" : "sigiliu_bronz_crengutaflori_1.5ron.png",
+    "color": "bronz",
     "pret": 1.5
 },
 {
     "id": 2,
     "model": "crenguta simpla",
     "src" : "sigiliu_bronz_crengutasimpla_1.5ron.png",
+    "color": "bronz",
     "pret": 1.5
 },
 {
     "id": 3,
     "model": "inscriptie cu drag",
     "src" : "sigiliu_bronz_cu_drag_1.5ron.png",
+    "color": "bronz",
     "pret": 1.5
 },
 {
     "id": 4,
     "model": "design gol",
     "src" : "sigiliu_bronz_designgol_1.5ron.png",
+    "color": "bronz",
     "pret": 1.5
 },
 {
     "id": 5,
     "model": "eucalipt",
     "src" : "sigiliu_bronz_eucalipt_1.5ron.png",
+    "color": "bronz",
     "pret": 1.5
 },
 {
     "id": 6,
     "model": "frunza",
     "src" : "sigiliu_bronz_frunza_1.5ron.png",
+    "color": "bronz",
     "pret": 1.5
 }],
 "#c49c48" : [{
     "id": 1,
     "model": "crenguta cu flori",
     "src" : "sigiliu_auriu_crengutaflori_1.5ron.png",
+    "color": "auriu",
     "pret": 1.5
 },
 {
     "id": 2,
     "model": "crenguta simpla",
     "src" : "sigiliu_auriu_crengutasimpla_1.5ron.png",
+    "color": "auriu",
     "pret": 1.5
 },
 {
     "id": 3,
     "model": "inscriptie cu drag",
     "src" : "sigiliu_auriu_cu_drag_1.5ron.png",
+    "color": "auriu",
     "pret": 1.5
 },
 {
     "id": 4,
     "model": "design gol",
     "src" : "sigiliu_auriu_designgol_1.5ron.png",
+    "color": "auriu",
     "pret": 1.5
 },
 {
     "id": 5,
     "model": "eucalipt",
     "src" : "sigiliu_auriu_eucalipt_1.5ron.png",
+    "color": "auriu",
     "pret": 1.5
 },
 {
     "id": 6,
     "model": "frunza",
     "src" : "sigiliu_auriu_frunza_1.5ron.png",
+    "color": "auriu",
     "pret": 1.5
 }]}

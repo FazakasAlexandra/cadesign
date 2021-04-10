@@ -19,9 +19,8 @@ export default function PaperCard({ productType, selectedItems, addToOrder }) {
     const [weight, setWeight] = useState(papers.weights[0])
 
     const handleColorClick = (e) => {
-        const chosenPapper = papers[type].papers.find((paper) => paper.hex === e.target.id)
-        setPaper(chosenPapper)
-        if (productTypeAlreadyInOrder()) addToOrder(productType, `${chosenEnvelope.papper} | ${chosenEnvelope.color}`, price)
+        const chosenPaper = papers[type].papers.find((paper) => paper.hex === e.target.id)
+        setPaper(chosenPaper)
     }
 
     const productTypeAlreadyInOrder = () => selectedItems && selectedItems[productType] || false
@@ -33,6 +32,10 @@ export default function PaperCard({ productType, selectedItems, addToOrder }) {
     useEffect(() => {
         setPrice(quantity * 2.7)
     }, [quantity])
+
+    useEffect(()=>{
+        if (productTypeAlreadyInOrder()) addToOrder(productType, `Hartie ${type} | Culoare ${paper.color} | ${weight}`, price)
+    },[paper, weight])
 
     const paperColors = () => {
         return papers[type].colors.map((color, idx) => {

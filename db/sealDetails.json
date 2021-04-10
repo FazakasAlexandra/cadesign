@@ -1,0 +1,32 @@
+{
+    "none": [
+        {
+            "detailType": "none",
+            "material": "none",
+            "src": "plic_negru.png",
+            "price": 0
+        }
+    ],
+    "snur": [
+        {
+            "detailType": "snur",
+            "material": "bumbac",
+            "src": "snur_plic_1.5ron_extra.png",
+            "price": 1.5
+        }
+    ],
+    "panglica": [
+        {
+            "detailType": "panglica",
+            "material": "matase naturala",
+            "src": "panglica_matasenaturala_3ron.png",
+            "price": 3
+        },
+        {
+            "detailType": "panglica",
+            "material": "bumbac",
+            "src": "panglica_matasenaturala_3ron.png",
+            "price": 2
+        }
+    ]
+}

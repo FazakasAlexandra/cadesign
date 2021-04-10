@@ -1,0 +1,18 @@
+{
+    "none" : {
+        "id": 1,
+        "name": "none",
+        "src": "plic_verde.png",
+        "price": 0,
+        "w": "204",
+        "h": "144"
+    },
+    "interior decorat plic" : {
+        "id": 2,
+        "name": "interior decorat plic",
+        "src": "interiordecorat_plic_2ron.png",
+        "price": 2.0,
+        "w": "200",
+        "h": "240"
+    }
+}

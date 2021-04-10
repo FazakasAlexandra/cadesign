@@ -3,8 +3,10 @@ import { faMinusCircle } from '@fortawesome/free-solid-svg-icons'
 import _ from 'lodash'
 
 export default function PricesTotal({ selectedItems, setSelectedItems }) {
+    let totalPrice = 0
     const displayPrices = Object.keys(selectedItems).map((productType, i) => {
-        const { itemName, price } = selectedItems[productType] || []
+        const { itemName, price } = selectedItems[productType] || {}
+        totalPrice += price
         return (
             <li key={i} id={itemName} className="receipt-item">
                 <span>{itemName}</span>  <span>{price.toFixed(2)} lei</span>
@@ -12,7 +14,6 @@ export default function PricesTotal({ selectedItems, setSelectedItems }) {
             </li>
         )
     })
-    const totalPrice = 0
 
     return <div className="receipt">
         <div className="prices-info">

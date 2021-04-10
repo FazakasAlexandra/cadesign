@@ -1,9 +1,14 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMinusCircle } from '@fortawesome/free-solid-svg-icons'
 import _ from 'lodash'
+import TextField from '@material-ui/core/TextField';
+import React, { useState, useEffect } from "react";
 
 export default function PricesTotal({ selectedItems, setSelectedItems }) {
     let totalPrice = 0
+    const [quantity, setQuantity] = useState(1);
+
+
     const displayPrices = Object.keys(selectedItems).map((productType, i) => {
         const { itemName, price } = selectedItems[productType] || {}
         totalPrice += price
@@ -25,7 +30,22 @@ export default function PricesTotal({ selectedItems, setSelectedItems }) {
                 {displayPrices}
                 <hr />
             </div>
-            <span>Total <span className="receipt-price">{totalPrice.toFixed(2)} lei</span></span>
+            <div className="total">
+                <span>Total <span className="receipt-price">{(totalPrice * quantity).toFixed(2)} lei</span></span>
+                <TextField
+                    className="card-calculator-quantity"
+                    id="outlined-number"
+                    label="Cantitate"
+                    type="number"
+                    InputLabelProps={{
+                        shrink: true,
+                    }}
+                    variant="outlined"
+                    value={quantity}
+                    onChange={(e) => setQuantity(e.target.value)}
+                />
+            </div>
+            <button className="add-button">Comanda</button>
         </div>
     </div>
 

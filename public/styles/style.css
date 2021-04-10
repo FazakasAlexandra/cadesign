@@ -22,6 +22,30 @@ li {
   list-style: none;
 }
 
+.receipt .add-button,
+.card .add-button {
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  font-size: 18px;
+  color: #777771;
+  background-color: white;
+  box-shadow: 0px 1px 4px 1px rgba(23, 23, 23, 0.13);
+  border-radius: 10px;
+  width: fit-content;
+  border-style: solid;
+  border-width: thin;
+  border-color: #c6c6bd;
+}
+.receipt .add-button:hover,
+.card .add-button:hover {
+  color: #CAAE88;
+}
+
+.receipt .add-button {
+  width: 100%;
+  margin-top: 1rem;
+}
+
 .cards-container,
 .preturi {
   display: flex;
@@ -410,6 +434,11 @@ li {
 .price-calculator h4 {
   font-weight: 100;
   font-size: 20px;
+}
+.price-calculator .receipt .total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .price-calculator .receipt .prices-info {
   background-color: #9DA499;

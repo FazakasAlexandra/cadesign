@@ -13,6 +13,12 @@
     }
 
     .receipt {
+        .total {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
         .prices-info {
             background-color: #9DA499;
             padding: 1.5rem;
@@ -31,7 +37,7 @@
         &-content {
             padding: 0rem 1rem 1rem;
 
-            h3{
+            h3 {
                 color: #70746e;
             }
         }
@@ -40,14 +46,17 @@
             display: flex;
             justify-content: space-between;
             padding: 10px 0px;
-            span{
+
+            span {
                 max-width: 220px;
             }
-            .remove{
-                cursor:pointer;
+
+            .remove {
+                cursor: pointer;
                 color: #9da499;
             }
-            .remove:hover{
+
+            .remove:hover {
                 color: rgb(199, 55, 55);
             }
         }

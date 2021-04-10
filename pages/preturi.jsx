@@ -20,9 +20,7 @@ export default function Preturi() {
 
     const addToOrder = (productType, itemName, price) => setSelectedItems({ ...selectedItems, [productType]: { itemName, price } })
 
-    const removeFromOrder = (productType) => {
-        setSelectedItems(_.omit(selectedItems, productType))
-    }
+    const removeFromOrder = (productType) => setSelectedItems(_.omit(selectedItems, productType))
 
     const currentStep = steps.find(({ currentSelection }) => currentSelection === true)
     const CurrentComponent = currentStep.component

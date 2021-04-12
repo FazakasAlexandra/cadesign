@@ -8,7 +8,11 @@ import EnvelopeAddon from '../components/EnvelopeAddon';
 import SealAddon from '../components/SealAddon'
 
 export default function Preturi() {
-    const [selectedItems, setSelectedItems] = useState({}) // { [productType]: { <productName>: <price> }, ...}
+    const getItemsFromLocalStorage = () => {
+        if (typeof window !== "undefined") return JSON.parse(localStorage.getItem('selectedItems') || '{}')
+        return {}
+    }
+    const [selectedItems, setSelectedItems] = useState(getItemsFromLocalStorage) // { [productType]: { <productName>: <price> }, ...}
     const [steps, setSteps] = useState([
         { id: 1, productType: 'envelopes', currentSelection: true, component: EnvelopeCard },
         { id: 2, productType: 'paper', currentSelection: false, component: PaperCard },
@@ -18,9 +22,15 @@ export default function Preturi() {
         { id: 6, productType: 'menus', currentSelection: false, component: 'MenuCard' }
     ])
 
-    const addToOrder = (productType, itemName, price) => setSelectedItems({ ...selectedItems, [productType]: { itemName, price } })
+    const addToOrder = (productType, itemName, price) => {
+        setSelectedItems({ ...selectedItems, [productType]: { itemName, price } })
+        if (typeof window !== "undefined") localStorage.setItem('selectedItems', JSON.stringify(selectedItems))
+    }
 
-    const removeFromOrder = (productType) => setSelectedItems(_.omit(selectedItems, productType))
+    const removeFromOrder = (productType) => {
+        setSelectedItems(_.omit(selectedItems, productType))
+        if (typeof window !== "undefined") localStorage.setItem('selectedItems', JSON.stringify(selectedItems))
+    }
 
     const currentStep = steps.find(({ currentSelection }) => currentSelection === true)
     const CurrentComponent = currentStep.component

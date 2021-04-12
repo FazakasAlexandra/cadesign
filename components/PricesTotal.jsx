@@ -7,16 +7,17 @@ import React, { useState, useEffect } from "react";
 export default function PricesTotal({ selectedItems, setSelectedItems }) {
     let totalPrice = 0
     const [quantity, setQuantity] = useState(1);
+    const [email, setEmail] = useState('')
 
     const handleOrderSubmit = () => {
         Email.send({
             Host : "smtp.elasticemail.com",
             Username : "samannaphala@gmail.com",
-            Password : process.env.SMTP_PASSWORD,
+            Password : '717370EBF1DCA0F434803816E737D17E37F5',
             To : 'alexandra.fazakas91@gmail.com',
             From : "samannaphala@gmail.com",
             Subject : "CA Design - This is the order!!!",
-            Body : selectedItems
+            Body : { ...selectedItems, email }
         }).then(console.log)
     }
 
@@ -57,6 +58,7 @@ export default function PricesTotal({ selectedItems, setSelectedItems }) {
                     onChange={(e) => setQuantity(e.target.value)}
                 />
             </div>
+            <TextField className="card-calculator-quantity" label="Email" value={email} onChange={e => setEmail(e.target.value)}/>
             <button className="add-button" onClick={handleOrderSubmit}>Comanda</button>
         </div>
     </div>

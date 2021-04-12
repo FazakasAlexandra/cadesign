@@ -226,6 +226,40 @@ li {
   padding: 3rem 0rem 0.5rem;
 }
 
+.card.model .header p {
+  color: #8d8d8d;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+.card.model .header i {
+  text-transform: capitalize;
+  color: #8d8d8d;
+  font-size: 20px;
+}
+.card.model .wraper {
+  padding: 0rem 0.8rem;
+}
+.card.model .arrow {
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+  color: white;
+  background-color: #c9cec691;
+  border-radius: 100%;
+  padding: 0.6rem 1rem;
+  top: 45%;
+}
+.card.model .arrow:hover {
+  color: white;
+  background-color: #ffffff5e;
+}
+.card.model .arrow.R {
+  left: 31rem;
+}
+.card.model .arrow.L {
+  left: 2%;
+}
+
 .card.paper {
   display: flex;
   flex-direction: column;

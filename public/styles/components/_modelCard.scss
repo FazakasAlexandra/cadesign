@@ -1,0 +1,38 @@
+.card.model{
+    .header{
+        p {
+            color: #8d8d8d;
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+        i{
+            text-transform: capitalize;
+            color: #8d8d8d;
+            font-size: 20px;
+        }
+    }
+    .wraper{
+        padding: 0rem 0.8rem;
+    }
+
+    .arrow{
+        cursor: pointer;
+        position: absolute;
+        z-index: 1;
+        color: white;
+        background-color: #c9cec691;        
+        border-radius: 100%;
+        padding: 0.6rem 1rem;
+        top: 45%;
+    }
+    .arrow:hover{
+        color: white;
+        background-color: #ffffff5e;
+    }
+    .arrow.R{
+        left: 31rem;
+    }
+    .arrow.L{
+        left: 2%;
+    }
+}

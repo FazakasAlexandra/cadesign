@@ -86,6 +86,11 @@
     .navstepts.pagination .prev {
         margin-right: 0.6rem;
     }
+    .card.model {
+        .arrow.R{
+            left: 85%;
+        }
+    }
 
     .price-calculator {
         margin: 0rem;
@@ -103,6 +108,15 @@
             width: 100%;
         }
     }
+}
+
+@media(max-width:420px) {
+    .card.model {
+        .arrow.R{
+            left: 82%;
+        }
+    }
+
 }
 
 @media(max-width:394px) {

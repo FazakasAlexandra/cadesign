@@ -16,7 +16,7 @@
     },
     {
         "id" : 12,
-        "nume": "model elegant vintage",
+        "nume": "elegant vintage",
         "hartie card": "hartie din carton texturat",
         "hartie plic": "hartie din carton texturat",
         "card confirmari": "card confirmari carton texturat",
@@ -34,7 +34,7 @@
     },
     {
         "id" : 2,
-        "nume": "model brown cherry",
+        "nume": "brown cherry",
         "hartie card": "hartie de bumbac",
         "hartie plic": "carton texturat",
         "detaliu card": "invelit in hartie de calc cu imprimare digitala textura marbel",
@@ -44,8 +44,8 @@
         "sigiliu": "sigiliu din ceara de culoare maro",
         "pret": 10.5,
         "src": [
-            "MODEL BROWN-CHERRY_10.5 ron (2).jpg",
             "MODEL BROWN-CHERRY_10.5 ron (3).jpg",
+            "MODEL BROWN-CHERRY_10.5 ron (2).jpg",
             "MODEL BROWN-CHERRY_10.5 ron(4).jpg"
         ],
         "height":"tall"
@@ -53,7 +53,7 @@
     
     {
         "id" : 3,
-        "nume": "model wild elegant",
+        "nume": "wild elegant",
         "hartie card": "hartie de bumbac",
         "hartie plic": "carton texturat",
         "detaliu card": "marginile sunt rupe manual",
@@ -72,7 +72,7 @@
     },
     {
         "id" : 5,
-        "nume": "model little vintage",
+        "nume": "little vintage",
         "hartie card": "hartie de bumbac",
         "hartie plic": "carton texturat",
         "detaliu card": null,
@@ -89,7 +89,7 @@
     },
     {
         "id" : 6,
-        "nume": "model blue-oceanic",
+        "nume": "blue-oceanic",
         "hartie card": "hartie de bumbac",
         "hartie plic": "carton texturat",
         "card confirmari": null,
@@ -99,14 +99,14 @@
         "sigiliu": "sigiliu din ceara de culoarea bronzului",
         "pret": 10.5,
         "src": [
-            "model_blueoceanic_10.5ron (2).jpg",
-            "model_blueoceanic_10.5ron.jpg"
+            "model_blueoceanic_10.5ron.jpg",
+            "model_blueoceanic_10.5ron (2).jpg"
         ],
         "height":"tall"
     }, 
     {
         "id" : 7,
-        "nume": "model gold green",
+        "nume": "gold green",
         "hartie card": "hartie din bumbac",
         "hartie plic": "hartie din carton texturat",
         "card confirmari": null,
@@ -123,7 +123,7 @@
     },
     {
         "id" : 8,
-        "nume": "model handmade vintage",
+        "nume": "handmade vintage",
         "hartie card": "hartie din bumbac",
         "hartie plic": "hartie din carton texturat",
         "card confirmari": null,
@@ -145,12 +145,12 @@
     },
     {
         "id" : 9,
-        "nume": "model handmade pastel",
+        "nume": "handmade pastel",
         "hartie card": "hartie handmade",
         "hartie plic": "hartie din carton texturat",
         "card confirmari": null,
         "detaliu card": "marginile sunt rupe manual",
-        "detaliu plic": "plic emborsat",
+        "detaliu plic": "plic emborsat cu initialele mirilor",
         "detalii sigiliu": null,
         "sigiliu": "sigiliu din ceara de culoare aurie",
         "pret": 19,
@@ -161,7 +161,7 @@
     },
     {
         "id" : 10,
-        "nume": "model handmade vintage luxury",
+        "nume": "handmade vintage luxury",
         "hartie card": "hartie handmade",
         "hartie plic": "hartie din carton texturat",
         "card confirmari": null,
@@ -177,7 +177,7 @@
     },
     {
         "id" : 13,
-        "nume": "model blue elegant",
+        "nume": "blue elegant",
         "hartie card": "hartie din insertii auri",
         "hartie plic": "hartie din carton texturat",
         "card confirmari": "card confirmari carton texturat",
@@ -195,7 +195,7 @@
     },
     {
         "id" : 14,
-        "nume": "model handmade elegant",
+        "nume": "handmade elegant",
         "hartie card": "hartie handmade",
         "hartie plic": "hartie din carton texturat",
         "card confirmari": null,
@@ -212,7 +212,7 @@
     },
     {
         "id" : 15,
-        "nume": "model handmade elegant",
+        "nume": "handmade elegant",
         "hartie card": "hartie handmade",
         "hartie plic": "hartie din carton texturat",
         "card confirmari": null,
@@ -230,7 +230,7 @@
     },
     {
         "id" : 16,
-        "nume": "model handmade vintage green",
+        "nume": "handmade vintage green",
         "hartie card": "hartie handmade",
         "hartie plic": "hartie din carton texturat",
         "card confirmari": null,
@@ -246,7 +246,7 @@
     },
     {
         "id" : 17,
-        "nume": "model handmade gold",
+        "nume": "handmade gold",
         "hartie card": "hartie handmade",
         "hartie plic": "hartie din carton texturat",
         "card confirmari": null,
@@ -262,7 +262,7 @@
     },
     {
         "id" : 18,
-        "nume": "model luxury green/white",
+        "nume": "luxury green/white",
         "hartie card": "hartie handmade",
         "hartie plic": "hartie din carton texturat",
         "card confirmari": "card confirmari din hartie de bumbac",
@@ -281,7 +281,7 @@
     },
     {
         "id" : 11,
-        "nume": "model handmade vintage art",
+        "nume": "handmade vintage art",
         "hartie card": "hartie handmade",
         "hartie plic": "hartie din carton texturat",
         "card confirmari": null,
@@ -295,6 +295,24 @@
             "Model_vintageart_15ron.jpg",
             "Model_vintageart_15ron (2).jpg",
             "Model_vintageart_15ron (3).jpg"
+        ],
+        "height":"tall" 
+    },
+    {
+        "id" : 11,
+        "nume": "Handmade elegant green",
+        "hartie card": "hartie handmade",
+        "hartie plic": "hartie din carton texturat",
+        "card confirmari": null,
+        "detaliu card": "marginile sunt rupe manual, invelit cu hartie de calc",
+        "detaliu plic": null,
+        "detalii sigiliu": "sigiliu peste snur cerat verde",
+        "sigiliu": "sigiliu din ceara de culoare aurie",
+        "pret": 15,
+        "src": [
+            "model-handmadeelegantgreen-14.5ron (2).jpg",
+            "model-handmadeelegantgreen-14.5ron(5).jpg",
+            "model-handmadeelegantgreen-14.5ron(3).jpg"
         ],
         "height":"tall" 
     }

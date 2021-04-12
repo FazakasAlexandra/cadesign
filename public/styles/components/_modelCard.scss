@@ -1,4 +1,9 @@
 .card.model{
+    ul {
+        li p {
+            max-width: 30rem;
+        }
+    }
     .header{
         p {
             color: #8d8d8d;
@@ -30,7 +35,7 @@
         background-color: #ffffff5e;
     }
     .arrow.R{
-        left: 31rem;
+        left: 88%;
     }
     .arrow.L{
         left: 2%;

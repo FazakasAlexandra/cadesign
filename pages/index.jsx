@@ -75,6 +75,7 @@ export default function HomePage() {
           loggedOutGreeting="Buna, suntem aici pentru a raspunde la orice intrebari !"
         />
       </div>
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
       </html>
   )
 }

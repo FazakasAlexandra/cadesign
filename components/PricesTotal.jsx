@@ -8,6 +8,18 @@ export default function PricesTotal({ selectedItems, setSelectedItems }) {
     let totalPrice = 0
     const [quantity, setQuantity] = useState(1);
 
+    const handleOrderSubmit = () => {
+        Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "samannaphala@gmail.com",
+            Password : "717370EBF1DCA0F434803816E737D17E37F5",
+            To : 'alexandra.fazakas91@gmail.com',
+            From : "samannaphala@gmail.com",
+            Subject : "CA Design - This is the order!!!",
+            Body : selectedItems
+        }).then(console.log)
+    }
+
 
     const displayPrices = Object.keys(selectedItems).map((productType, i) => {
         const { itemName, price } = selectedItems[productType] || {}
@@ -45,7 +57,7 @@ export default function PricesTotal({ selectedItems, setSelectedItems }) {
                     onChange={(e) => setQuantity(e.target.value)}
                 />
             </div>
-            <button className="add-button">Comanda</button>
+            <button className="add-button" onClick={handleOrderSubmit}>Comanda</button>
         </div>
     </div>
 

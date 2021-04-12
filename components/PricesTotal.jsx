@@ -12,7 +12,7 @@ export default function PricesTotal({ selectedItems, setSelectedItems }) {
         Email.send({
             Host : "smtp.elasticemail.com",
             Username : "samannaphala@gmail.com",
-            Password : "717370EBF1DCA0F434803816E737D17E37F5",
+            Password : process.env.SMTP_PASSWORD,
             To : 'alexandra.fazakas91@gmail.com',
             From : "samannaphala@gmail.com",
             Subject : "CA Design - This is the order!!!",

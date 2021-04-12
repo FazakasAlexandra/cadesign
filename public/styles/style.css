@@ -381,7 +381,7 @@ li {
   margin: 0px;
   padding: 0px;
   display: flex;
-  width: 250px;
+  width: 400px;
   justify-content: space-evenly;
 }
 .main-nav .logo {
@@ -674,6 +674,14 @@ li {
 
   .card.seal div:first-child {
     align-self: center;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-nav ul a {
+    margin-top: 1rem;
   }
 }
 @media (max-width: 550px) {

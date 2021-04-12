@@ -12,10 +12,10 @@ export default function ModelCard({ cardModel }) {
     const [currentSrcIdx, setcurrentSrcIdx] = useState(0)
     const [open, setOpen] = useState(false);
     const [quantity, setQuantity] = useState(1)
-    const [price, setPrice] = useState(model.pret)
+    const [price, setPrice] = useState(cardModel.pret)
 
     useEffect(() => {
-        setPrice(quantity * price)
+        setPrice(quantity * cardModel.price)
     }, [quantity])
 
     return (
@@ -34,10 +34,10 @@ export default function ModelCard({ cardModel }) {
                     alt="imagine plic"
                 />
                 {
-                    cardModel.src.length > 1 && currentSrcIdx !== cardModel.src.length - 1 ?
+                    model.src.length > 1 && currentSrcIdx !== model.src.length - 1 ?
                         <FontAwesomeIcon className="arrow R"
                             icon={faChevronRight} size="2x"
-                            onClick={() => { if (currentSrcIdx < cardModel.src.length - 1) setcurrentSrcIdx(currentSrcIdx + 1) }}
+                            onClick={() => { if (currentSrcIdx < model.src.length - 1) setcurrentSrcIdx(currentSrcIdx + 1) }}
                         /> : null
                 }
             </div>

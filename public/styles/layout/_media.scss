@@ -62,14 +62,15 @@
         margin: 0.5rem 0.5rem;
     }
 
-    .card.paper{
-        .img-container:nth-child(1){
+    .card.paper {
+        .img-container:nth-child(1) {
             width: fit-content;
             align-self: center;
         }
+
         width: 94%;
     }
-    
+
     .card.seal {
         width: 94%;
         justify-content: flex-end;
@@ -80,55 +81,67 @@
     .card.seal div:first-child {
         align-self: center;
     }
-}
 
-@media(max-width:550px) {
-    .navstepts.pagination .prev {
-        margin-right: 0.6rem;
-    }
-    .card.model {
-        .arrow.R{
-            left: 85%;
+    .main-nav {
+        ul {
+            flex-direction: column;
+            align-items: center;
+
+            a{
+                margin-top: 1rem;
+            }
         }
     }
+}
 
-    .price-calculator {
-        margin: 0rem;
-        max-width: 100%;
-    }
+    @media(max-width:550px) {
+        .navstepts.pagination .prev {
+            margin-right: 0.6rem;
+        }
 
-    .navsteps-component-wraper {
-        width: 100%;
+        .card.model {
+            .arrow.R {
+                left: 85%;
+            }
+        }
 
-        .step-component {
+        .price-calculator {
+            margin: 0rem;
+            max-width: 100%;
+        }
+
+        .navsteps-component-wraper {
             width: 100%;
-        }
 
-        .navsteps-wraper {
-            width: 100%;
-        }
-    }
-}
+            .step-component {
+                width: 100%;
+            }
 
-@media(max-width:420px) {
-    .card.model {
-        .arrow.R{
-            left: 82%;
+            .navsteps-wraper {
+                width: 100%;
+            }
         }
     }
 
-}
+    @media(max-width:420px) {
+        .card.model {
+            .arrow.R {
+                left: 82%;
+            }
+        }
 
-@media(max-width:394px) {
-    .navstepts.pagination .next {
-        text-align: end;
     }
 
-    .number-wraper {
-        margin-top: 1rem;
-    }
+    @media(max-width:394px) {
+        .navstepts.pagination .next {
+            text-align: end;
+        }
 
-    .page.preturi {
-        margin-top: 0rem !important;
+        .number-wraper {
+            margin-top: 1rem;
+        }
+
+        .page.preturi {
+            margin-top: 0rem !important;
+        }
     }
-}

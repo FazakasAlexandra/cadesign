@@ -11,12 +11,13 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 const papers = require('../db/papersB.json');
 
 export default function PaperCard({ productType, selectedItems, addToOrder }) {
-    const [type, setType] = useState('cartonata')
-    const [paper, setPaper] = useState(papers['cartonata'].papers[0])
+    console.table(selectedItems.paper?.selection.paper)
+    const [type, setType] = useState(selectedItems.paper?.selection.type || 'cartonata')
+    const [paper, setPaper] = useState(selectedItems.paper?.selection.paper || papers['cartonata'].papers[0])
     const [open, setOpen] = useState(false)
     const [quantity, setQuantity] = useState(1)
     const [price, setPrice] = useState(2.7)
-    const [weight, setWeight] = useState(papers.weights[0])
+    const [weight, setWeight] = useState(selectedItems.paper?.selection.weight || papers.weights[0])
 
     const handleColorClick = (e) => {
         const chosenPaper = papers[type].papers.find((paper) => paper.hex === e.target.id)
@@ -26,7 +27,7 @@ export default function PaperCard({ productType, selectedItems, addToOrder }) {
     const productTypeAlreadyInOrder = () => selectedItems && selectedItems[productType] || false
 
     useEffect(() => {
-        setPaper(papers[type].papers[0])
+        setPaper(selectedItems.paper?.selection.paper || papers[type].papers[0])
     }, [type])
 
     useEffect(() => {
@@ -34,7 +35,7 @@ export default function PaperCard({ productType, selectedItems, addToOrder }) {
     }, [quantity])
 
     useEffect(()=>{
-        if (productTypeAlreadyInOrder()) addToOrder(productType, `Hartie ${type} | Culoare ${paper.color} | ${weight}`, price)
+        if (productTypeAlreadyInOrder()) addToOrder(productType, `Hartie ${type} | Culoare ${paper.color} | ${weight}`, price, {type, paper, weight})
     },[paper, weight])
 
     const paperColors = () => {
@@ -127,7 +128,7 @@ export default function PaperCard({ productType, selectedItems, addToOrder }) {
                                 null :
                                 <button
                                     className="add-button"
-                                    onClick={() => addToOrder(productType, `Hartie ${type} | Culoare ${paper.color} | ${weight}`, price)}
+                                    onClick={() => addToOrder(productType, `Hartie ${type} | Culoare ${paper.color} | ${weight}`, price, {type, paper, weight})}
                                 >
                                     Adauga
                                  </button>

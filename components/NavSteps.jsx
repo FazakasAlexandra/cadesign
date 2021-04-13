@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
-export default function NavSteps({ steps, setSteps }) {
+export default function NavSteps({ selectedItems, steps, setSteps }) {
     const [currentStep, setCurrentStep] = useState(1)
     const handleSelectStep = stepId => {
         if (stepId <= 0 || stepId > steps.length) return
@@ -16,6 +16,11 @@ export default function NavSteps({ steps, setSteps }) {
         })
         setSteps(updatedSteps)
     }
+
+    useEffect(() => {
+        if (typeof window !== "undefined") localStorage.setItem('userSelection', JSON.stringify(selectedItems))   
+    }, [currentStep])
+
     const showSteps = steps.map((step, idx) => {
         return <div key={idx} className="number-wraper"><a onClick={() => handleSelectStep(step.id)} className={step.currentSelection ? 'number selected' : 'number normal'}>{step.id}</a></div>
     })

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import NavSteps from "../components/NavSteps";
 import EnvelopeCard from "../components/EnvelopeCard";
 import SealCard from '../components/SealCard'
@@ -8,11 +8,8 @@ import EnvelopeAddon from '../components/EnvelopeAddon';
 import SealAddon from '../components/SealAddon'
 
 export default function Preturi() {
-    const getItemsFromLocalStorage = () => {
-        if (typeof window !== "undefined") return JSON.parse(localStorage.getItem('selectedItems') || '{}')
-        return {}
-    }
-    const [selectedItems, setSelectedItems] = useState(getItemsFromLocalStorage) // { [productType]: { <productName>: <price> }, ...}
+    const getUserSelection = () => typeof window !== "undefined" ? JSON.parse(localStorage.getItem('userSelection') || '{}') : {}
+    const [selectedItems, setSelectedItems] = useState(getUserSelection()) // { [productType]: { <productName>: <price> }, ...}
     const [steps, setSteps] = useState([
         { id: 1, productType: 'envelopes', currentSelection: true, component: EnvelopeCard },
         { id: 2, productType: 'paper', currentSelection: false, component: PaperCard },
@@ -22,27 +19,27 @@ export default function Preturi() {
         { id: 6, productType: 'menus', currentSelection: false, component: 'MenuCard' }
     ])
 
-    const addToOrder = (productType, itemName, price) => {
-        setSelectedItems({ ...selectedItems, [productType]: { itemName, price } })
-        if (typeof window !== "undefined") localStorage.setItem('selectedItems', JSON.stringify(selectedItems))
-    }
+    useEffect(() => {
+        console.log('component rendered', selectedItems)
+    }, [])
 
-    const removeFromOrder = (productType) => {
-        setSelectedItems(_.omit(selectedItems, productType))
-        if (typeof window !== "undefined") localStorage.setItem('selectedItems', JSON.stringify(selectedItems))
-    }
+    // selection contains the individual choices stored as an object; itemName is the string representation of those choices
+    const addToOrder = (productType, itemName, price, selection) => setSelectedItems({ ...selectedItems, [productType]: { itemName, price, selection } })
+
+    const removeFromOrder = (productType) => setSelectedItems(_.omit(selectedItems, productType))
 
     const currentStep = steps.find(({ currentSelection }) => currentSelection === true)
     const CurrentComponent = currentStep.component
 
     return (<div className="page preturi row">
         <div className="navsteps-component-wraper">
-            <NavSteps steps={steps} setSteps={setSteps} />
+            <NavSteps selectedItems={selectedItems} steps={steps} setSteps={setSteps} />
             <div className="step-component">
                 <CurrentComponent
                     productType={currentStep.productType}
                     selectedItems={selectedItems}
                     setSelectedItems={setSelectedItems}
+                    getUserSelection={getUserSelection}
                     addToOrder={addToOrder}
                     removeFromOrder={removeFromOrder}
                 />

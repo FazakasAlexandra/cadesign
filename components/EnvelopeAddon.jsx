@@ -10,7 +10,7 @@ import { blue } from '@material-ui/core/colors';
 import envelopeAddon from '../db/envelopeAddon.json'
 
 export default function EnvelopeAddon({ productType, selectedItems, addToOrder, removeFromOrder }) {
-    const [addon, setAddon] = useState(selectedItems.envelopeAddons?.selection || envelopeAddon['none'])
+    const [addon, setAddon] = useState(selectedItems?.envelopeAddons?.selection || envelopeAddon['none'])
 
     const handleAddonClick = (e) => {
         setAddon(envelopeAddon[e.target.value])

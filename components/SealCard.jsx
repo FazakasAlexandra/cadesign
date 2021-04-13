@@ -11,9 +11,9 @@ import MenuItem from '@material-ui/core/MenuItem';
 const seals = require('../db/seals.json');
 
 export default function SealCard({ productType, selectedItems, addToOrder }) {
-    const [hex, setColor] = useState(selectedItems.seals?.selection.hex || '#3e260f')
-    const [seal, setSeal] = useState(selectedItems.seals?.selection.seal || seals['#3e260f'][0]);
-    const [model, setModel] = useState(selectedItems.seals?.selection.model || seals['#3e260f'][0]['model']);
+    const [hex, setColor] = useState(selectedItems?.seals?.selection.hex || '#3e260f')
+    const [seal, setSeal] = useState(selectedItems?.seals?.selection.seal || seals['#3e260f'][0]);
+    const [model, setModel] = useState(selectedItems?.seals?.selection.model || seals['#3e260f'][0]['model']);
 
     const [open, setOpen] = useState(false);
     const [quantity, setQuantity] = useState(1)

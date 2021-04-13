@@ -7,7 +7,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 const envelopes = require('../db/envelopes.json');
 
 export default function EnvelopeCard({ productType, selectedItems, addToOrder }) {
-    const [envelope, setEnvelope] = useState(selectedItems.envelopes?.selection || envelopes[0]);
+    const [envelope, setEnvelope] = useState(selectedItems?.envelopes?.selection || envelopes[0]);
     const [open, setOpen] = useState(false);
     const [quantity, setQuantity] = useState(1)
     const [price, setPrice] = useState(2.7)

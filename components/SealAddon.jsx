@@ -13,7 +13,7 @@ import { blue } from '@material-ui/core/colors';
 import sealDetails from '../db/sealDetails.json'
 
 export default function SealAddon({ productType, selectedItems, addToOrder, removeFromOrder }) {
-    const [sealDetail, setSealDetail] = useState(selectedItems.sealAddon?.selection || sealDetails["none"][0])
+    const [sealDetail, setSealDetail] = useState(selectedItems?.sealAddon?.selection || sealDetails["none"][0])
 
     useEffect(()=>{
         if (sealDetail.detailType != 'none'){

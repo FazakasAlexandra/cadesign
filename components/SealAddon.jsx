@@ -12,12 +12,12 @@ import { withStyles } from '@material-ui/core/styles';
 import { blue } from '@material-ui/core/colors';
 import sealDetails from '../db/sealDetails.json'
 
-export default function SealAddon({ productType, addToOrder, removeFromOrder }) {
-    const [sealDetail, setSealDetail] = useState(sealDetails["none"][0])
+export default function SealAddon({ productType, selectedItems, addToOrder, removeFromOrder }) {
+    const [sealDetail, setSealDetail] = useState(selectedItems?.sealAddon?.selection || sealDetails["none"][0])
 
     useEffect(()=>{
         if (sealDetail.detailType != 'none'){
-            addToOrder(productType, `Detaliu plic | ${sealDetail.detailType} ${sealDetail.material}`, sealDetail.price)
+            addToOrder(productType, `Detaliu plic | ${sealDetail.detailType} ${sealDetail.material}`, sealDetail.price, sealDetail)
         } else {
             removeFromOrder(productType)
         } 
@@ -64,7 +64,7 @@ export default function SealAddon({ productType, addToOrder, removeFromOrder }) 
                         width={204}
                         alt="imagine sigiliu">
                     </Image>
-                    <div class="select-wraper">
+                    <div className="select-wraper">
                         {sealDetail.detailType === 'panglica' ?
                             <FormControl variant="outlined">
                                 <InputLabel id="demo-simple-select-outlined-label">Material</InputLabel>

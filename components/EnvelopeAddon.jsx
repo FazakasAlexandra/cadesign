@@ -9,8 +9,8 @@ import { withStyles } from '@material-ui/core/styles';
 import { blue } from '@material-ui/core/colors';
 import envelopeAddon from '../db/envelopeAddon.json'
 
-export default function EnvelopeAddon({ productType, addToOrder, removeFromOrder }) {
-    const [addon, setAddon] = useState(envelopeAddon['none'])
+export default function EnvelopeAddon({ productType, selectedItems, addToOrder, removeFromOrder }) {
+    const [addon, setAddon] = useState(selectedItems?.envelopeAddons?.selection || envelopeAddon['none'])
 
     const handleAddonClick = (e) => {
         setAddon(envelopeAddon[e.target.value])
@@ -18,11 +18,11 @@ export default function EnvelopeAddon({ productType, addToOrder, removeFromOrder
 
     useEffect(()=>{
         if (addon.name != 'none'){
-            addToOrder(productType, `Detaliu plic | ${addon.name}`, addon.price)
+            addToOrder(productType, `Detaliu plic | ${addon.name}`, addon.price, addon)
         } else {
             removeFromOrder(productType)
         } 
-    },[addon])
+    }, [addon])
 
     const BlueRadio = withStyles({
         root: {

@@ -11,9 +11,9 @@ import MenuItem from '@material-ui/core/MenuItem';
 const seals = require('../db/seals.json');
 
 export default function SealCard({ productType, selectedItems, addToOrder }) {
-    const [hex, setColor] = useState('#3e260f')
-    const [seal, setSeal] = useState(seals['#3e260f'][0]);
-    const [model, setModel] = useState(seals['#3e260f'][0]['model']);
+    const [hex, setColor] = useState(selectedItems?.seals?.selection.hex || '#3e260f')
+    const [seal, setSeal] = useState(selectedItems?.seals?.selection.seal || seals['#3e260f'][0]);
+    const [model, setModel] = useState(selectedItems?.seals?.selection.model || seals['#3e260f'][0]['model']);
 
     const [open, setOpen] = useState(false);
     const [quantity, setQuantity] = useState(1)
@@ -24,7 +24,7 @@ export default function SealCard({ productType, selectedItems, addToOrder }) {
     useEffect(() => {
         const newSeal = seals[hex].find((seal) => seal.model === model)
         setSeal(newSeal);
-        if (productTypeAlreadyInOrder()) addToOrder(productType, `Sigiliu | Model ${newSeal.model} | Culoare ${newSeal.color}`, price)
+        if (productTypeAlreadyInOrder()) addToOrder(productType, `Sigiliu | Model ${newSeal.model} | Culoare ${newSeal.color}`, price, {hex, model, seal: newSeal})
     }, [hex])
 
     useEffect(() => {
@@ -47,7 +47,7 @@ export default function SealCard({ productType, selectedItems, addToOrder }) {
         const newSeal = seals[hex].find((seal) => seal.model === e.target.value)
         setSeal(newSeal);
         setModel(newSeal.model)
-        if (productTypeAlreadyInOrder()) addToOrder(productType, `Sigiliu | Model ${newSeal.model} | Culoare ${newSeal.color}`, price)
+        if (productTypeAlreadyInOrder()) addToOrder(productType, `Sigiliu | Model ${newSeal.model} | Culoare ${newSeal.color}`, price, {hex, seal, model: newSeal.model})
     }
 
     return (
@@ -104,7 +104,7 @@ export default function SealCard({ productType, selectedItems, addToOrder }) {
                             </div>
                             {productTypeAlreadyInOrder() || selectedItems === undefined ?
                                 null :
-                                <button className="add-button" onClick={() => addToOrder(productType, `Sigiliu | Model ${seal.model} | Culoare ${seal.color}`, price)}>Adauga</button>}
+                                <button className="add-button" onClick={() => addToOrder(productType, `Sigiliu | Model ${seal.model} | Culoare ${seal.color}`, price, {hex, seal, model})}>Adauga</button>}
                         </div>
                     </> : null
             }

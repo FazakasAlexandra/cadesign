@@ -26,7 +26,7 @@ export default function PaperCard({ productType, selectedItems, addToOrder }) {
     const productTypeAlreadyInOrder = () => selectedItems && selectedItems[productType] || false
 
     useEffect(() => {
-        setPaper(selectedItems.paper?.selection.paper || papers[type].papers[0])
+        setPaper(selectedItems?.paper?.selection.paper || papers[type].papers[0])
     }, [type])
 
     useEffect(() => {

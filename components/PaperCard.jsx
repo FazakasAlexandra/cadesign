@@ -11,7 +11,6 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 const papers = require('../db/papersB.json');
 
 export default function PaperCard({ productType, selectedItems, addToOrder }) {
-    console.table(selectedItems.paper?.selection.paper)
     const [type, setType] = useState(selectedItems?.paper?.selection.type || 'cartonata')
     const [paper, setPaper] = useState(selectedItems?.paper?.selection.paper || papers['cartonata'].papers[0])
     const [open, setOpen] = useState(false)

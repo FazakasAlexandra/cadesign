@@ -1,21 +1,11 @@
-import Head from 'next/head'
 import Link from 'next/link'
 import Layout from '../components/Layout'
-import Navbar from '../components/Navbar'
 import OrderStepCard from '../components/OrderStepCard'
-const envelopes = require('../db/envelopes.json');
 import Image from 'next/image'
-import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 export default function HomePage() {
   return (
-    <html lang="ro-RO">
-      <Head>
-        <title>Invitatii handmade pentru nunta</title>
-        <meta name="keywords" content="invitatii pentru nunta, hartie handmade, arta manual, plicuri, siginii, nunta, invitatie, special"></meta>
-        <meta name="description" content="Confectionam invitatii personalizate pentru nunta lucrate manual, de cea mai buna calitate si la cel mai bun pret"></meta>
-        <link rel="icon" href="/assets/logo.png"></link>
-      </Head>
+    <Layout>
       <div className="page home">
         <div className="slogan-container">
           <Image
@@ -68,14 +58,7 @@ export default function HomePage() {
             id="livrare"
           />
         </div>
-        <MessengerCustomerChat
-          pageId="2204227486254620"
-          appId="3205299383049134"
-          loggedInGreeting="Buna, suntem aici pentru a raspunde la orice intrebari !"
-          loggedOutGreeting="Buna, suntem aici pentru a raspunde la orice intrebari !"
-        />
       </div>
-      <script src="https://smtpjs.com/v3/smtp.js"></script>
-      </html>
+      </Layout>
   )
 }

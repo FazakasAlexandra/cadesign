@@ -2,7 +2,7 @@
 body {
   font-family: "PT Serif", serif;
   margin: 0px;
-  background-color: #b4bbb0b5;
+  background-color: #BAC1B6;
 }
 
 a {
@@ -377,6 +377,13 @@ li {
   padding: 1rem 6rem 2rem 6rem;
   align-items: center;
 }
+.main-nav .fa-bars {
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+  color: #9DA499;
+  display: none;
+}
 .main-nav ul {
   margin: 0px;
   padding: 0px;
@@ -524,7 +531,7 @@ li {
 
 .navsteps.numbers {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -591,7 +598,6 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 530px;
 }
 .navsteps-component-wraper .navsteps-wraper {
   width: 100%;
@@ -615,6 +621,10 @@ li {
     margin-top: 4rem;
     font-size: 18px;
     margin-bottom: 2rem;
+  }
+
+  .price-calculator {
+    margin-top: 2rem;
   }
 
   .slogan {
@@ -655,6 +665,13 @@ li {
 @media (max-width: 600px) {
   .cards-container .card {
     margin: 0.5rem 0.5rem;
+  }
+
+  .main-nav .list {
+    display: none;
+  }
+  .main-nav .fa-bars {
+    display: flex;
   }
 
   .card.paper {

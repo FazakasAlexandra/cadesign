@@ -15,7 +15,9 @@
             margin-bottom: 2rem;
         }
     }
-
+    .price-calculator{
+        margin-top: 2rem;
+    }
     .slogan {
         margin-left: 1rem;
 
@@ -61,7 +63,15 @@
     .cards-container .card {
         margin: 0.5rem 0.5rem;
     }
-
+    .main-nav {
+        .list{
+            display: none;
+        }
+        .fa-bars{
+            display: flex;
+        }
+    }
+    
     .card.paper {
         .img-container:nth-child(1) {
             width: fit-content;

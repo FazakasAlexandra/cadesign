@@ -4,6 +4,14 @@
     padding: 1rem 6rem 2rem 6rem;
     align-items: center;
 
+    .fa-bars {
+        position: absolute;
+        left: 2rem;
+        top: 2rem;
+        color: #9DA499;
+        display: none;
+    }
+
     ul {
         margin: 0px;
         padding: 0px;

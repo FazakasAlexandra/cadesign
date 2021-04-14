@@ -668,7 +668,7 @@ li {
   }
 
   .main-nav .list {
-    display: none;
+    display: none !important;
   }
   .main-nav .fa-bars {
     display: flex;

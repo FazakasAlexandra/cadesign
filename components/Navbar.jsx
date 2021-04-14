@@ -5,7 +5,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 
 export default function Navbar() {
-    const [menuOn, setMenuOn] = useState(false)
+    const [menuOn, setMenuOn] = useState(true)
     return (<>
         <nav className="main-nav">
             <FontAwesomeIcon icon={faBars} size="2x" onClick={() => setMenuOn(!menuOn)} />

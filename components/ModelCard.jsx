@@ -31,7 +31,7 @@ export default function ModelCard({ cardModel }) {
                     src={`/assets/models/${model.src[currentSrcIdx]}`}
                     height={model.height === 'tall' ? 760 : 450}
                     width={model.height === 'tall' ? 560 : 560}
-                    alt="imagine plic"
+                    alt={`model invitatie nunta ${cardModel.nume}`}
                 />
                 {
                     model.src.length > 1 && currentSrcIdx !== model.src.length - 1 ?

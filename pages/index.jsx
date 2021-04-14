@@ -11,9 +11,9 @@ export default function HomePage() {
   return (
     <html lang="ro-RO">
       <Head>
-        <title>CAdesign invitatii handmade pentru nunta</title>
-        <meta name="keywords" content="invitatii pentru nunti, hartie handmade, anvelope, siginii, nunta, plicuri"></meta>
-        <meta name="description" content="Confectionam invitatii de nunta handmade personalizate, menuri pentru nunti, carti de vizita, hartie, sigilii si plicuri."></meta>
+        <title>Invitatii handmade pentru nunta</title>
+        <meta name="keywords" content="invitatii pentru nunta, hartie handmade, arta manual, plicuri, siginii, nunta, invitatie, special"></meta>
+        <meta name="description" content="Confectionam invitatii personalizate pentru nunta lucrate manual, de cea mai buna calitate si la cel mai bun pret"></meta>
         <link rel="icon" href="/assets/logo.png"></link>
       </Head>
       <div className="page home">

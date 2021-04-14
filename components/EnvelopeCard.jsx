@@ -7,7 +7,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 const envelopes = require('../db/envelopes.json');
 
 export default function EnvelopeCard({ productType, selectedItems, addToOrder }) {
-    const [envelope, setEnvelope] = useState(envelopes[0]);
+    const [envelope, setEnvelope] = useState(selectedItems?.envelopes?.selection || envelopes[0]);
     const [open, setOpen] = useState(false);
     const [quantity, setQuantity] = useState(1)
     const [price, setPrice] = useState(2.7)
@@ -19,7 +19,7 @@ export default function EnvelopeCard({ productType, selectedItems, addToOrder })
         if (envelope.id != e.target.id) setLoading(true)
         const chosenEnvelope = envelopes.find((envelope) => envelope.id == e.target.id)
         setEnvelope(chosenEnvelope)
-        if (productTypeAlreadyInOrder()) addToOrder(productType, `Plic | Hartie ${chosenEnvelope.papper} | Culoare ${chosenEnvelope.color}`, price)
+        if (productTypeAlreadyInOrder()) addToOrder(productType, `Plic | Hartie ${chosenEnvelope.papper} | Culoare ${chosenEnvelope.color}`, price, chosenEnvelope)
     }
 
     useEffect(() => {
@@ -96,7 +96,7 @@ export default function EnvelopeCard({ productType, selectedItems, addToOrder })
                             </div>
                             {productTypeAlreadyInOrder() || selectedItems === undefined ?
                                 null :
-                                <button className="add-button" onClick={() => addToOrder(productType, `Plic | Hartie ${envelope.papper} | Culoare ${envelope.color}`, price)}>Adauga</button>}
+                                <button className="add-button" onClick={() => addToOrder(productType, `Plic | Hartie ${envelope.papper} | Culoare ${envelope.color}`, price, envelope)}>Adauga</button>}
                         </div>
                     </div> : null
             }

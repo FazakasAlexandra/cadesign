@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import EnvelopeaAddon from './EnvelopeAddon';
+import EnvelopeAddon from './EnvelopeAddon';
 import SealAddon from './SealAddon'
 
 export default function AddonsCard({ productType, selectedItems, addToOrder }) {
@@ -7,12 +7,12 @@ export default function AddonsCard({ productType, selectedItems, addToOrder }) {
 
     return (
         <div className="card addons">
-            <EnvelopeaAddon
+            <EnvelopeAddon
                 selectedItems={selectedItems}
                 addToOrder={addToOrder}
                 productType={productType}
             >
-            </EnvelopeaAddon>
+            </EnvelopeAddon>
             <hr />
             <SealAddon
                 addToOrder={addToOrder}

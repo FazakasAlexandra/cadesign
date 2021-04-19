@@ -53,6 +53,7 @@ export default function PricesTotal({ selectedItems, setSelectedItems }) {
                     InputLabelProps={{
                         shrink: true,
                     }}
+                    InputProps={{ inputProps: { min: 1 } }}
                     variant="outlined"
                     value={quantity}
                     onChange={(e) => setQuantity(e.target.value)}

@@ -94,6 +94,7 @@ export default function SealCard({ productType, selectedItems, addToOrder }) {
                                     }}
                                     variant="outlined"
                                     value={quantity}
+                                    InputProps={{ inputProps: { min: 1 } }}
                                     onChange={(e) => setQuantity(e.target.value)}
                                 />
                             }

@@ -15,7 +15,7 @@ export default function ModelCard({ cardModel }) {
     const [price, setPrice] = useState(cardModel.pret)
 
     useEffect(() => {
-        setPrice(quantity * cardModel.price)
+        setPrice(quantity * cardModel.pret)
     }, [quantity])
 
     return (
@@ -90,6 +90,7 @@ export default function ModelCard({ cardModel }) {
                                 }}
                                 variant="outlined"
                                 value={quantity}
+                                InputProps={{ inputProps: { min: 1 } }}
                                 onChange={(e) => setQuantity(e.target.value)}
                             />
                             <div className="card-calculator-price">

@@ -115,6 +115,7 @@ export default function PaperCard({ productType, selectedItems, addToOrder }) {
                                     }}
                                     variant="outlined"
                                     value={quantity}
+                                    InputProps={{ inputProps: { min: 1 } }}
                                     onChange={(e) => setQuantity(e.target.value)}
                                 />
                             }

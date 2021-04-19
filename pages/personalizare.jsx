@@ -45,6 +45,7 @@ export default function Preturi() {
                             getUserSelection={getUserSelection}
                             addToOrder={addToOrder}
                             removeFromOrder={removeFromOrder}
+                            isOpen={true}
                         />
                     </div>
                 </div>

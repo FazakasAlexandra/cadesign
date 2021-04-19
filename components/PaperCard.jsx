@@ -10,10 +10,10 @@ import MenuItem from '@material-ui/core/MenuItem';
 import CircularProgress from '@material-ui/core/CircularProgress';
 const papers = require('../db/papersB.json');
 
-export default function PaperCard({ productType, selectedItems, addToOrder }) {
+export default function PaperCard({ productType, selectedItems, addToOrder, isOpen }) {
     const [type, setType] = useState(selectedItems?.paper?.selection.type || 'cartonata')
     const [paper, setPaper] = useState(selectedItems?.paper?.selection.paper || papers['cartonata'].papers[0])
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(isOpen || false)
     const [quantity, setQuantity] = useState(1)
     const [price, setPrice] = useState(2.7)
     const [weight, setWeight] = useState(selectedItems?.paper?.selection.weight || papers.weights[0])

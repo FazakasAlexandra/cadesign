@@ -7,9 +7,9 @@ export default function Papetarie() {
     return (
         <Layout>
             <div className="cards-container" id="produse">
-                <EnvelopeCard />
-                <SealCard />
-                <PaperCard />
+                <EnvelopeCard isOpen={false} />
+                <SealCard isOpen={false}/>
+                <PaperCard isOpen={false}/>
             </div>
         </Layout>
     )

@@ -17,10 +17,10 @@ export default function PricesTotal({ selectedItems, setSelectedItems }) {
             To : 'alexandra.fazakas91@gmail.com',
             From : "samannaphala@gmail.com",
             Subject : "CA Design - This is the order!!!",
-            Body : { ...selectedItems, email }
+            Body : "<p>Salut!</p><span>This is <b>bold</b> text</span>"
         }).then(console.log)
     }
-
+     //{ ...selectedItems, email }
 
     const displayPrices = Object.keys(selectedItems).map((productType, i) => {
         const { itemName, price } = selectedItems[productType] || {}

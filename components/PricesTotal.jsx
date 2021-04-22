@@ -3,24 +3,34 @@ import { faMinusCircle } from '@fortawesome/free-solid-svg-icons'
 import _ from 'lodash'
 import TextField from '@material-ui/core/TextField';
 import React, { useState, useEffect } from "react";
+import OrderForm from './OrderForm'
+import {preferinte} from './EmailTemplates.js'
 
 export default function PricesTotal({ selectedItems, setSelectedItems }) {
     let totalPrice = 0
     const [quantity, setQuantity] = useState(1);
-    const [email, setEmail] = useState('')
+    const [openForm, setOpenForm] = useState(false);
 
-    const handleOrderSubmit = () => {
+    const handleClickOpen = () => {
+        setOpenForm(true);
+    };
+
+    const handleClose = () => {
+        setOpenForm(false);
+    };
+
+    const handleOrderSubmit = (client) => {
+        const emailHTML = preferinte(client, selectedItems, quantity, totalPrice, (totalPrice * quantity).toFixed(2))
         Email.send({
-            Host : "smtp.elasticemail.com",
-            Username : "samannaphala@gmail.com",
-            Password : '',
-            To : 'alexandra.fazakas91@gmail.com',
-            From : "samannaphala@gmail.com",
-            Subject : "CA Design - This is the order!!!",
-            Body : "<p>Salut!</p><span>This is <b>bold</b> text</span>"
+            Host: "smtp.elasticemail.com",
+            Username: "samannaphala@gmail.com",
+            Password: '717370EBF1DCA0F434803816E737D17E37F5',
+            To: 'alexandra.fazakas91@gmail.com',
+            From: "samannaphala@gmail.com",
+            Subject: "CA Design - Comanda",
+            Body: emailHTML
         }).then(console.log)
     }
-     //{ ...selectedItems, email }
 
     const displayPrices = Object.keys(selectedItems).map((productType, i) => {
         const { itemName, price } = selectedItems[productType] || {}
@@ -59,9 +69,13 @@ export default function PricesTotal({ selectedItems, setSelectedItems }) {
                     onChange={(e) => setQuantity(e.target.value)}
                 />
             </div>
-            <TextField className="card-calculator-quantity" label="Email" value={email} onChange={e => setEmail(e.target.value)}/>
-            <button className="add-button" onClick={handleOrderSubmit}>Comanda</button>
+            <button className="add-button" onClick={handleClickOpen}>Comanda</button>
         </div>
+        <OrderForm
+            handleOrderSubmit={handleOrderSubmit}
+            handleClose={handleClose}
+            open={openForm}
+        />
     </div>
 
 }

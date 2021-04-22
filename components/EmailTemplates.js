@@ -4,7 +4,7 @@ return`
 <body style="font-family: serif;">
     <div style="background-color: white; margin: 0 auto; max-width:400px;"
         <a href="https://imgbb.com/">
-            <img src="https://i.ibb.co/C0B5VkG/logo-circle.jpg" alt="logo" style="width: 80px; display: block; margin-left: auto; margin-right: auto;">
+            <img src="https://i.ibb.co/C0B5VkG/logo-circle.jpg" alt="logo" style="width: 100px; display: block; margin-left: auto; margin-right: auto;">
         </a>
         <div style="color:#858C81; padding : 2rem;">
             <h1 style="text-align:Center; margin-top:0px;">Comanda</h1>

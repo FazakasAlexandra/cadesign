@@ -6,9 +6,8 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import { TextareaAutosize } from '@material-ui/core';
 
-export default function OrderForm({ handleClose, handleOrderSubmit, open }) {
+export default function OrderForm({ handleClose, handleOrderSubmit, open, formErrors }) {
     const [client, setClient] = useState({
         nume: '',
         email: '',
@@ -17,7 +16,7 @@ export default function OrderForm({ handleClose, handleOrderSubmit, open }) {
     })
     
     return (
-        <div>
+        <form>
             <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
                 <DialogTitle id="form-dialog-title">Trimitere comanda</DialogTitle>
                 <DialogContent>
@@ -32,6 +31,7 @@ export default function OrderForm({ handleClose, handleOrderSubmit, open }) {
                         fullWidth
                         onChange={(e) => setClient({ ...client, nume: e.target.value })}
                     />
+                    { formErrors.hasOwnProperty('nume') ? <p>{formErrors.nume}</p> : null }
                     <TextField
                         margin="dense"
                         label="Email"
@@ -39,6 +39,7 @@ export default function OrderForm({ handleClose, handleOrderSubmit, open }) {
                         fullWidth
                         onChange={(e) => setClient({ ...client, email: e.target.value })}
                     />
+                    { formErrors.hasOwnProperty('email') ? <p>{formErrors.email}</p> : null }
                     <TextField
                         margin="dense"
                         label="Telefon"
@@ -59,11 +60,11 @@ export default function OrderForm({ handleClose, handleOrderSubmit, open }) {
                     <Button onClick={handleClose} color="primary">
                         Cancel
                     </Button>
-                    <Button onClick={() => handleOrderSubmit(client)} color="primary">
+                    <Button type="submit" onClick={() => handleOrderSubmit(client)} color="primary">
                         Trimite comanda
                  </Button>
                 </DialogActions>
             </Dialog>
-        </div>
+        </form>
     );
 }

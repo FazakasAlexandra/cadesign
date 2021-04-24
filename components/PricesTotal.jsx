@@ -8,6 +8,7 @@ import {preferinte} from './EmailTemplates.js'
 
 export default function PricesTotal({ selectedItems, setSelectedItems }) {
     let totalPrice = 0
+    const [formErrors, setFormErrors] = useState({})
     const [quantity, setQuantity] = useState(1);
     const [openForm, setOpenForm] = useState(false);
 
@@ -20,6 +21,10 @@ export default function PricesTotal({ selectedItems, setSelectedItems }) {
     };
 
     const handleOrderSubmit = (client) => {
+        const validEmail = /\S+@\S+\.\S+/.test(client.email)
+        if (!client.nume) setFormErrors(prevState => ({ ...prevState, nume: 'Name is required.' }))
+        if (!validEmail) setFormErrors(prevState => ({ ...prevState, email: 'Please enter a valid email.' }))
+        if (!client.nume || !validEmail) return
         const emailHTML = preferinte(client, selectedItems, quantity, totalPrice, (totalPrice * quantity).toFixed(2))
         Email.send({
             Host: "smtp.elasticemail.com",
@@ -75,6 +80,7 @@ export default function PricesTotal({ selectedItems, setSelectedItems }) {
             handleOrderSubmit={handleOrderSubmit}
             handleClose={handleClose}
             open={openForm}
+            formErrors={formErrors}
         />
     </div>
 

@@ -1,0 +1,31 @@
+[{
+    "id" : 1,
+    "descriere": "Carti de vizita ilustrate din hartie de bumbac texturata",
+    "pret": 2,
+    "src": [
+        "cartidevizita_2ron_hartiedebumbactexturata_9x5cm.jpg"
+    ],
+    "height":"short"
+},
+{
+    "id" : 1,
+    "descriere": "Carti de vizita cu print fata-verso",
+    "pret": 3,
+    "src": [
+        "cartidevizita_3ron_hartiedebumbactexturata_printfataverso_9x5cm (2).jpg",
+        "cartidevizita_3ron_hartiedebumbactexturata_printfataverso_9x5cm (3).jpg",
+        "cartidevizita_3ron_hartiedebumbactexturata_printfataverso_9x5cm (4).jpg",
+        "cartidevizita_3ron_hartiedebumbactexturata_printfataverso_9x5cm (5).jpg"
+    ],
+    "height":"short"
+},
+{
+    "id" : 1,
+    "descriere": "Carti de vizita ilustrate din hartie handmade",
+    "pret": 3,
+    "src": [
+        "cartidevizita_3ron_hartiemanuala_9x5cm.jpg"
+    ],
+    "height":"tall"
+}
+]

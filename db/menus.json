@@ -1,6 +1,58 @@
-[
-    {
-        "id": 1,
-        "src": ""
-    }
+[{
+    "id" : 1,
+    "descriere": "Carduri pentru mese din hartie cartonata cu insertii aurii",
+    "pret": 6,
+    "src": [
+        "IMG-3821.jpg",
+        "IMG-3832.jpg"
+    ],
+    "height":"tall"
+},
+{
+    "id" : 1,
+    "descriere": "Model de meniu elegant cu sigiliu",
+    "pret": 6,
+    "src": [
+        "Meniu +sigiliu_pret 6 ron_21x10.5 cm.jpg"
+    ],
+    "height":"tall"
+},
+{
+    "id" : 1,
+    "descriere": "Model de meniu cu print pe fata",
+    "pret": 4.5,
+    "src": [
+        "meniu printofata_4.5ron_21x10.5 cm.jpg"
+    ],
+    "height":"tall"
+},
+{
+    "id" : 1,
+    "descriere": "Model de meniu de tip carticica din hartie handmade, dimensiunea A5",
+    "pret": 12,
+    "src": [
+        "Meniu tip carticica_HARTIEMANUALA_pret 12ron_format A5 (5).jpg"
+    ],
+    "height":"tall"
+},
+{
+    "id" : 1,
+    "descriere": "Model de meniu de tip carticica lunga",
+    "pret": 8,
+    "src": [
+        "Meniu tip carticica_pret 8ron_format 21X10.5CM (5).jpg",
+        "Meniu tip carticica_pret 8ron_format 21X10.5CM (7).jpg"
+    ],
+    "height":"tall"
+},
+{
+    "id" : 1,
+    "descriere": "Model de meniu de tip carticica scurta (dimensiunea A5)",
+    "pret": 8,
+    "src": [
+        "Meniu tip carticica_pret 8ron_format A5 (4).jpg",
+        "Meniu tip carticica_pret 8ron_format A5.jpg"
+    ],
+    "height":"short"
+}
 ]

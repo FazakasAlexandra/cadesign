@@ -25,7 +25,7 @@ export default function PricesTotal({ selectedItems, setSelectedItems }) {
             Host: "smtp.elasticemail.com",
             Username: "samannaphala@gmail.com",
             Password: '717370EBF1DCA0F434803816E737D17E37F5',
-            To: 'alexandra.fazakas91@gmail.com',
+            To: 'designca18@gmail.com',
             From: "samannaphala@gmail.com",
             Subject: "CA Design - Comanda",
             Body: emailHTML

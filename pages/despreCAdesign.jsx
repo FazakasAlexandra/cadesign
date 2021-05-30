@@ -46,8 +46,8 @@ export default function despreCAdesign() {
                     </div>
                     <p style={{ fontWeight: "bold", fontSize: "18px", textDecoration: "underline", marginBottom: "1rem" }}>cadesign18@gmail.com</p>
                     <div className="icons">
-                        <a href="https://www.facebook.com/cadesignbistrita"><FontAwesomeIcon icon={faFacebookSquare} size="4x" style={{marginRight:"1rem", color:"#828580"}} className="brand-icons"/></a>
-                        <a href="https://www.instagram.com/cadesign.ro/"><FontAwesomeIcon icon={faInstagram} size="4x" style={{color:"#828580"}} className="brand-icons"/></a>
+                        <a target="_blank" href="https://www.facebook.com/cadesignbistrita"><FontAwesomeIcon icon={faFacebookSquare} size="4x" style={{marginRight:"1rem", color:"#828580"}} className="brand-icons"/></a>
+                        <a target="_blank" href="https://www.instagram.com/cadesign.ro/"><FontAwesomeIcon icon={faInstagram} size="4x" style={{color:"#828580"}} className="brand-icons"/></a>
                     </div>
                 </div>
             </div>

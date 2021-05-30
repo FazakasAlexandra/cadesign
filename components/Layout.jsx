@@ -4,7 +4,7 @@ import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 export default function Layout({ children }) {
     return (
-        <html lang="ro">
+        <html lang="rm-RO">
             <Head>
                 <title>Invitatii handmade pentru nunta</title>
                 <meta charset="UTF-8"/>

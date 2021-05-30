@@ -2,16 +2,16 @@
     "none" : {
         "id": 1,
         "name": "none",
-        "src": "plic_verde.png",
+        "src": "plic_fara_interior.png",
         "price": 0,
-        "w": "204",
-        "h": "144"
+        "w": "200",
+        "h": "240"
     },
     "interior decorat plic" : {
         "id": 2,
         "name": "interior decorat plic",
         "src": "interiordecorat_plic_2ron.png",
-        "price": 2.0,
+        "price": 3.0,
         "w": "200",
         "h": "240"
     }

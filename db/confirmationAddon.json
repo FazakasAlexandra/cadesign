@@ -1,0 +1,18 @@
+{
+    "none" : {
+        "id": 1,
+        "name": "none",
+        "src": "card de confirmari_3.jpeg",
+        "price": 0,
+        "w": "300",
+        "h": "100"
+    },
+    "card confirmare" : {
+        "id": 2,
+        "name": "card confirmare",
+        "src": "card de confirmari_3.jpeg",
+        "price": 2.0,
+        "w": "300",
+        "h": "100"
+    }
+}

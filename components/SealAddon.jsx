@@ -64,7 +64,7 @@ export default function SealAddon({ productType, selectedItems, addToOrder, remo
                         width={204}
                         alt="imagine sigiliu">
                     </Image>
-                    <div className="select-wraper">
+{/*                     <div className="select-wraper">
                         {sealDetail.detailType === 'panglica' ?
                             <FormControl variant="outlined">
                                 <InputLabel id="demo-simple-select-outlined-label">Material</InputLabel>
@@ -80,7 +80,7 @@ export default function SealAddon({ productType, selectedItems, addToOrder, remo
                                 </Select>
                             </FormControl>
                             : null}
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

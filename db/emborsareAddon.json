@@ -1,0 +1,18 @@
+{
+    "none" : {
+        "id": 1,
+        "name": "none",
+        "src": "neemborsat.jpg",
+        "price": 0,
+        "w": "320",
+        "h": "240"
+    },
+    "plic emborsat" : {
+        "id": 2,
+        "name": "plic emborsat",
+        "src": "initiale_embosate.png",
+        "price": 2.0,
+        "w": "320",
+        "h": "240"
+    }
+}

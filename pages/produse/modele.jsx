@@ -15,6 +15,7 @@ export default function Modele() {
       />
     })
   }
+  
   return (
     <Layout>
       <div className="cards-container" id="produse">

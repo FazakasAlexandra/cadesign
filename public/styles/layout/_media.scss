@@ -15,9 +15,11 @@
             margin-bottom: 2rem;
         }
     }
-    .price-calculator{
+
+    .price-calculator {
         margin-top: 2rem;
     }
+
     .slogan {
         margin-left: 1rem;
 
@@ -42,6 +44,33 @@
         margin-top: 2rem;
         margin-bottom: 2rem;
     }
+
+    .despre-noi{
+        .content{
+            width: 100% !important;
+        }
+        .us-img{
+            left: 20% !important;
+        }
+    }
+    
+}
+
+
+@media(max-width: 700px) {
+    .slogan {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .despre-noi{
+        .us-img{
+            left: 15% !important;
+            width: 400px;
+            height: 400px;
+        }
+    }
+    
 }
 
 @media(max-width: 829px) {
@@ -60,18 +89,25 @@
 }
 
 @media (max-width: 600px) {
+    .despre-noi{
+        h1{
+            font-size: 40px !important;
+        }
+    }
     .cards-container .card {
         margin: 0.5rem 0.5rem;
     }
+
     .main-nav {
-        .list{
+        .list {
             display: none;
         }
-        .fa-bars{
+
+        .fa-bars {
             display: flex;
         }
     }
-    
+
     .card.paper {
         .img-container:nth-child(1) {
             width: fit-content;
@@ -97,61 +133,84 @@
             flex-direction: column;
             align-items: center;
 
-            a{
+            a {
                 margin-top: 1rem;
             }
         }
     }
 }
 
-    @media(max-width:550px) {
-        .navstepts.pagination .prev {
-            margin-right: 0.6rem;
+@media(max-width:550px) {
+    .despre-noi{
+        h1{
+            font-size: 35px !important;
         }
-
-        .card.model {
-            .arrow.R {
-                left: 85%;
-            }
+    }
+    .despre-noi{
+        .us-img{
+            left: 10% !important;
+            width: 400px;
+            height: 400px;
         }
+    }
 
-        .price-calculator {
-            margin: 0rem;
-            max-width: 100%;
+    .navstepts.pagination .prev {
+        margin-right: 0.6rem;
+    }
+
+    .card.model {
+        .arrow.R {
+            left: 85%;
         }
+    }
 
-        .navsteps-component-wraper {
+    .price-calculator {
+        margin: 0rem;
+        max-width: 100%;
+    }
+
+    .navsteps-component-wraper {
+        width: 100%;
+
+        .step-component {
             width: 100%;
+        }
 
-            .step-component {
-                width: 100%;
-            }
+        .navsteps-wraper {
+            width: 100%;
+        }
+    }
+}
 
-            .navsteps-wraper {
-                width: 100%;
-            }
+@media(max-width:480px) {
+
+    .despre-noi{
+        .us-img{
+            left: 7% !important;
         }
     }
 
-    @media(max-width:420px) {
-        .card.model {
-            .arrow.R {
-                left: 82%;
-            }
-        }
+}
 
-    }
-
-    @media(max-width:394px) {
-        .navstepts.pagination .next {
-            text-align: end;
-        }
-
-        .number-wraper {
-            margin-top: 1rem;
-        }
-
-        .page.preturi {
-            margin-top: 0rem !important;
+@media(max-width:420px) {
+    .card.model {
+        .arrow.R {
+            left: 82%;
         }
     }
+
+}
+
+@media(max-width:394px) {
+    .navstepts.pagination .next {
+        text-align: end;
+    }
+
+    .number-wraper {
+        margin-top: 1rem;
+    }
+
+    .page.preturi {
+        margin-top: 0rem !important;
+    }
+}

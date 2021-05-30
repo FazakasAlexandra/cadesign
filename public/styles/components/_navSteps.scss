@@ -1,6 +1,6 @@
 .navsteps.numbers {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;    
     flex-wrap: wrap;
 }
 
@@ -12,6 +12,7 @@
     background-color: white;
     border-radius: 100%;
     background-color: $gold;
+    margin-top: 0.5rem;
 
     .number {
         padding: 1rem 1.7rem;
@@ -81,8 +82,8 @@
     flex-direction: column;
     align-items: center;
     .navsteps-wraper {
-        width: 100%;
-    }
+        max-width: 470px;
+        }
 }
 
 .preturi .card {

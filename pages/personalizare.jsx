@@ -6,6 +6,8 @@ import PricesTotal from "../components/PricesTotal";
 import PaperCard from '../components/PaperCard';
 import EnvelopeAddon from '../components/EnvelopeAddon';
 import SealAddon from '../components/SealAddon'
+import ConfirmationAddon from '../components/ConfirmationAddon'
+import EmborsareAddon from '../components/EmborsareAddon'
 import Layout from '../components/Layout'
 
 export default function Preturi() {
@@ -17,7 +19,9 @@ export default function Preturi() {
         { id: 3, productType: 'seals', currentSelection: false, component: SealCard },
         { id: 4, productType: 'envelopeAddons', currentSelection: false, component: EnvelopeAddon },
         { id: 5, productType: 'sealAddon', currentSelection: false, component: SealAddon },
-        { id: 6, productType: 'menus', currentSelection: false, component: 'MenuCard' }
+        { id: 6, productType: 'ConfirmationAddon', currentSelection: false, component: ConfirmationAddon },
+        { id: 7, productType: 'EmborsareAddon', currentSelection: false, component: EmborsareAddon },
+        { id: 8, productType: 'menus', currentSelection: false, component: 'MenuCard' }
     ])
 
     useEffect(() => {

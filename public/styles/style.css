@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap");
 body {
   font-family: "PT Serif", serif;
   margin: 0px;
@@ -647,6 +648,25 @@ li {
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
+
+  .despre-noi .content {
+    width: 100% !important;
+  }
+  .despre-noi .us-img {
+    left: 20% !important;
+  }
+}
+@media (max-width: 700px) {
+  .slogan {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .despre-noi .us-img {
+    left: 15% !important;
+    width: 400px;
+    height: 400px;
+  }
 }
 @media (max-width: 829px) {
   .navstepts.pagination .prev {
@@ -663,6 +683,10 @@ li {
   }
 }
 @media (max-width: 600px) {
+  .despre-noi h1 {
+    font-size: 40px !important;
+  }
+
   .cards-container .card {
     margin: 0.5rem 0.5rem;
   }
@@ -702,6 +726,16 @@ li {
   }
 }
 @media (max-width: 550px) {
+  .despre-noi h1 {
+    font-size: 35px !important;
+  }
+
+  .despre-noi .us-img {
+    left: 10% !important;
+    width: 400px;
+    height: 400px;
+  }
+
   .navstepts.pagination .prev {
     margin-right: 0.6rem;
   }
@@ -725,6 +759,11 @@ li {
     width: 100%;
   }
 }
+@media (max-width: 480px) {
+  .despre-noi .us-img {
+    left: 7% !important;
+  }
+}
 @media (max-width: 420px) {
   .card.model .arrow.R {
     left: 82%;
@@ -743,6 +782,70 @@ li {
     margin-top: 0rem !important;
   }
 }
+.despre-noi {
+  position: relative;
+}
+.despre-noi .content {
+  z-index: 2;
+  border-radius: 10px;
+  position: relative;
+  width: 650px;
+  margin-top: 23rem;
+  margin-bottom: 5rem;
+  background-color: white;
+  box-shadow: 0px 4px 4px 1px rgba(23, 23, 23, 0.13);
+}
+.despre-noi .background {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  background-image: url(/assets/about-page/background.jpg);
+  background-size: cover;
+  filter: blur(2px);
+  height: 100%;
+}
+.despre-noi .us-img {
+  border-radius: 100%;
+  position: absolute;
+  left: 7rem;
+  top: -20rem;
+  filter: drop-shadow(-1px 2px 4px #BAACA8);
+}
+.despre-noi .brand-icons:hover {
+  color: #BEBEBE !important;
+}
+.despre-noi .icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+.despre-noi .text {
+  padding-top: 10rem;
+}
+.despre-noi h1 {
+  font-family: "Homemade Apple", cursive;
+  font-size: 45px;
+  margin-bottom: 2rem;
+  font-weight: 100;
+}
+.despre-noi p {
+  font-size: 20px;
+  margin: 1rem 60px;
+}
+.despre-noi h1,
+.despre-noi p {
+  text-align: center;
+  color: #777771;
+}
+.despre-noi p {
+  margin-bottom: 3rem;
+}
+.despre-noi .images-container {
+  display: flex;
+  margin: 6rem 0rem;
+  margin-bottom: 3rem;
+}
+
 nav {
   display: flex;
   justify-content: space-evenly;

@@ -34,7 +34,7 @@ export default function Preturi() {
 
     return (
         <Layout>
-            <div className="page preturi row">
+            <div className="page preturi row" id="invitatii">
                 <div className="navsteps-component-wraper">
                     <NavSteps selectedItems={selectedItems} steps={steps} setSteps={setSteps} />
                     <div className="step-component">

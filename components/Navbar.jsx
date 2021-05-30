@@ -11,9 +11,9 @@ export default function Navbar() {
             <FontAwesomeIcon icon={faBars} size="2x" onClick={() => setMenuOn(!menuOn)} />
             <Link href="/"><img className="logo" src="/assets/navbar/logo.jpg" alt="logo" /></Link>
             <ul className="list" style={{display : menuOn ? 'flex' : 'none'}}>
-                <Link href="/personalizare"><a>Personalizare</a></Link>
+                <Link href="/personalizare#invitatii"><a>Personalizare</a></Link>
                 <Link href="/#livrare"><a>Despre Livrare</a></Link>
-                <Link href="/despreCAdesign"><a>Despre Noi</a></Link>
+                <Link href="/despreCAdesign#noi"><a>Despre Noi</a></Link>
             </ul>
         </nav>
         <NavProducts />

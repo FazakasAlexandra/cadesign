@@ -6,7 +6,7 @@ import { faFacebookSquare, faInstagram } from '@fortawesome/free-brands-svg-icon
 export default function despreCAdesign() {
     return (
         <Layout>
-            <div className="page despre-noi">
+            <div className="page despre-noi" id="noi">
                 <div className="background"></div>
                 <div className="content">
                     <img
@@ -22,7 +22,7 @@ export default function despreCAdesign() {
                         <h1>Noi suntem Cata si Ana</h1>
                         <p>In urma cu aproximativ  doi ani , am început afacerea CA design, cu invitații de nuntă personalizate și realizate manual, ceva nou pentru România.</p>
                         <p>Amândurora ne place arta și dorim ca prin invitațile create de noi, mirii să își prezinte viitoare nuntă, pentru că știm cu toții, invitația este prima imagine a nunții tale. Si ne bucurăm ca prin invitațile noastre să fim parte a nunții fiecărui cuplu care alege să lucreze cu noi.</p>
-                        <p>Pentru noi e extrem de important dorința mirilor, ca totul sa arate cum ei visează și sa fie cea mai buna calitate, de aceea suntem atenți la fiecare detaliu și invest mult în materialele care le folosim.</p>
+                        <p>Pentru noi e extrem de important dorința mirilor, ca totul sa arate cum ei visează și sa fie cea mai buna calitate, de aceea suntem atenți la fiecare detaliu și investim mult în materialele care le folosim.</p>
                     </div>
                     <div className="images-container">
                         <Image

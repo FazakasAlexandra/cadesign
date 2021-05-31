@@ -8,92 +8,109 @@
     "handmade" : {
         "colors" : [
             "#e4e4da",
-            "#bbbab6",
-            "#cca4a1"
+            "#ADA595",
+            "#BCC1CD",
+            "#9BA2B2",
+            "#808672"
         ],
+        "price": 2.7,
         "papers" : [
             {
                 "id": 1,
-                "src": "handmade_white.png",
+                "src": "handmade_white.jpeg",
                 "type": "handmade",
-                "color": "alb",
+                "color": "Alb",
                 "hex": "#e4e4da"
             },
             {
-                "id": 2,
-                "src": "handmade_gris.png",
+                "id": 5,
+                "src": "handmade_crem_inchis.jpeg",
                 "type": "handmade",
-                "color": "gri",
-                "hex": "#bbbab6"
+                "color": "Crem inchis",
+                "hex": "#ADA595"
             },
             {
                 "id": 3,
-                "src": "handmade_pink.png",
+                "src": "handmade_gri.jpeg",
                 "type": "handmade",
-                "color": "roz",
-                "hex": "#cca4a1"
+                "color": "Gri",
+                "hex": "#9BA2B2"
+            },
+            {
+                "id": 2,
+                "src": "handmade_crem.jpeg",
+                "type": "handmade",
+                "color": "Crem",
+                "hex": "#BCC1CD"
+            },
+            {
+                "id": 6,
+                "src": "handmade_green.jpeg",
+                "type": "handmade",
+                "color": "Verde",
+                "hex": "#808672"
             }
         ]
     },
     "cartonata" : {
         "colors" : [
-            "#cca4a1",
-            "#54b29c",
-            "#94aba8",
-            "#d4c4ac",
-            "#bbbab6",
-            "#b5ac88",
-            "#e4e4da"
+            "#e4e4da",
+            "#ADA595",
+            "#B7C2D7",
+            "#9BA2B2",
+            "#AEB4CA",
+            "#808672"
         ],
+        "price" : 2.9,
         "papers" : [
             {
-                "id": 4,
-                "src": "cartonata_pink.png",
+                "id": 81,
+                "src": "hartie carton texturat alb.jpeg",
                 "type": "cartonata",
-                "color": "roz",
-                "hex": "#cca4a1"
-            },
-            {
-                "id": 5,
-                "src": "cartonata_green.png",
-                "type": "cartonata",
-                "color": "verde",
-                "hex": "#54b29c"
-            },
-            {
-                "id": 6,
-                "src": "cartonata_brown.png",
-                "type": "cartonata",
-                "color": "crem",
-                "hex": "#d4c4ac"
+                "color": "Alb",
+                "hex": "#e4e4da"
             },
             {
                 "id": 7,
-                "src": "cartonata_blue.png",
+                "src": "hartie cu insertii de scoarta de copac crem.jpeg",
                 "type": "cartonata",
-                "color": "albastru",
-                "hex": "#94aba8"
+                "color": "Insertii scoarta de copac, crem",
+                "hex": "#ADA595"
             },
             {
-                "id": 8,
-                "src": "cartonata_texturata.png",
+                "id": 2,
+                "src": "hartie texturata nud.jpeg",
                 "type": "cartonata",
-                "color": "gri",
-                "hex": "#bbbab6"
-            },
-            {
-                "id": 9,
-                "src": "cartonata_insertii.png",
-                "type": "cartonata",
-                "color": "insertii aurii",
-                "hex": "#b5ac88"
-            },
-            {
-                "id": 10,
-                "src": "cartonata_white.png",
-                "type": "cartonata",
-                "color": "alb",
+                "color": "Verde",
                 "hex": "#e4e4da"
+            },
+            {
+                "id": 4,
+                "src": "hartie cu insertii aurii.jpeg",
+                "type": "cartonata",
+                "color": "Insertii aurii",
+                "hex": "#B7C2D7"
+            },
+            {
+                "id": 5,
+                "src": "hartie cu insertii de scame  crem.jpeg",
+                "type": "cartonata",
+                "color": "Insertii de scame, crem",
+                "hex": "#9BA2B2"
+            },
+            {
+                "id": 6,
+                "src": "hartie cu insertii de scoarta de copac alba.jpeg",
+                "type": "cartonata",
+                "color": "Insertii scoarta de copac, alb",
+                "hex": "#AEB4CA"
+            },
+            {
+                "id": 3,
+                "src": "hartie texturata verde wild.jpeg",
+                "type": "cartonata",
+                "color": "Verde",
+                "hex": "#808672"
             }
         ]
     }

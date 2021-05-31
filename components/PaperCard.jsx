@@ -60,7 +60,7 @@ export default function PaperCard({ productType, selectedItems, addToOrder, isOp
             <div className="img-container">
                 <Image
                     src={`/assets/papers/${paper.src}`}
-                    height={509}
+                    height={370}
                     width={300}
                     alt="imagine hartie"
                 />

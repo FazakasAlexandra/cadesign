@@ -43,7 +43,10 @@ export default function PricesTotal({ selectedItems, setSelectedItems }) {
         return (
             <li key={i} id={itemName} className="receipt-item">
                 <span>{itemName}</span>  <span>{price.toFixed(2)} lei</span>
-                <FontAwesomeIcon size="1x" className="remove" icon={faMinusCircle} onClick={() => setSelectedItems(_.omit(selectedItems, productType))} />
+                { // every order needs paper and envelope - don't show delete button for those
+                    productType === 'paper' || productType === 'envelopes' ? null :
+                    <FontAwesomeIcon size="1x" className="remove" icon={faMinusCircle} onClick={() => setSelectedItems(_.omit(selectedItems, productType))} />
+                }
             </li>
         )
     })
@@ -59,7 +62,7 @@ export default function PricesTotal({ selectedItems, setSelectedItems }) {
                 <hr />
             </div>
             <div className="total">
-                <span>Total <span className="receipt-price">{(totalPrice * quantity).toFixed(2)} lei</span></span>
+                <span>Total <span className="receipt-price">{totalPrice < 6 ? 6 : (totalPrice * quantity).toFixed(2)} lei</span></span>
                 <TextField
                     className="card-calculator-quantity"
                     id="outlined-number"

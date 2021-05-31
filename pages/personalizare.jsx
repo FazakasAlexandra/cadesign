@@ -9,9 +9,24 @@ import SealAddon from '../components/SealAddon'
 import ConfirmationAddon from '../components/ConfirmationAddon'
 import EmborsareAddon from '../components/EmborsareAddon'
 import Layout from '../components/Layout'
+const envelopes = require('../db/envelopes.json')
+const papers = require('../db/papersB.json')
+
+const defaultOrder = {
+    'envelopes': { 
+        itemName: 'Plic | Hartie Texturata cu insertii aurii | Culoare Alb',
+        price: 2.7,
+        selection: envelopes[0]
+    },
+    'paper': {
+        itemName: 'Hartie cartonata | Culoare Alb | 270 g',
+        price: 2.7,
+        selection: papers['cartonata'].papers[0]
+    }
+}
 
 export default function Preturi() {
-    const getUserSelection = () => typeof window !== "undefined" ? JSON.parse(localStorage.getItem('userSelection') || '{}') : {}
+    const getUserSelection = () => typeof window !== "undefined" ? JSON.parse(localStorage.getItem('userSelection') || JSON.stringify(defaultOrder)) : defaultOrder
     const [selectedItems, setSelectedItems] = useState(getUserSelection()) // { [productType]: { <productName>: <price> }, ...}
     const [steps, setSteps] = useState([
         { id: 1, productType: 'envelopes', currentSelection: true, component: EnvelopeCard },

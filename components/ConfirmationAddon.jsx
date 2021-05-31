@@ -22,6 +22,7 @@ const BlueRadio = withStyles({
 
 export default function ConfirmationAddon({ productType, selectedItems, addToOrder, removeFromOrder }) {
     const [addon, setAddon] = useState(selectedItems?.confirmationAddon?.selection || confirmationAddon['none'])
+    console.log(selectedItems?.confirmationAddon?.selection)
 
     const handleAddonClick = (e) => setAddon(confirmationAddon[e.target.value])
 
@@ -41,7 +42,7 @@ export default function ConfirmationAddon({ productType, selectedItems, addToOrd
                     <FormControl component="fieldset">
                         <FormLabel component="legend"></FormLabel>
                         <RadioGroup aria-label="card_confirmare" value={addon.name} onChange={(e) => handleAddonClick(e)}>
-                            <FormControlLabel value="card confirmare" control={<BlueRadio />} label="Da" />
+                            <FormControlLabel value="card_confirmare" control={<BlueRadio />} label="Da" />
                             <FormControlLabel value="none" control={<BlueRadio />} label="Nu" />
                         </RadioGroup>
                     </FormControl>

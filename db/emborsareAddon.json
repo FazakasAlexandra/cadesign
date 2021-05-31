@@ -7,9 +7,9 @@
         "w": "320",
         "h": "240"
     },
-    "plic emborsat" : {
+    "plic_emborsat" : {
         "id": 2,
-        "name": "plic emborsat",
+        "name": "plic_emborsat",
         "src": "initiale_embosate.png",
         "price": 2.0,
         "w": "320",

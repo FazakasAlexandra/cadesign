@@ -19,8 +19,8 @@ export default function Preturi() {
         { id: 3, productType: 'seals', currentSelection: false, component: SealCard },
         { id: 4, productType: 'envelopeAddons', currentSelection: false, component: EnvelopeAddon },
         { id: 5, productType: 'sealAddon', currentSelection: false, component: SealAddon },
-        { id: 6, productType: 'ConfirmationAddon', currentSelection: false, component: ConfirmationAddon },
-        { id: 7, productType: 'EmborsareAddon', currentSelection: false, component: EmborsareAddon },
+        { id: 6, productType: 'confirmationAddon', currentSelection: false, component: ConfirmationAddon },
+        { id: 7, productType: 'emborsareAddon', currentSelection: false, component: EmborsareAddon },
         { id: 8, productType: 'menus', currentSelection: false, component: 'MenuCard' }
     ])
 

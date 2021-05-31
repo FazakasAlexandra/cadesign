@@ -41,7 +41,7 @@ export default function EmborsareAddon({ productType, selectedItems, addToOrder,
                     <FormControl component="fieldset">
                         <FormLabel component="legend"></FormLabel>
                         <RadioGroup aria-label="plic_emborsat" value={addon.name} onChange={(e) => handleAddonClick(e)}>
-                            <FormControlLabel value="plic emborsat" control={<BlueRadio />} label="Da" />
+                            <FormControlLabel value="plic_emborsat" control={<BlueRadio />} label="Da" />
                             <FormControlLabel value="none" control={<BlueRadio />} label="Nu" />
                         </RadioGroup>
                     </FormControl>

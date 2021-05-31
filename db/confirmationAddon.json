@@ -7,9 +7,9 @@
         "w": "300",
         "h": "100"
     },
-    "card confirmare" : {
+    "card_confirmare" : {
         "id": 2,
-        "name": "card confirmare",
+        "name": "card_confirmare",
         "src": "card de confirmari_3.jpeg",
         "price": 2.0,
         "w": "300",

@@ -17,10 +17,6 @@ export default function NavSteps({ selectedItems, steps, setSteps }) {
         setSteps(updatedSteps)
     }
 
-    useEffect(() => {
-        if (typeof window !== "undefined") localStorage.setItem('userSelection', JSON.stringify(selectedItems))   
-    }, [currentStep])
-
     const showSteps = steps.map((step, idx) => {
         return <div key={idx} className="number-wraper"><a onClick={() => handleSelectStep(step.id)} className={step.currentSelection ? 'number selected' : 'number normal'}>{step.id}</a></div>
     })

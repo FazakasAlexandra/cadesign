@@ -38,7 +38,10 @@ export default function PricesTotal({ selectedItems, setSelectedItems }) {
         return (
             <li key={i} id={itemName} className="receipt-item">
                 <span>{itemName}</span>  <span>{price.toFixed(2)} lei</span>
-                <FontAwesomeIcon size="1x" className="remove" icon={faMinusCircle} onClick={() => setSelectedItems(_.omit(selectedItems, productType))} />
+                { // every order needs paper and envelope - don't show delete button for those
+                    productType === 'paper' || productType === 'envelopes' ? null :
+                    <FontAwesomeIcon size="1x" className="remove" icon={faMinusCircle} onClick={() => setSelectedItems(_.omit(selectedItems, productType))} />
+                }
             </li>
         )
     })

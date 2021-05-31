@@ -57,7 +57,7 @@ export default function PricesTotal({ selectedItems, setSelectedItems }) {
                 <hr />
             </div>
             <div className="total">
-                <span>Total <span className="receipt-price">{totalPrice < 6 ? 6 : (totalPrice * quantity).toFixed(2)} lei</span></span>
+                <span>Total <span className="receipt-price">{(totalPrice * quantity).toFixed(2)} lei</span></span>
                 <TextField
                     className="card-calculator-quantity"
                     id="outlined-number"

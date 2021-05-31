@@ -46,8 +46,11 @@ export default function Preturi() {
     // selection contains the individual choices stored as an object; itemName is the string representation of those choices
     const addToOrder = (productType, itemName, price, selection) => setSelectedItems({ ...selectedItems, [productType]: { itemName, price, selection } })
 
-    const removeFromOrder = (productType) => setSelectedItems(_.omit(selectedItems, productType))
-
+    const removeFromOrder = (productType) => {
+        setSelectedItems(_.omit(selectedItems, productType))
+        if (typeof window !== "undefined") localStorage.setItem('userSelection', JSON.stringify(selectedItems))
+    }
+    
     const currentStep = steps.find(({ currentSelection }) => currentSelection === true)
     const CurrentComponent = currentStep.component
 

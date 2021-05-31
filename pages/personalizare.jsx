@@ -47,8 +47,9 @@ export default function Preturi() {
     const addToOrder = (productType, itemName, price, selection) => setSelectedItems({ ...selectedItems, [productType]: { itemName, price, selection } })
 
     const removeFromOrder = (productType) => {
-        setSelectedItems(_.omit(selectedItems, productType))
-        if (typeof window !== "undefined") localStorage.setItem('userSelection', JSON.stringify(selectedItems))
+        const updatedItems = _.omit(selectedItems, productType)
+        if (typeof window !== "undefined") localStorage.setItem('userSelection', JSON.stringify(updatedItems))
+        setSelectedItems(updatedItems)
     }
     
     const currentStep = steps.find(({ currentSelection }) => currentSelection === true)

@@ -9,7 +9,7 @@ export default function HomePage() {
       <div className="page home">
         <div className="slogan-container">
           <Image
-            src={`/assets/envelopes_details/interiordecorat_plic_2ron.png`}
+            src={`/assets/envelopes_details/interiordecorat_plic_2ron.jpg`}
             height={585}
             width={450}
             alt="plic invitatie nunta"

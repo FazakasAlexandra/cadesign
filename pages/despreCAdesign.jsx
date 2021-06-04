@@ -26,19 +26,19 @@ export default function despreCAdesign() {
                     </div>
                     <div className="images-container">
                         <Image
-                            src={`/assets/about-page/img1.jpg`}
+                            src={`/assets/about-page/img1.png`}
                             height={190}
                             width={280}
                             alt="imagine masurat dimensiuni invitatii">
                         </Image>
                         <Image
-                            src={`/assets/about-page/img2.jpg`}
+                            src={`/assets/about-page/img2.png`}
                             height={190}
                             width={280}
                             alt="imagine invitatii si plicuri">
                         </Image>
                         <Image
-                            src={`/assets/about-page/img3.jpg`}
+                            src={`/assets/about-page/img3.png`}
                             height={190}
                             width={280}
                             alt="imagine imprimanta invitatii">

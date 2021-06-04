@@ -1,6 +1,6 @@
 [{
         "id": 1,
-        "src": "albinsertiiaurii_120g_13x18cm_2.7ron.jpg",
+        "src": "albinsertiiaurii_120g_13x18cm_2.7ron.png",
         "papper": "Texturata cu insertii aurii",
         "color": "Alb",
         "hex": "#F7F3ED",
@@ -12,7 +12,7 @@
     },
     {
         "id": 6,
-        "src": "nud-crem_120 g_13x18cm_2.7ron (2).jpg",
+        "src": "nud-crem_120 g_13x18cm_2.7ron (2).png",
         "papper": "Texturata",
         "color": "Nud crem",
         "hex": "#EFEEED",
@@ -24,7 +24,7 @@
     },
     {
         "id": 4,
-        "src": "cremnisipos _150g_13x18cm_2.7ron.jpg",
+        "src": "cremnisipos _150g_13x18cm_2.7ron.png",
         "papper": "Texturata",
         "color": "Crem nisipos",
         "hex": "#E5CDA7",
@@ -36,7 +36,7 @@
     },
     {
         "id": 7,
-        "src": "rozvintage_120g_13x18cm_2.7ron.jpg",
+        "src": "rozvintage_120g_13x18cm_2.7ron.png",
         "papper": "Texturata",
         "color": "Roz vintage",
         "hex": "#E5CAE5",
@@ -48,7 +48,7 @@
     },
     {
         "id": 2,
-        "src": "ametist_120 g_13x18cm_2.7ron.jpg",
+        "src": "ametist_120 g_13x18cm_2.7ron.png",
         "papper": "Texturata",
         "color": "Ametist",
         "hex": "#82779D",
@@ -144,7 +144,7 @@
     },
     {
         "id": 5,
-        "src": "negru_120_g_13x18cm_2.7ron.jpg",
+        "src": "negru_120_g_13x18cm_2.7ron.png",
         "papper": "Texturata",
         "color": "Negru",
         "hex": "#000000",

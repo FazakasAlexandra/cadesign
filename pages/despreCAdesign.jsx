@@ -10,7 +10,7 @@ export default function despreCAdesign() {
                 <div className="background"></div>
                 <div className="content">
                     <img
-                        src={`/assets/about-page/catasiana.JPG`}
+                        src={`/assets/about-page/catasiana.jpg`}
                         height={450}
                         width={450}
                         style={{ position: "absolute" }}

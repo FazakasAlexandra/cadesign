@@ -2,7 +2,7 @@
     "none" : {
         "id": 1,
         "name": "none",
-        "src": "plic_fara_interior.png",
+        "src": "plic_fara_interior.jpg",
         "price": 0,
         "w": "200",
         "h": "240"
@@ -10,7 +10,7 @@
     "interior decorat plic" : {
         "id": 2,
         "name": "interior decorat plic",
-        "src": "interiordecorat_plic_2ron.png",
+        "src": "interiordecorat_plic_2ron.jpg",
         "price": 3.0,
         "w": "200",
         "h": "240"

@@ -1,6 +1,6 @@
 [{
         "id": 1,
-        "src": "albinsertiiaurii_120g_13x18cm_2.7ron.png",
+        "src": "albinsertiiaurii_120g_13x18cm_2.7ron.jpg",
         "papper": "Texturata cu insertii aurii",
         "color": "Alb",
         "hex": "#F7F3ED",
@@ -12,7 +12,7 @@
     },
     {
         "id": 6,
-        "src": "nud-crem_120 g_13x18cm_2.7ron (2).png",
+        "src": "nud-crem_120 g_13x18cm_2.7ron (2).jpg",
         "papper": "Texturata",
         "color": "Nud crem",
         "hex": "#EFEEED",
@@ -24,7 +24,7 @@
     },
     {
         "id": 4,
-        "src": "cremnisipos _150g_13x18cm_2.7ron.png",
+        "src": "cremnisipos _150g_13x18cm_2.7ron.jpg",
         "papper": "Texturata",
         "color": "Crem nisipos",
         "hex": "#E5CDA7",
@@ -36,7 +36,7 @@
     },
     {
         "id": 7,
-        "src": "rozvintage_120g_13x18cm_2.7ron.png",
+        "src": "rozvintage_120g_13x18cm_2.7ron.jpg",
         "papper": "Texturata",
         "color": "Roz vintage",
         "hex": "#E5CAE5",
@@ -48,7 +48,7 @@
     },
     {
         "id": 2,
-        "src": "ametist_120 g_13x18cm_2.7ron.png",
+        "src": "ametist_120 g_13x18cm_2.7ron.jpg",
         "papper": "Texturata",
         "color": "Ametist",
         "hex": "#82779D",
@@ -60,7 +60,7 @@
     },
     {
         "id": 10,
-        "src": "plic gri_hartie manuala_dimensiune13x18cm.jpeg",
+        "src": "plic gri_hartie manuala_dimensiune13x18cm.jpg",
         "papper": "Handmade",
         "color": "Gri albastrui",
         "hex": "#6B7584",
@@ -72,7 +72,7 @@
     },
     {
         "id": 12,
-        "src": "plic crem_carton texturat_dimensiune13x18cm.jpeg",
+        "src": "plic crem_carton texturat_dimensiune13x18cm.jpg",
         "papper": "Texturata",
         "color": "Crem",
         "hex": "#90897D",
@@ -84,7 +84,7 @@
     },
     {
         "id": 9,
-        "src": "verdeolive.jpeg",
+        "src": "verdeolive.jpg",
         "papper": "Texturata",
         "color": "Verde olive",
         "hex": "#7A887D",
@@ -96,7 +96,7 @@
     },
     {
         "id": 8,
-        "src": "verde-smarald_120 g_13x18cm_2.7ron.jpeg",
+        "src": "verde-smarald_120 g_13x18cm_2.7ron.jpg",
         "papper": "Texturata",
         "color": "Turcoaz",
         "hex": "#589492",
@@ -108,7 +108,7 @@
     },
     {
         "id": 11,
-        "src": "plic verde smarald_carton texturat_dimensiune13x18cm.jpeg",
+        "src": "plic verde smarald_carton texturat_dimensiune13x18cm.jpg",
         "papper": "Texturata",
         "color": "Verde smarald ",
         "hex": "#32635B",
@@ -120,7 +120,7 @@
     },
     {
         "id": 13,
-        "src": "plic roz-mov_carton texturat_dimensiune13x18cm.jpeg",
+        "src": "plic roz-mov_carton texturat_dimensiune13x18cm.jpg",
         "papper": "Texturata",
         "color": "Roz/Mov",
         "hex": "#6E4857",
@@ -132,7 +132,7 @@
     },
     {
         "id": 3,
-        "src": "plic caramiziu_carton texturat_dimensiune13x18cm.jpeg",
+        "src": "plic caramiziu_carton texturat_dimensiune13x18cm.jpg",
         "papper": "Texturata",
         "color": "Caramiziu",
         "hex": "#5C3232",
@@ -144,7 +144,7 @@
     },
     {
         "id": 5,
-        "src": "negru_120_g_13x18cm_2.7ron.png",
+        "src": "negru_120_g_13x18cm_2.7ron.jpg",
         "papper": "Texturata",
         "color": "Negru",
         "hex": "#000000",

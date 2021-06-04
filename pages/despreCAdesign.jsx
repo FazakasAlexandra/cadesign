@@ -10,7 +10,7 @@ export default function despreCAdesign() {
                 <div className="background"></div>
                 <div className="content">
                     <img
-                        src={`/assets/about-page/catasiana.JPG`}
+                        src={`/assets/about-page/catasiana.jpg`}
                         height={450}
                         width={450}
                         style={{ position: "absolute" }}
@@ -26,19 +26,19 @@ export default function despreCAdesign() {
                     </div>
                     <div className="images-container">
                         <Image
-                            src={`/assets/about-page/img1.png`}
+                            src={`/assets/about-page/img1.jpg`}
                             height={190}
                             width={280}
                             alt="imagine masurat dimensiuni invitatii">
                         </Image>
                         <Image
-                            src={`/assets/about-page/img2.png`}
+                            src={`/assets/about-page/img2.jpg`}
                             height={190}
                             width={280}
                             alt="imagine invitatii si plicuri">
                         </Image>
                         <Image
-                            src={`/assets/about-page/img3.png`}
+                            src={`/assets/about-page/img3.jpg`}
                             height={190}
                             width={280}
                             alt="imagine imprimanta invitatii">

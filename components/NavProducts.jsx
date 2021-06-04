@@ -5,28 +5,28 @@ export default function NavProducts() {
         <nav className="sec-nav">
             <Link href="/produse/papetarie#produse">
                 <div className="menu-circle">
-                    <img src="/assets/navbar/menu_icon1.png" alt="papetarie" className="menu-image" />
+                    <img src="/assets/navbar/menu_icon1.jpg" alt="papetarie" className="menu-image" />
                     <span className="menu-circle title" id="icon-papetarie">Papetarie</span>
                 </div>
             </Link>
 
             <Link href="/produse/modele#produse">
                 <div className="menu-circle">
-                    <img src="/assets/navbar/menu_icon3.png" alt="modele invitatii" className="menu-image" />
+                    <img src="/assets/navbar/menu_icon3.jpg" alt="modele invitatii" className="menu-image" />
                     <span className="menu-circle title" id="icon-modele">Modele</span>
                 </div>
             </Link>
 
             <Link href="/produse/carti-de-vizita#produse">
                 <div className="menu-circle">
-                    <img src="/assets/navbar/menu_icon4.png" alt="carti de vizita" className="menu-image" />
+                    <img src="/assets/navbar/menu_icon4.jpg" alt="carti de vizita" className="menu-image" />
                     <span className="menu-circle title" id="icon-carti-vizita">Carti de vizita</span>
                 </div>
             </Link>
 
             <Link href="/produse/meniuri#produse">
                 <div className="menu-circle">
-                    <img src="/assets/navbar/menu_icon2.png" alt="meniuri" className="menu-image" />
+                    <img src="/assets/navbar/menu_icon2.jpg" alt="meniuri" className="menu-image" />
                     <span className="menu-circle title" id="icon-meniuri">Meniuri</span>
                 </div>
             </Link>

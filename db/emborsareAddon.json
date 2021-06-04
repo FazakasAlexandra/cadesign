@@ -10,7 +10,7 @@
     "plic emborsat" : {
         "id": 2,
         "name": "plic emborsat",
-        "src": "initiale_embosate.png",
+        "src": "initiale_embosate.jpg",
         "price": 2.0,
         "w": "320",
         "h": "240"

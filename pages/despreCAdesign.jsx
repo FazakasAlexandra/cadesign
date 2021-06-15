@@ -44,7 +44,7 @@ export default function despreCAdesign() {
                             alt="imagine imprimanta invitatii">
                         </Image>
                     </div>
-                    <p style={{ fontWeight: "bold", fontSize: "18px", textDecoration: "underline", marginBottom: "1rem" }}>cadesign18@gmail.com</p>
+                    <p style={{ fontWeight: "bold", fontSize: "18px", textDecoration: "underline", marginBottom: "1rem" }}>Designca18@gmail.com</p>
                     <div className="icons">
                         <a target="_blank" href="https://www.facebook.com/cadesignbistrita"><FontAwesomeIcon icon={faFacebookSquare} size="4x" style={{marginRight:"1rem", color:"#828580"}} className="brand-icons"/></a>
                         <a target="_blank" href="https://www.instagram.com/cadesign.ro/"><FontAwesomeIcon icon={faInstagram} size="4x" style={{color:"#828580"}} className="brand-icons"/></a>

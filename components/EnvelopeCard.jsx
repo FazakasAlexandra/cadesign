@@ -6,11 +6,11 @@ import { faGripLines } from '@fortawesome/free-solid-svg-icons'
 import CircularProgress from '@material-ui/core/CircularProgress';
 const envelopes = require('../db/envelopes.json');
 
-export default function EnvelopeCard({ productType, selectedItems, addToOrder, isOpen}) {
+export default function EnvelopeCard({ productType, selectedItems, addToOrder, isOpen }) {
     const [envelope, setEnvelope] = useState(selectedItems?.envelopes?.selection || envelopes[0]);
     const [open, setOpen] = useState(isOpen || false);
     const [quantity, setQuantity] = useState(1)
-    const [price, setPrice] = useState(2.7)
+    const [price, setPrice] = useState(envelope.price)
     const [loading, setLoading] = useState(false)
 
     const productTypeAlreadyInOrder = () => selectedItems && selectedItems[productType] || false
@@ -19,12 +19,13 @@ export default function EnvelopeCard({ productType, selectedItems, addToOrder, i
         if (envelope.id != e.target.id) setLoading(true)
         const chosenEnvelope = envelopes.find((envelope) => envelope.id == e.target.id)
         setEnvelope(chosenEnvelope)
+        setPrice(chosenEnvelope.price)
         if (productTypeAlreadyInOrder()) addToOrder(productType, `Plic | Hartie ${chosenEnvelope.papper} | Culoare ${chosenEnvelope.color}`, price, chosenEnvelope)
     }
 
     useEffect(() => {
-        setPrice(quantity * 2.7)
-    }, [quantity])
+        setPrice(quantity * envelope.price)
+    }, [quantity, envelope])
 
     useEffect(() => {
         setLoading(false)

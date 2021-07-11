@@ -23,6 +23,24 @@ li {
   list-style: none;
 }
 
+.language-options {
+  position: absolute;
+  top: 1rem;
+  left: 94%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.language-options img {
+  margin-right: 0.3rem;
+  width: 15px;
+  height: 15px;
+}
+
+.header {
+  position: relative;
+}
+
 .receipt .add-button,
 .card .add-button {
   cursor: pointer;

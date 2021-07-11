@@ -36,7 +36,7 @@ export default function Preturi() {
         { id: 5, productType: 'sealAddon', currentSelection: false, component: SealAddon },
         { id: 6, productType: 'confirmationAddon', currentSelection: false, component: ConfirmationAddon },
         { id: 7, productType: 'emborsareAddon', currentSelection: false, component: EmborsareAddon },
-        { id: 8, productType: 'menus', currentSelection: false, component: 'MenuCard' }
+        //{ id: 8, productType: 'menus', currentSelection: false, component: 'MenuCard' }
     ])
 
     useEffect(() => {

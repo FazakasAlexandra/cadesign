@@ -2,8 +2,11 @@ import Link from 'next/link'
 import Layout from '../components/Layout'
 import OrderStepCard from '../components/OrderStepCard'
 import Image from 'next/image'
+import useTranslation from '../hooks/useTranslation';
 
 export default function HomePage() {
+  const { t } = useTranslation();
+
   return (
     <Layout>
       <div className="page home">
@@ -16,30 +19,30 @@ export default function HomePage() {
           />
           <div className="slogan">
             <i>CAdesign</i>
-            <h1>INVITATII HANDMADE</h1>
-            <a  target="_blank" href="/assets/catalog2021.pdf">Catalog</a>
+            <h1>{t("HOMEPAGE_h1")}</h1>
+            <a  target="_blank" href="/assets/catalog2021.pdf">{t("HOMEPAGE_CATALOG")}</a>
           </div>
         </div>
         <div className="order-steps-cards" id="procedura">
           <OrderStepCard
             text={
               <>
-                <p>Alegerea unui model nu este intodteauna un lucru usor.</p>
-                <p>Noi stim lucrul acesta si dorim sa va ajutam punandu-va la dispozitie o gama diversificata de <Link href="/produse/modele"><a target="_blank">modele de invitatii handmade.</a></Link></p>
-                <p>Puteti alege un unul dintre modelele de invitatii, puteti sugera modifcari ale acesteia sau, daca aveti ceva special in gand, invitatiile noastre pot fi <i>personalizate in intregime !</i></p>
-                <p>Daca v-ati decis pentru modificari in privinta unui model, pretul modelului se schimba ( poate scadea sau creste )  in functie de modificarile cerute. </p>
-                <p>Daca v-ati decis pentru o invitatie de nunta in intregime personalizata, puteti calcula pretul final raspunzand la <Link href="/personalizare#invitatii"><a target="_blank">chestionarul nostru.</a></Link></p>
+                <p>{t("DELIVERY_STEP1_p1")}</p>
+                <p>{t("DELIVERY_STEP1_p2a")} <Link href="/produse/modele"><a target="_blank">{t("DELIVERY_STEP1_p2b")}</a></Link></p>
+                <p>{t("DELIVERY_STEP1_p3a")} <i>{t("DELIVERY_STEP1_p3b")}</i></p>
+                <p>{t("DELIVERY_STEP1_p4")}</p>
+                <p>{t("DELIVERY_STEP1_p5a")}<Link href="/personalizare#invitatii"><a target="_blank">{t("DELIVERY_STEP1_p5b")}</a></Link></p>
               </>
             }
 
             number={1}
-            title={"Alegerea modelului"}
+            title={t("DELIVERY_STEP1_title")}
           />
           <OrderStepCard
             text={
               <>
-                <p>Daca te-ai decis in privinta unui model, tot ce ramane de facut este sa ne trimiti modelul impreuna cu textul care ti-ar placea ! </p>
-                <p>Odata ce am primit aceste lucruri, noi va trimitem un <a target="_blank" href="/assets/contract.pdf">contract</a> pe care puteti sa il semnati fie in mod digital, fie in mod fizic.</p>
+                <p>{t("DELIVERY_STEP2_p1")}</p>
+                <p>{t("DELIVERY_STEP2_p2a")} <a target="_blank" href="/assets/contract.pdf">{t("DELIVERY_STEP2_p2b")}</a> {t("DELIVERY_STEP2_p2c")}</p>
               </>
             }
             number={2}

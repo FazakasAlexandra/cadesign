@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Image from 'next/image'
-import InputLabel from '@material-ui/core/InputLabel';
-import Select from '@material-ui/core/Select';
-import MenuItem from '@material-ui/core/MenuItem';
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -64,23 +61,6 @@ export default function SealAddon({ productType, selectedItems, addToOrder, remo
                         width={204}
                         alt="imagine sigiliu">
                     </Image>
-{/*                     <div className="select-wraper">
-                        {sealDetail.detailType === 'panglica' ?
-                            <FormControl variant="outlined">
-                                <InputLabel id="demo-simple-select-outlined-label">Material</InputLabel>
-                                <Select
-                                    labelId="demo-simple-select-outlined-label"
-                                    id="demo-simple-select-outlined"
-                                    value={sealDetail.material}
-                                    onChange={(e) => handleRibbonChange(e)}
-                                    label="Model"
-                                >
-                                    <MenuItem value="matase naturala">Matase naturala</MenuItem>
-                                    <MenuItem value="bumbac">Bumbac natural</MenuItem>
-                                </Select>
-                            </FormControl>
-                            : null}
-                    </div> */}
                 </div>
             </div>
         </div>

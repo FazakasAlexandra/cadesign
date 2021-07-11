@@ -17,6 +17,7 @@
     "lodash": "^4.17.21",
     "next": "^10.0.9",
     "node-sass": "^5.0.0",
+    "posthog-js": "^1.11.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-messenger-customer-chat": "^0.8.0"

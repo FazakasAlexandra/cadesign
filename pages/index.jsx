@@ -36,7 +36,7 @@ export default function HomePage() {
             }
 
             number={1}
-            title={t("DELIVERY_STEP1_title")}
+            title={t("DELIVERY_STEP1_TITLE")}
           />
           <OrderStepCard
             text={
@@ -51,13 +51,13 @@ export default function HomePage() {
           <OrderStepCard
             text={
               <>
-                <p>In decurs de cateva zile de la semnarea contractului, veti primi doua mostre din care o veti alege pe cea favorita.</p>
-                <p>Pentru a se incepe realizarea invitatiilor, trebuie achitat un <b>avans de 50%</b> din pretul total.</p>
-                <p>Odata avansul primit invitatiile vor fi livrate in <b>minimun 15 zile.</b></p>
+                <p>{t("DELIVERY_STEP3_p1")}</p>
+                <p>{t("DELIVERY_STEP3_p2")} <b>{t("DELIVERY_STEP3_p2a")} </b>{t("DELIVERY_STEP3_p2b")}</p>
+                <p>{t("DELIVERY_STEP3_p3")} <b>{t("DELIVERY_STEP3_p3a")}</b></p>
               </>
             }
             number={3}
-            title={"Mostre si livrare"}
+            title={t("DELIVERY_STEP3_TITLE")}
             id="livrare"
           />
         </div>

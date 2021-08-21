@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import TextField from '@material-ui/core/TextField';
-import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGripLines } from '@fortawesome/free-solid-svg-icons'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+import Zoom from 'react-medium-image-zoom'
 
 export default function ModelCard({ cardMenu, type }) {
     const [model] = useState(cardMenu);
@@ -28,12 +28,14 @@ export default function ModelCard({ cardMenu, type }) {
                         onClick={() => { if (currentSrcIdx != 0) setcurrentSrcIdx(currentSrcIdx - 1) }}
                     /> : null
                 }
-                <Image
+                <Zoom>
+                <img
                     src={`/assets/${type}/${model.src[currentSrcIdx]}`}
                     height={model.height === 'tall' ? 760 : 450}
                     width={model.height === 'tall' ? 560 : 560}
                     alt={`model invitatie nunta ${cardMenu.nume}`}
                 />
+                </Zoom>
                 {
                     model.src.length > 1 && currentSrcIdx !== model.src.length - 1 ?
                         <FontAwesomeIcon className="arrow R"

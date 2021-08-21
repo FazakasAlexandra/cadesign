@@ -15,12 +15,12 @@ const papers = require('../db/papersB.json')
 const defaultOrder = {
     'envelopes': { 
         itemName: 'Plic | Hartie Texturata cu insertii aurii | Culoare Alb',
-        price: 2.7,
+        price: envelopes[0].price,
         selection: envelopes[0]
     },
     'paper': {
         itemName: 'Hartie cartonata | Culoare Alb | 270 g',
-        price: 2.7,
+        price: papers['cartonata'].price,
         selection: papers['cartonata'].papers[0]
     }
 }

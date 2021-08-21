@@ -1,19 +1,21 @@
-[{
-        "id" : 1,
-        "nume": "basic elegant",
-        "hartie card": "carton texturat",
-        "detaliu card": null,
-        "hartie plic": "carton texturat",
-        "detaliu plic": null,
-        "sigiliu": "sigiliu din ceara de culoare maro",
-        "detalii sigiliu": null,
-        "card confirmari": null,
-        "pret": 8.5,
-        "src": [
-            "MODEL BASIC ELEGANT_1.jpg"
-        ],
-        "height":"short"
-    },
+[    {
+    "id" : 11,
+    "nume": "Basic",
+    "hartie card": "hartie din carton texturat",
+    "hartie plic": "hartie din carton texturat",
+    "card confirmari": null,
+    "detaliu card": "marginile sunt rupe manual, invelit cu hartie de calc",
+    "detaliu plic": null,
+    "detalii sigiliu": null,
+    "sigiliu": null,
+    "pret": 8,
+    "src": [
+        "modelbasic_3.jpg",
+        "modelbasic_2.jpg",
+        "modelbasic_1b.jpg"
+    ],
+    "height":"small" 
+},
     {
         "id" : 12,
         "nume": "elegant vintage",
@@ -26,9 +28,9 @@
         "sigiliu": "sigiliu din ceara de culoarea bronzului",
         "pret": 11.5,
         "src": [
-            "model-elegantvintage-11.5ron.jpg",
-            "model-elegantvintage-11.5ron (3).JPG",
-            "model-elegantvintage-11.5ron (2).JPG"
+            "elegant-vintage(1).jpg",
+            "elegant-vintage(2).jpg",
+            "elegant-vintage(3).jpg"
         ],
         "height":"short" 
     },
@@ -221,9 +223,10 @@
         "sigiliu": "sigiliu din ceara de culoarea bronzului",
         "pret": 12,
         "src": [
-            "model_handmadeelegant_13.5-20ron.jpg",
-            "model_handmadeelegant_13.5 ron.jpg",
-            "model_handmadeelegant_13.5 ron (2).jpg"
+            "handmade-elegant.jpg",
+            "handmade-elegant(2).jpg",
+            "handmade-elegant(3).jpg",
+            "handmade-elegant(4).jpg"
         ],
         "height":"tall" 
     },
@@ -271,15 +274,15 @@
         "sigiliu": "sigiliu din ceara de culoare aurie",
         "pret": 16,
         "src": [
-            "model_handmadeluxurygreen_16 ron (4) Cropped.jpg",
-            "model_handmadeluxurygreen_16 ron(6)2 Cropped.jpg",
-            "model_handmadeluxurygreen_16 ron (3).jpg",
-            "model_handmadeluxurywhite_16ron.jpg"
+            "luxury-green(2).jpg",
+            "luxury-green.jpg",
+            "luxury-green(3).jpg",
+            "luxury-green-white.jpg"
         ],
         "height":"short"
     },
     {
-        "id" : 11,
+        "id" : 20,
         "nume": "handmade vintage art",
         "hartie card": "hartie handmade",
         "hartie plic": "hartie din carton texturat",
@@ -298,7 +301,7 @@
         "height":"tall" 
     },
     {
-        "id" : 11,
+        "id" : 21,
         "nume": "Handmade elegant green",
         "hartie card": "hartie handmade",
         "hartie plic": "hartie din carton texturat",

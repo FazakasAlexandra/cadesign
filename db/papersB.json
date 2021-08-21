@@ -13,7 +13,8 @@
             "#9BA2B2",
             "#808672"
         ],
-        "price": 2.7,
+        "price": 5,
+        "price_large" : 6.5,
         "papers" : [
             {
                 "id": 1,
@@ -61,7 +62,8 @@
             "#AEB4CA",
             "#808672"
         ],
-        "price" : 2.9,
+        "price" : 3.8,
+        "price_large" : 4.2,
         "papers" : [
             {
                 "id": 81,

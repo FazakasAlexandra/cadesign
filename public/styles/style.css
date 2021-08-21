@@ -872,6 +872,10 @@ nav {
   background-color: white;
 }
 
+img {
+  object-fit: cover;
+}
+
 .page {
   display: flex;
   justify-content: center;

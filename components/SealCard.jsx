@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import TextField from '@material-ui/core/TextField';
-import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGripLines } from '@fortawesome/free-solid-svg-icons'
 import InputLabel from '@material-ui/core/InputLabel';
@@ -51,10 +50,11 @@ export default function SealCard({ productType, selectedItems, addToOrder, isOpe
 
     return (
         <div className="card seal">
-            <Image
+            <img
                 src={`/assets/seals/${seal.src}`}
                 height={300}
                 width={300}
+                style={{objectFit: "contain"}}
                 alt="imagine sigiliu"
             />
             <div className="card-seal-footer">

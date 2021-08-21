@@ -15,7 +15,8 @@ export default function PaperCard({ productType, selectedItems, addToOrder, isOp
     const [paper, setPaper] = useState(selectedItems?.paper?.selection.paper || papers['cartonata'].papers[0])
     const [open, setOpen] = useState(isOpen || false)
     const [quantity, setQuantity] = useState(1)
-    const [price, setPrice] = useState(2.7)
+    const [price, setPrice] = useState(3.8)
+    const [defaultPrice, setDefaultPrice] = useState(3.8)
     const [weight, setWeight] = useState(selectedItems?.paper?.selection.weight || papers.weights[0])
 
     const handleColorClick = (e) => {
@@ -27,10 +28,13 @@ export default function PaperCard({ productType, selectedItems, addToOrder, isOp
 
     useEffect(() => {
         setPaper(selectedItems?.paper?.selection.paper || papers[type].papers[0])
+        setDefaultPrice(papers[type].price)
+        setPrice(papers[type].price)
+        setQuantity(1)
     }, [type])
 
     useEffect(() => {
-        setPrice(quantity * 2.7)
+        setPrice(quantity * defaultPrice)
     }, [quantity])
 
     useEffect(()=>{

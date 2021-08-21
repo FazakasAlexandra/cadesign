@@ -8,7 +8,8 @@
         "smallWeight": "120 g",
         "smallSize": "12x15 cm",
         "bigSize": "13x18 cm",
-        "price": 2.7
+        "price_large": 2.7,
+        "price": 2.2
     },
     {
         "id": 6,
@@ -20,7 +21,8 @@
         "smallWeight": "120 g",
         "smallSize": "12x15 cm",
         "bigSize": "13x18 cm",
-        "price": 2.7
+        "price_large": 2.7,
+        "price": 2.2
     },
     {
         "id": 4,
@@ -32,7 +34,9 @@
         "smallWeight": "120 g",
         "smallSize": "12x15 cm",
         "bigSize": "13x18 cm",
-        "price": 2.7
+        "price_large": 2.7,
+        "price": 2.2
+        
     },
     {
         "id": 7,
@@ -44,7 +48,8 @@
         "smallWeight": "120 g",
         "smallSize": "12x15 cm",
         "bigSize": "13x18 cm",
-        "price": 2.7
+        "price_large": 2.7,
+        "price": 2.2
     },
     {
         "id": 2,
@@ -56,7 +61,8 @@
         "smallWeight": "120 g",
         "smallSize": "12x15 cm",
         "bigSize": "13x18 cm",
-        "price": 2.7
+        "price_large": 2.7,
+        "price": 2.2
     },
     {
         "id": 10,
@@ -68,19 +74,8 @@
         "smallWeight": "120 g",
         "smallSize": "12x15 cm",
         "bigSize": "13x18 cm",
+        "price_large": 8,
         "price": 7
-    },
-    {
-        "id": 12,
-        "src": "plic crem_carton texturat_dimensiune13x18cm.jpg",
-        "papper": "Texturata",
-        "color": "Crem",
-        "hex": "#90897D",
-        "largeWeight": "150 g",
-        "smallWeight": "120 g",
-        "smallSize": "12x15 cm",
-        "bigSize": "13x18 cm",
-        "price": 2.7
     },
     {
         "id": 9,
@@ -92,7 +87,8 @@
         "smallWeight": "120 g",
         "smallSize": "12x15 cm",
         "bigSize": "13x18 cm",
-        "price": 2.7
+        "price_large": 2.7,
+        "price": 2.2
     },
     {
         "id": 8,
@@ -104,7 +100,8 @@
         "smallWeight": "120 g",
         "smallSize": "12x15 cm",
         "bigSize": "13x18 cm",
-        "price": 2.7
+        "price_large": 2.7,
+        "price": 2.2
     },
     {
         "id": 11,
@@ -116,7 +113,8 @@
         "smallWeight": "120 g",
         "smallSize": "12x15 cm",
         "bigSize": "13x18 cm",
-        "price": 2.7
+        "price_large": 2.7,
+        "price": 2.2
     },
     {
         "id": 13,
@@ -128,7 +126,8 @@
         "smallWeight": "120 g",
         "smallSize": "12x15 cm",
         "bigSize": "13x18 cm",
-        "price": 2.7
+        "price_large": 2.7,
+        "price": 2.2
     },
     {
         "id": 3,
@@ -140,7 +139,8 @@
         "smallWeight": "120 g",
         "smallSize": "12x15 cm",
         "bigSize": "13x18 cm",
-        "price": 2.7
+        "price_large": 2.7,
+        "price": 2.2
     },
     {
         "id": 5,
@@ -152,6 +152,7 @@
         "smallWeight": "120 g",
         "smallSize": "12x15 cm",
         "bigSize": "13x18 cm",
-        "price": 2.7
+        "price_large": 2.7,
+        "price": 2.2
     }
 ]

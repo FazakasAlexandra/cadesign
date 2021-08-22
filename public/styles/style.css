@@ -74,20 +74,19 @@ li {
   max-width: 100%;
 }
 
+.cards-container .card:nth-child(even) {
+  margin-left: 2rem;
+}
+.cards-container .card:last-child {
+  margin-left: 2rem;
+}
+
 .cards-container,
 .preturi {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 1rem;
-}
-.cards-container .card:nth-child(even),
-.preturi .card:nth-child(even) {
-  margin-left: 2rem;
-}
-.cards-container .card:last-child,
-.preturi .card:last-child {
-  margin-left: 2rem;
 }
 .cards-container .card,
 .preturi .card {
@@ -874,6 +873,7 @@ li {
 @media (max-width: 480px) {
   .despre-noi .us-img {
     left: 7% !important;
+    top: -15rem !important;
   }
 }
 @media (max-width: 420px) {

@@ -7,13 +7,7 @@
     max-width: 100%;
 }
 
-.cards-container,
-.preturi {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 1rem;
-
+.cards-container{
     .card:nth-child(even) {
         margin-left: 2rem;
     }
@@ -21,6 +15,14 @@
     .card:last-child{
         margin-left: 2rem;
     }
+}
+
+.cards-container,
+.preturi {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
 
     .card {
         width: fit-content;

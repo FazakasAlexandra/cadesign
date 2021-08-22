@@ -675,7 +675,6 @@ li {
 .image.seal,
 .image.paper {
   object-fit: cover;
-  width: 100%;
 }
 
 .image.seal,
@@ -985,6 +984,7 @@ img {
 
 [data-rmiz-wrap=visible], [data-rmiz-wrap=hidden] {
   width: 100%;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */

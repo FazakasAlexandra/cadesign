@@ -20,7 +20,7 @@ export default function EnvelopeCard({ productType, selectedItems, addToOrder, i
         const chosenEnvelope = envelopes.find((envelope) => envelope.id == e.target.id)
         setEnvelope(chosenEnvelope)
         setPrice(chosenEnvelope.price)
-        if (productTypeAlreadyInOrder()) addToOrder(productType, `Plic | Hartie ${chosenEnvelope.papper} | Culoare ${chosenEnvelope.color}`, price, chosenEnvelope)
+        if (productTypeAlreadyInOrder()) addToOrder(productType, `Plic | Hartie ${chosenEnvelope.papper} | Culoare ${chosenEnvelope.color}`, chosenEnvelope.price, chosenEnvelope)
     }
 
     useEffect(() => {

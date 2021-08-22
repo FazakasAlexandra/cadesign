@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import TextField from '@material-ui/core/TextField';
-import Image from 'next/image'
+import { Img } from './Img'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGripLines } from '@fortawesome/free-solid-svg-icons'
 import CircularProgress from '@material-ui/core/CircularProgress';
@@ -40,12 +40,12 @@ export default function EnvelopeCard({ productType, selectedItems, addToOrder, i
     return (
         <div className="card envelope">
             {loading ? <CircularProgress className="progress" /> : null}
-            <Image
+            <Img
+                size="envelope"
+                alt="plic"
                 src={`/assets/envelopes/${envelope.src}`}
-                height={359}
-                width={500}
-                alt="imagine plic"
             />
+
             <div className="card-envelope-footer">
                 <FontAwesomeIcon icon={faGripLines} size="2x" onClick={() => setOpen(!open)} />
                 <div className="colors-container">

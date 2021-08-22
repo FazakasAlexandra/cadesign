@@ -6,7 +6,7 @@ import Layout from '../../components/Layout'
 export default function Papetarie() {
     return (
         <Layout>
-            <div className="cards-container" id="produse">
+            <div className="cards-container papetarie" id="produse">
                 <EnvelopeCard isOpen={false} />
                 <SealCard isOpen={false}/>
                 <PaperCard isOpen={false}/>

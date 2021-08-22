@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import TextField from '@material-ui/core/TextField';
-import Image from 'next/image'
+import { Img } from './Img'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGripLines } from '@fortawesome/free-solid-svg-icons'
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
-import CircularProgress from '@material-ui/core/CircularProgress';
 const papers = require('../db/papersB.json');
 
 export default function PaperCard({ productType, selectedItems, addToOrder, isOpen }) {
@@ -37,9 +36,9 @@ export default function PaperCard({ productType, selectedItems, addToOrder, isOp
         setPrice(quantity * defaultPrice)
     }, [quantity])
 
-    useEffect(()=>{
-        if (productTypeAlreadyInOrder()) addToOrder(productType, `Hartie ${type} | Culoare ${paper.color} | ${weight}`, price, {type, paper, weight})
-    },[paper, weight])
+    useEffect(() => {
+        if (productTypeAlreadyInOrder()) addToOrder(productType, `Hartie ${type} | Culoare ${paper.color} | ${weight}`, price, { type, paper, weight })
+    }, [paper, weight])
 
     const paperColors = () => {
         return papers[type].colors.map((color, idx) => {
@@ -61,14 +60,11 @@ export default function PaperCard({ productType, selectedItems, addToOrder, isOp
 
     return (
         <div className="card paper">
-            <div className="img-container">
-                <Image
-                    src={`/assets/papers/${paper.src}`}
-                    height={370}
-                    width={300}
-                    alt="imagine hartie"
-                />
-            </div>
+            <Img
+                src={`/assets/papers/${paper.src}`}
+                size="paper"
+                alt="hartie"
+            />
             <div className="card-paper-footer">
                 <FontAwesomeIcon icon={faGripLines} size="2x" onClick={() => setOpen(!open)} />
                 <div className="colors-container">
@@ -132,10 +128,10 @@ export default function PaperCard({ productType, selectedItems, addToOrder, isOp
                                 null :
                                 <button
                                     className="add-button"
-                                    onClick={() => addToOrder(productType, `Hartie ${type} | Culoare ${paper.color} | ${weight}`, price, {type, paper, weight})}
+                                    onClick={() => addToOrder(productType, `Hartie ${type} | Culoare ${paper.color} | ${weight}`, price, { type, paper, weight })}
                                 >
                                     Adauga
-                                 </button>
+                                </button>
                             }
                         </div>
                     </div> : null

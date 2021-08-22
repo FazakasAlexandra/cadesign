@@ -1,23 +1,23 @@
-[    {
-    "id" : 11,
-    "nume": "Basic",
-    "hartie card": "hartie din carton texturat",
-    "hartie plic": "hartie din carton texturat",
-    "card confirmari": null,
-    "detaliu card": "marginile sunt rupe manual, invelit cu hartie de calc",
-    "detaliu plic": null,
-    "detalii sigiliu": null,
-    "sigiliu": null,
-    "pret": 8,
-    "src": [
-        "modelbasic_3.jpg",
-        "modelbasic_2.jpg",
-        "modelbasic_1b.jpg"
-    ],
-    "height":"small" 
-},
+[{
+        "id": 11,
+        "nume": "Basic",
+        "hartie card": "hartie din carton texturat",
+        "hartie plic": "hartie din carton texturat",
+        "card confirmari": null,
+        "detaliu card": "marginile sunt rupe manual, invelit cu hartie de calc",
+        "detaliu plic": null,
+        "detalii sigiliu": null,
+        "sigiliu": null,
+        "pret": 8,
+        "src": [
+            "modelbasic_3.jpg",
+            "modelbasic_2.jpg",
+            "modelbasic_1b.jpg"
+        ],
+        "height": "short"
+    },
     {
-        "id" : 12,
+        "id": 12,
         "nume": "elegant vintage",
         "hartie card": "hartie din carton texturat",
         "hartie plic": "hartie din carton texturat",
@@ -32,10 +32,10 @@
             "elegant-vintage(2).jpg",
             "elegant-vintage(3).jpg"
         ],
-        "height":"short" 
+        "height": "short"
     },
     {
-        "id" : 2,
+        "id": 2,
         "nume": "brown cherry",
         "hartie card": "hartie de bumbac",
         "hartie plic": "carton texturat",
@@ -50,11 +50,11 @@
             "MODEL BROWN-CHERRY_10.5 ron (2).jpg",
             "MODEL BROWN-CHERRY_10.5 ron(4).jpg"
         ],
-        "height":"tall"
+        "height": "tall"
     },
-    
+
     {
-        "id" : 3,
+        "id": 3,
         "nume": "wild elegant",
         "hartie card": "hartie de bumbac",
         "hartie plic": "carton texturat",
@@ -70,10 +70,10 @@
             "MODEL WILD ELEGANT_9.5 ron 4.jpg"
         ],
         "dimensiune": "13x18cm",
-        "height":"tall"
+        "height": "tall"
     },
     {
-        "id" : 5,
+        "id": 5,
         "nume": "little vintage",
         "hartie card": "hartie de bumbac",
         "hartie plic": "carton texturat",
@@ -87,10 +87,10 @@
             "modellittlevintage_1model_litlevintage_8 ron 5.jpg",
             "modelitlevintage_3.jpg"
         ],
-        "height":"tall"
+        "height": "tall"
     },
     {
-        "id" : 6,
+        "id": 6,
         "nume": "blue-oceanic",
         "hartie card": "hartie de bumbac",
         "hartie plic": "carton texturat",
@@ -104,10 +104,10 @@
             "model_blueoceanic_10.5ron.jpg",
             "model_blueoceanic_10.5ron (2).jpg"
         ],
-        "height":"tall"
-    }, 
+        "height": "tall"
+    },
     {
-        "id" : 7,
+        "id": 7,
         "nume": "gold green",
         "hartie card": "hartie din bumbac",
         "hartie plic": "hartie din carton texturat",
@@ -121,10 +121,10 @@
             "model_goldgreen_11ron (3).jpg",
             "model_goldgreen_11ron (4).jpg"
         ],
-        "height":"tall"
+        "height": "tall"
     },
     {
-        "id" : 8,
+        "id": 8,
         "nume": "handmade vintage",
         "hartie card": "hartie din bumbac",
         "hartie plic": "hartie din carton texturat",
@@ -142,10 +142,10 @@
             "model_handmadevintage_11.5ron(3).jpg",
             "model_handmadevintage_11.5ron(4).jpg"
         ],
-        "height":"tall"
+        "height": "tall"
     },
     {
-        "id" : 9,
+        "id": 9,
         "nume": "handmade pastel",
         "hartie card": "hartie handmade",
         "hartie plic": "hartie din carton texturat",
@@ -158,10 +158,10 @@
         "src": [
             "model_handmadepastel_12-15ron.jpg"
         ],
-        "height":"tall"
+        "height": "tall"
     },
     {
-        "id" : 10,
+        "id": 10,
         "nume": "handmade vintage luxury",
         "hartie card": "hartie handmade",
         "hartie plic": "hartie din carton texturat",
@@ -174,10 +174,10 @@
         "src": [
             "Model_handmadevintageluxury_13ron.jpg"
         ],
-        "height":"tall"
+        "height": "tall"
     },
     {
-        "id" : 13,
+        "id": 13,
         "nume": "blue elegant",
         "hartie card": "hartie din insertii auri",
         "hartie plic": "hartie din carton texturat",
@@ -192,10 +192,10 @@
             "model-bluelegant-12 ron (2).jpg",
             "model-bluelegant-12 ron.jpg"
         ],
-        "height":"short" 
+        "height": "short"
     },
     {
-        "id" : 14,
+        "id": 14,
         "nume": "handmade elegant",
         "hartie card": "hartie handmade",
         "hartie plic": "hartie din carton texturat",
@@ -209,10 +209,10 @@
             "model-handmadeelegant_13.5 ron.jpg",
             "model-handmadeelegant_13.5 ron (3).jpg"
         ],
-        "height":"short"
+        "height": "short"
     },
     {
-        "id" : 15,
+        "id": 15,
         "nume": "handmade elegant",
         "hartie card": "hartie handmade",
         "hartie plic": "hartie din carton texturat",
@@ -228,10 +228,10 @@
             "handmade-elegant(3).jpg",
             "handmade-elegant(4).jpg"
         ],
-        "height":"tall" 
+        "height": "tall"
     },
     {
-        "id" : 16,
+        "id": 16,
         "nume": "handmade vintage green",
         "hartie card": "hartie handmade",
         "hartie plic": "hartie din carton texturat",
@@ -244,10 +244,10 @@
         "src": [
             "model_handmadevintagegreen_15ron(3).jpg"
         ],
-        "height":"tall" 
+        "height": "tall"
     },
     {
-        "id" : 17,
+        "id": 17,
         "nume": "handmade gold",
         "hartie card": "hartie handmade",
         "hartie plic": "hartie din carton texturat",
@@ -260,10 +260,10 @@
         "src": [
             "model_handmadegold_13,5ron.jpg"
         ],
-        "height":"short" 
+        "height": "short"
     },
     {
-        "id" : 18,
+        "id": 18,
         "nume": "luxury green/white",
         "hartie card": "hartie handmade",
         "hartie plic": "hartie din carton texturat",
@@ -279,10 +279,10 @@
             "luxury-green(3).jpg",
             "luxury-green-white.jpg"
         ],
-        "height":"short"
+        "height": "short"
     },
     {
-        "id" : 20,
+        "id": 20,
         "nume": "handmade vintage art",
         "hartie card": "hartie handmade",
         "hartie plic": "hartie din carton texturat",
@@ -298,10 +298,10 @@
             "Model_vintageart_15ron (2).jpg",
             "Model_vintageart_15ron (3).jpg"
         ],
-        "height":"tall" 
+        "height": "tall"
     },
     {
-        "id" : 21,
+        "id": 21,
         "nume": "Handmade elegant green",
         "hartie card": "hartie handmade",
         "hartie plic": "hartie din carton texturat",
@@ -316,6 +316,6 @@
             "model-handmadeelegantgreen-14.5ron(5).jpg",
             "model-handmadeelegantgreen-14.5ron(3).jpg"
         ],
-        "height":"tall" 
+        "height": "tall"
     }
 ]

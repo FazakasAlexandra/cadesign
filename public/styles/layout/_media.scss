@@ -4,6 +4,12 @@
     }
 }
 
+@media(max-width: 1300px) {
+    .card.model {
+        margin-left: 0.5rem !important;
+    }
+}
+
 @media(max-width: 1000px) {
     .main-nav {
         justify-content: center;
@@ -45,15 +51,16 @@
         margin-bottom: 2rem;
     }
 
-    .despre-noi{
-        .content{
+    .despre-noi {
+        .content {
             width: 100% !important;
         }
-        .us-img{
+
+        .us-img {
             left: 20% !important;
         }
     }
-    
+
 }
 
 
@@ -63,14 +70,14 @@
         margin-bottom: 2rem;
     }
 
-    .despre-noi{
-        .us-img{
+    .despre-noi {
+        .us-img {
             left: 15% !important;
             width: 400px;
             height: 400px;
         }
     }
-    
+
 }
 
 @media(max-width: 829px) {
@@ -89,13 +96,16 @@
 }
 
 @media (max-width: 600px) {
-    .despre-noi{
-        h1{
+    .despre-noi {
+        h1 {
             font-size: 40px !important;
         }
     }
-    .cards-container .card {
-        margin: 0.5rem 0.5rem;
+
+    .cards-container {
+        .card {
+            margin: 2rem 0.5rem 0 0.5rem !important;
+        }
     }
 
     .main-nav {
@@ -106,6 +116,30 @@
         .fa-bars {
             display: flex;
         }
+
+        .language-options {
+            left: 90%;
+        }
+    }
+
+    .svg.seal,
+    .svg.envelope,
+    .svg.paper{
+        height: 100%;
+        width: 100%;
+    }
+
+    .image.seal,
+    .image.paper,
+    .image.envelope{
+        height: 500px;
+        object-fit: contain;
+    }
+
+    .card.seal,
+    .card.paper,
+    .card.envelope{
+        width: 94%;
     }
 
     .card.paper {
@@ -114,11 +148,9 @@
             align-self: center;
         }
 
-        width: 94%;
     }
 
     .card.seal {
-        width: 94%;
         justify-content: flex-end;
         display: flex;
         flex-direction: column;
@@ -141,13 +173,14 @@
 }
 
 @media(max-width:550px) {
-    .despre-noi{
-        h1{
+    .despre-noi {
+        h1 {
             font-size: 35px !important;
         }
     }
-    .despre-noi{
-        .us-img{
+
+    .despre-noi {
+        .us-img {
             left: 10% !important;
             width: 400px;
             height: 400px;
@@ -184,8 +217,8 @@
 
 @media(max-width:480px) {
 
-    .despre-noi{
-        .us-img{
+    .despre-noi {
+        .us-img {
             left: 7% !important;
         }
     }

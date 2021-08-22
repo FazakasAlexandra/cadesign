@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGripLines } from '@fortawesome/free-solid-svg-icons'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
-import Zoom from 'react-medium-image-zoom'
+import { Img } from './Img'
 
 export default function ModelCard({ cardModel }) {
     const [model] = useState(cardModel);
@@ -19,21 +19,18 @@ export default function ModelCard({ cardModel }) {
 
     return (
         <div className="card model">
-            <div style={{position : "relative"}}>
+            <div style={{ position: "relative" }}>
                 {currentSrcIdx > 0 ?
                     <FontAwesomeIcon className="arrow L"
                         icon={faChevronLeft} size="2x"
                         onClick={() => { if (currentSrcIdx != 0) setcurrentSrcIdx(currentSrcIdx - 1) }}
                     /> : null
                 }
-                <Zoom>
-                <img
+                <Img
                     src={`/assets/models/${model.src[currentSrcIdx]}`}
-                    height={model.height === 'tall' ? 760 : 450}
-                    width={model.height === 'tall' ? 560 : 560}
+                    size={model.height}
                     alt={`model invitatie nunta ${cardModel.nume}`}
                 />
-                </Zoom>
                 {
                     model.src.length > 1 && currentSrcIdx !== model.src.length - 1 ?
                         <FontAwesomeIcon className="arrow R"

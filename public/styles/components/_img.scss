@@ -1,0 +1,49 @@
+.placeholder {
+    background-color: #F0F0F0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.svg.short {
+    width: 360px;
+    height: 360px;
+}
+
+.svg.tall {
+    width: 360px;
+    height: 550px;
+}
+
+.image.tall {
+    height: 760px;
+    width: 560px;
+}
+
+.image.short {
+    height: 450px;
+    width: 560px;
+}
+
+.image.seal,
+.image.paper {
+    object-fit: cover;
+    width: 100%;
+}
+
+.image.seal,
+.image.paper,
+.image.envelope{
+    height: 370px;
+}
+
+.image.envelope{
+    width: 500px;
+}
+
+.svg.seal,
+.svg.paper,
+.svg.envelope{
+    width: 200px;
+    height: 200px;
+}

@@ -6,7 +6,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
-
+import { Img } from './Img'
 const seals = require('../db/seals.json');
 
 export default function SealCard({ productType, selectedItems, addToOrder, isOpen }) {
@@ -22,7 +22,7 @@ export default function SealCard({ productType, selectedItems, addToOrder, isOpe
     useEffect(() => {
         const newSeal = seals[hex].find((seal) => seal.model === model)
         setSeal(newSeal);
-        if (productTypeAlreadyInOrder()) addToOrder(productType, `Sigiliu | Model ${newSeal.model} | Culoare ${newSeal.color}`, price, {hex, model, seal: newSeal})
+        if (productTypeAlreadyInOrder()) addToOrder(productType, `Sigiliu | Model ${newSeal.model} | Culoare ${newSeal.color}`, price, { hex, model, seal: newSeal })
     }, [hex])
 
     useEffect(() => {
@@ -45,17 +45,15 @@ export default function SealCard({ productType, selectedItems, addToOrder, isOpe
         const newSeal = seals[hex].find((seal) => seal.model === e.target.value)
         setSeal(newSeal);
         setModel(newSeal.model)
-        if (productTypeAlreadyInOrder()) addToOrder(productType, `Sigiliu | Model ${newSeal.model} | Culoare ${newSeal.color}`, price, {hex, seal, model: newSeal.model})
+        if (productTypeAlreadyInOrder()) addToOrder(productType, `Sigiliu | Model ${newSeal.model} | Culoare ${newSeal.color}`, price, { hex, seal, model: newSeal.model })
     }
 
     return (
         <div className="card seal">
-            <img
+            <Img
                 src={`/assets/seals/${seal.src}`}
-                height={300}
-                width={300}
-                style={{objectFit: "contain"}}
-                alt="imagine sigiliu"
+                size="seal"
+                alt="sigiliu"
             />
             <div className="card-seal-footer">
                 <FontAwesomeIcon icon={faGripLines} size="2x" onClick={() => setOpen(!open)} />
@@ -104,7 +102,7 @@ export default function SealCard({ productType, selectedItems, addToOrder, isOpe
                             </div>
                             {productTypeAlreadyInOrder() || selectedItems === undefined ?
                                 null :
-                                <button className="add-button" onClick={() => addToOrder(productType, `Sigiliu | Model ${seal.model} | Culoare ${seal.color}`, price, {hex, seal, model})}>Adauga</button>}
+                                <button className="add-button" onClick={() => addToOrder(productType, `Sigiliu | Model ${seal.model} | Culoare ${seal.color}`, price, { hex, seal, model })}>Adauga</button>}
                         </div>
                     </> : null
             }

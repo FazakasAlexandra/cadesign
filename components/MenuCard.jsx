@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGripLines } from '@fortawesome/free-solid-svg-icons'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
-import Zoom from 'react-medium-image-zoom'
+import { Img } from './Img.jsx'
 
 export default function ModelCard({ cardMenu, type }) {
     const [model] = useState(cardMenu);
@@ -13,29 +13,24 @@ export default function ModelCard({ cardMenu, type }) {
     const [quantity, setQuantity] = useState(1)
     const [price, setPrice] = useState(cardMenu.pret)
 
-    console.log(type)
-    
     useEffect(() => {
         setPrice(quantity * cardMenu.pret)
     }, [quantity])
 
     return (
         <div className="card model">
-            <div style={{position : "relative"}}>
+            <div style={{ position: "relative" }}>
                 {currentSrcIdx > 0 ?
                     <FontAwesomeIcon className="arrow L"
                         icon={faChevronLeft} size="2x"
                         onClick={() => { if (currentSrcIdx != 0) setcurrentSrcIdx(currentSrcIdx - 1) }}
                     /> : null
                 }
-                <Zoom>
-                <img
+                <Img
+                    size={model.height}
                     src={`/assets/${type}/${model.src[currentSrcIdx]}`}
-                    height={model.height === 'tall' ? 760 : 450}
-                    width={model.height === 'tall' ? 560 : 560}
-                    alt={`model invitatie nunta ${cardMenu.nume}`}
+                    alt={`meniu ${cardMenu.nume}`}
                 />
-                </Zoom>
                 {
                     model.src.length > 1 && currentSrcIdx !== model.src.length - 1 ?
                         <FontAwesomeIcon className="arrow R"

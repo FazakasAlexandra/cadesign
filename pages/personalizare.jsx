@@ -11,6 +11,7 @@ import EmborsareAddon from '../components/EmborsareAddon'
 import Layout from '../components/Layout'
 const envelopes = require('../db/envelopes.json')
 const papers = require('../db/papersB.json')
+import { useRouter } from "next/router";
 
 const defaultOrder = {
     'envelopes': { 
@@ -26,6 +27,7 @@ const defaultOrder = {
 }
 
 export default function Preturi() {
+    const router = useRouter();
     const getUserSelection = () => typeof window !== "undefined" ? JSON.parse(localStorage.getItem('userSelection') || JSON.stringify(defaultOrder)) : defaultOrder
     const [selectedItems, setSelectedItems] = useState(getUserSelection()) // { [productType]: { <productName>: <price> }, ...}
     const [steps, setSteps] = useState([
@@ -40,7 +42,8 @@ export default function Preturi() {
     ])
 
     useEffect(() => {
-        console.log('component rendered', selectedItems)
+        // this page is on pause
+        router.back();
     }, [])
 
     useEffect(() => {

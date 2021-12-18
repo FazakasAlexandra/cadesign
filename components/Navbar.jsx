@@ -20,7 +20,6 @@ export default function Navbar() {
             </div>
             <Link href="/"><img className="logo" src="/assets/navbar/logo.jpg" alt="logo" /></Link>
             <ul className="list" style={{ display: menuOn ? 'flex' : 'none' }}>
-                <Link href="/personalizare#invitatii"><a>{t("HEADER_LINK1")}</a></Link>
                 <Link href="/#livrare"><a>{t("HEADER_LINK2")}</a></Link>
                 <Link href="/despreCAdesign#noi"><a>{t("HEADER_LINK3")}</a></Link>
             </ul>

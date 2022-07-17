@@ -4,7 +4,7 @@ import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 export default function Layout({ children }) {
     return (
-        <html lang="rm-RO">
+        <>
             <Head>
                 <title>Invitatii handmade pentru nunta</title>
                 <meta charSet="UTF-8" />
@@ -27,7 +27,7 @@ export default function Layout({ children }) {
             <footer>
                 <script src="https://smtpjs.com/v3/smtp.js"></script>
             </footer>
-        </html>
+        </>
     )
 
 }

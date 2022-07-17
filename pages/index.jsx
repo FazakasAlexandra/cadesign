@@ -1,67 +1,77 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
-import OrderStepCard from '../components/OrderStepCard'
-import Image from 'next/image'
-import useTranslation from '../hooks/useTranslation';
-
+import Layout from "../components/Layout";
+import Navbar from "../components/Navbar";
 export default function HomePage() {
-  const { t } = useTranslation();
+  const boxStyle = {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "250px 0px",
+    backgroundSize: "cover",
+    scrollSnapAlign: "center",
+  };
 
   return (
-    <Layout>
-      <div className="page home">
-        <div className="slogan-container">
-          <Image
-            src={`/assets/envelopes_details/interiordecorat_plic_2ron.png`}
-            height={585}
-            width={450}
-            alt="plic invitatie nunta"
-          />
-          <div className="slogan">
-            <i>CAdesign</i>
-            <h1>{t("HOMEPAGE_h1")}</h1>
-            <a  target="_blank" href="/assets/catalog2021.pdf">{t("HOMEPAGE_CATALOG")}</a>
+    <>
+      <div
+        style={{
+          maxHeight: "100vh",
+          overflowY: "scroll",
+          scrollSnapType: "y mandatory",
+        }}
+      >
+       <Navbar />
+        <div
+          style={{
+            background: "url(assets/home/pink_bg.png) no-repeat",
+            ...boxStyle,
+          }}
+        >
+          <img src="/assets/home/pink.png" height="700px" />
+        </div>
+        <div
+          style={{
+            background: "url(assets/home/black_bg.png) no-repeat",
+            ...boxStyle,
+          }}
+        >
+          <img src="/assets/home/black.png" />
+        </div>
+        <div
+          style={{
+            background: "url(assets/home/blue_bg.png) no-repeat",
+            ...boxStyle,
+          }}
+        >
+          <img src="/assets/home/blue.png" />
+        </div>
+        <div
+          style={{
+            background: "url(assets/home/green_bg.png) no-repeat",
+            ...boxStyle,
+          }}
+        >
+          <img src="/assets/home/green.png" />
+        </div>
+        <div
+          style={{
+            backgroundColor: "#647058",
+            ...boxStyle,
+            flexDirection: "column",
+          }}
+        >
+          <img src="/assets/home/logo.png" width="500px" />
+          <div
+            className="slogan"
+            style={{
+              margin: "0px",
+            }}
+          >
+            <a target="_blank" href="/assets/catalog2021.pdf">
+              Catalog
+            </a>
           </div>
         </div>
-        <div className="order-steps-cards" id="procedura">
-          <OrderStepCard
-            text={
-              <>
-                <p>{t("DELIVERY_STEP1_p1")}</p>
-                <p>{t("DELIVERY_STEP1_p2a")} <Link href="/produse/modele"><a target="_blank">{t("DELIVERY_STEP1_p2b")}</a></Link></p>
-                <p>{t("DELIVERY_STEP1_p3a")} <i>{t("DELIVERY_STEP1_p3b")}</i></p>
-                <p>{t("DELIVERY_STEP1_p4")}</p>
-                <p>{t("DELIVERY_STEP1_p5a")}<Link href="/personalizare#invitatii"><a target="_blank">{t("DELIVERY_STEP1_p5b")}</a></Link></p>
-              </>
-            }
-
-            number={1}
-            title={t("DELIVERY_STEP1_TITLE")}
-          />
-          <OrderStepCard
-            text={
-              <>
-                <p>{t("DELIVERY_STEP2_p1")}</p>
-                <p>{t("DELIVERY_STEP2_p2a")} <a target="_blank" href="/assets/contract.pdf">{t("DELIVERY_STEP2_p2b")}</a> {t("DELIVERY_STEP2_p2c")}</p>
-              </>
-            }
-            number={2}
-            title={"Contract"}
-          />
-          <OrderStepCard
-            text={
-              <>
-                <p>{t("DELIVERY_STEP3_p1")}</p>
-                <p>{t("DELIVERY_STEP3_p2")} <b>{t("DELIVERY_STEP3_p2a")} </b>{t("DELIVERY_STEP3_p2b")}</p>
-                <p>{t("DELIVERY_STEP3_p3")} <b>{t("DELIVERY_STEP3_p3a")}</b></p>
-              </>
-            }
-            number={3}
-            title={t("DELIVERY_STEP3_TITLE")}
-            id="livrare"
-          />
-        </div>
       </div>
-      </Layout>
-  )
+    </>
+  );
 }

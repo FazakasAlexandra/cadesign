@@ -11,8 +11,8 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     if (!window.location.href.includes('localhost')) {
-      posthog.init('phc_yuGermCJ4ar0OalfTJqjn0YYvqEXKM4ZwU3vAAj5HXR', { api_host: 'https://app.posthog.com' })
-      posthog.capture('visitour', { property: '1' })
+      //posthog.init('phc_yuGermCJ4ar0OalfTJqjn0YYvqEXKM4ZwU3vAAj5HXR', { api_host: 'https://app.posthog.com' })
+      //posthog.capture('visitour', { property: '1' })
     }
   }, [])
 

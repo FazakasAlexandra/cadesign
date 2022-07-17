@@ -1,30 +1,60 @@
-import NavProducts from './NavProducts'
-import Link from 'next/link'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
-import { useState } from 'react'
-import useTranslation from '../hooks/useTranslation';
+import Link from "next/link";
 
 export default function Navbar() {
-    const [menuOn, setMenuOn] = useState(true)
-    const { t, setLocale, locales, locale } = useTranslation();
+  return (
+      <nav className="sec-nav">
+         <Link href="/"><img className="logo" src="/assets/navbar/logo.jpg" alt="logo" /></Link>
+        <Link href="/produse/papetarie#produse">
+          <div className="menu-circle">
+            <img
+              src="/assets/navbar/menu_icon1.jpg"
+              alt="papetarie"
+              className="menu-image"
+            />
+            <span className="menu-circle title" id="icon-papetarie">
+              Papetarie
+            </span>
+          </div>
+        </Link>
 
-    return (<>
-        <nav className="main-nav">
-            <FontAwesomeIcon icon={faBars} size="2x" onClick={() => setMenuOn(!menuOn)} />
-            <div className="language-options" onClick={() => {
-                locale === 'en' ? setLocale('ro') : setLocale('en')
-            }}>
-              <img src={`/assets/${locale}.png`}/>
-              <span>{locale}</span>
-            </div>
-            <Link href="/"><img className="logo" src="/assets/navbar/logo.jpg" alt="logo" /></Link>
-            <ul className="list" style={{ display: menuOn ? 'flex' : 'none' }}>
-                <Link href="/#livrare"><a>{t("HEADER_LINK2")}</a></Link>
-                <Link href="/despreCAdesign#noi"><a>{t("HEADER_LINK3")}</a></Link>
-            </ul>
-        </nav>
-        <NavProducts />
-    </>
-    )
+        <Link href="/produse/modele#produse">
+          <div className="menu-circle">
+            <img
+              src="/assets/navbar/menu_icon3.jpg"
+              alt="modele invitatii"
+              className="menu-image"
+            />
+            <span className="menu-circle title" id="icon-modele">
+              Modele
+            </span>
+          </div>
+        </Link>
+
+        <Link href="/produse/carti-de-vizita#produse">
+          <div className="menu-circle">
+            <img
+              src="/assets/navbar/menu_icon4.jpg"
+              alt="carti de vizita"
+              className="menu-image"
+            />
+            <span className="menu-circle title" id="icon-carti-vizita">
+              Carti de vizita
+            </span>
+          </div>
+        </Link>
+
+        <Link href="/produse/meniuri#produse">
+          <div className="menu-circle">
+            <img
+              src="/assets/navbar/menu_icon2.jpg"
+              alt="meniuri"
+              className="menu-image"
+            />
+            <span className="menu-circle title" id="icon-meniuri">
+              Meniuri
+            </span>
+          </div>
+        </Link>
+      </nav>
+  );
 }

@@ -6,23 +6,19 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "scss": "sass --watch public/styles/style.scss public/styles/style.css"
+    "scss": "npx sass --watch public/styles/style.scss public/styles/style.css"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.35",
     "@fortawesome/free-brands-svg-icons": "5.15.3",
     "@fortawesome/free-solid-svg-icons": "5.15.3",
     "@fortawesome/react-fontawesome": "0.1.14",
-    "@material-ui/core": "4.11.3",
-    "lodash": "4.17.21",
     "next": "10.0.9",
     "node-sass": "7.0.1",
-    "posthog-js": "1.11.4",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-image-fallback": "8.0.0",
     "react-medium-image-zoom": "4.3.4",
-    "react-messenger-customer-chat": "0.8.0",
-    "swiper": "6.8.3"
+    "react-messenger-customer-chat": "0.8.0"
   }
 }

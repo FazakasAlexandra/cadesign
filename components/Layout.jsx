@@ -1,8 +1,12 @@
 import Head from 'next/head'
 import Navbar from './Navbar'
 import MessengerCustomerChat from 'react-messenger-customer-chat';
+import Footer from './Footer'
+import {useRouter} from 'next/router';
 
-export default function Layout({ children }) {
+export default function Layout(props) {
+    const router = useRouter()
+    console.log(router.pathname === "/")
     return (
         <>
             <Head>
@@ -16,7 +20,7 @@ export default function Layout({ children }) {
                 <Navbar />
             </header>
             <main>
-                {children}
+                {props.children}
                 <MessengerCustomerChat
                     pageId="2204227486254620"
                     appId="3205299383049134"
@@ -24,9 +28,8 @@ export default function Layout({ children }) {
                     loggedOutGreeting="Buna, suntem aici pentru a raspunde la orice intrebari !"
                 />
             </main>
-            <footer>
-                <script src="https://smtpjs.com/v3/smtp.js"></script>
-            </footer>
+            {/* hide footer on home page as it is cotained inside the children */}
+            {router.pathname !== "/" ? <Footer/> : null }
         </>
     )
 

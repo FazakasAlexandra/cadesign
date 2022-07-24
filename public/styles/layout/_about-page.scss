@@ -1,5 +1,7 @@
 .despre-noi {
     position: relative;
+    display: flex;
+    justify-content: center;
     .content {
         z-index: 2;
         border-radius: 10px;

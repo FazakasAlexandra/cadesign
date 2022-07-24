@@ -20,7 +20,6 @@ export async function getServerSideProps(_context) {
 }
 
 export default function Modele({ data }) {
-
   return (
     <Layout>
       <div className="cards-container" id="produse">

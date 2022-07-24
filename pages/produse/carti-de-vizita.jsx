@@ -20,7 +20,7 @@ export async function getServerSideProps(_context) {
   };
 }
 
-export default function Modele({ data }) {
+export default function CartiDeVizita({ data }) {
   return (
     <Layout>
       <div className="cards-container" id="produse">

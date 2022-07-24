@@ -1,29 +1,26 @@
-nav {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    background-color: white;
+.page {
+  margin-left: 14vw;
 }
 
-img{
-    object-fit: cover;
+@media (max-width: 1500px) {
+  .page {
+    margin-left: 0px;
+  }
 }
 
-.page{
-    display: flex;
-    justify-content: center;
+.page.not-found {
+  height: 100vh;
+  margin-top: 20%;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+
+  h3 {
+      padding: 0px 2rem;
+      font-size: 400;
+  }
 }
 
-.page.preturi {
-    margin-top: 2rem;
-    flex-wrap: wrap;
-}
-
-.page.preturi .card-calculator{
-    justify-content: space-between;
-}
-
-[data-rmiz-wrap="visible"], [data-rmiz-wrap="hidden"]{
-    width: 100%;
-    justify-content: center;
+img {
+  object-fit: cover;
 }

@@ -1,4 +1,5 @@
 import Layout from "../components/Layout";
+import Footer from "../components/Footer";
 
 export default function notFound() {
   const BACKGROUND_COLOR_GREEN = "#647058"

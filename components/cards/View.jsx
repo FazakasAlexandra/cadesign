@@ -2,7 +2,6 @@ import { Img } from '../Img'
 import { useState } from 'react'
 
 export default function View({ data, isEven, background, type }) {
-  console.log(data);
   const [current, setCurrent] = useState(1);
 
   return (

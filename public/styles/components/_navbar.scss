@@ -1,6 +1,13 @@
+.bars_icon{
+  position: absolute;
+  top: 2%;
+  left: 3%;
+  color: rgb(81, 81, 81);
+  display: none;
+}
+
 .nav {
   background-color: white;
-  display: flex;
   flex-direction: column;
   position: fixed;
   top: 0;
@@ -9,6 +16,14 @@
   align-items: center;
   width: 14vw;
   z-index: 2;
+
+  .cancel_icon {
+    display: none;
+    color:grey;
+    position: absolute;
+    top: 2%;
+    left: 5%;
+  }
 
   .logo {
     cursor: pointer;
@@ -103,8 +118,48 @@
   }
 }
 
-@media(max-width: 1500px) {
+@media (max-width: 1300px) {
   .nav {
-   display: none;
+    width: 100%;
+    justify-content: center;
+    .logo {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    @keyframes grow {
+      from {
+        top: 30%;
+      }
+
+      to {
+        top: 30%;
+      }
+    }
+
+    @keyframes ungrow {
+      from {
+        top: 30%;
+      }
+
+      to {
+        top: 30%;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .nav {
+    .logo{
+      display: none;
+    }
+    .menu-circle{
+      width: 130px;
+      height: 130px;
+      .title {
+        background-size: 50px;
+        background-position-y: 31%;
+      }
+    }
   }
 }

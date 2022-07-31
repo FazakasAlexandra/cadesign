@@ -3,8 +3,8 @@ import Footer from "../components/Footer";
 
 export default function HomePage() {
   return (
-    <Layout hideFooter={true}>
-      <div className="page home">
+    <Layout>
+      <div className="page scroll-snap-page home">
         <div
           className="box"
           style={{
@@ -12,7 +12,7 @@ export default function HomePage() {
               "url(assets/home/pink_bg.png) no-repeat center center / cover",
           }}
         >
-          <img src="/assets/home/pink.png" height="700px" />
+          <img src="/assets/home/pink.png" />
         </div>
         <div
           className="box"

@@ -1,12 +1,13 @@
 import Link from "next/link";
-import {useRouter} from 'next/router';
 
-export default function Layout() {
-  const router = useRouter()
+export default function Layout({color}) {
+  const BACKGROUND_COLOR_GREEN = "#647058";
 
   return (
     <footer
-      className={`${router.pathname === "/" ? "footer-home" : "footer-general"}`}
+      style={{
+        backgroundColor: color || BACKGROUND_COLOR_GREEN,
+      }}
     >
       <div className="sections">
         <div className="section produse">
@@ -43,10 +44,10 @@ export default function Layout() {
         </Link>
 
         <Link href="/personalizare">
-        <div className="section">
-          <h3>Personalizare</h3>
-          <p>Ghid complet despre cum pot sa iti personalizezi invitatia</p>
-        </div>
+          <div className="section">
+            <h3>Personalizare</h3>
+            <p>Ghid complet despre cum pot sa iti personalizezi invitatia</p>
+          </div>
         </Link>
         <div className="section contact">
           <h3>Contacteaza-ne</h3>

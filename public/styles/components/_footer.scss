@@ -8,7 +8,7 @@ footer {
   flex-direction: column;
   align-items: center;
   scroll-snap-align: center;
-  background-color: #647058;
+  background-color: $green;
 
   .copyright {
     color: white;
@@ -41,21 +41,21 @@ footer {
       cursor: pointer;
       font-family: "Open Sans", sans-serif;
       color: white;
-      max-width: 160px;
+      max-width: 150px;
 
       h3 {
         font-size: 18px;
         font-weight: 400;
       }
       strong {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 500;
         margin-right: 8px;
         text-decoration-line: none;
       }
       ul {
         li {
-          font-size: 16px;
+          font-size: 14px;
           font-weight: 100;
           text-decoration-line: underline;
           line-height: 30.79px;
@@ -64,7 +64,7 @@ footer {
         }
       }
       p {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 300;
         text-decoration-line: underline;
         line-height: 27.79px;
@@ -78,9 +78,9 @@ footer {
   }
 }
 
-@media(max-width: 1500px) {
+@media (max-width: 1500px) {
   footer {
-    .sections{
+    .sections {
       width: 700px;
     }
   }
@@ -90,10 +90,22 @@ footer {
   }
 }
 
-@media(max-width: 750px) {
+@media (max-width: 750px) {
   footer {
-    .sections{
-      width: 160px;
+    .sections {
+      margin: 5% 0px;
+      max-width: 320px;
+      .section{
+        h3 {
+          font-size: 16px;
+        }
+        p{
+          strong {
+            font-size: 12px;
+          }
+          font-size: 12px
+        }
+      }
     }
   }
 }

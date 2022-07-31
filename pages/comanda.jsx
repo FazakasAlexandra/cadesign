@@ -1,7 +1,8 @@
 import Layout from "../components/Layout";
+import Footer from "../components/Footer";
 
-export default function notFound() {
-  const BACKGROUND_COLOR_GREEN = "#647058"
+export default function despreCAdesign() {
+  const BACKGROUND_COLOR_GREEN = "#647058";
 
   return (
     <Layout>
@@ -10,10 +11,10 @@ export default function notFound() {
           className="box"
           style={{
             background:
-            "url(assets/green-flower-bg.png) no-repeat center center / cover",
-        }}
+              "url(assets/green-flower-bg.png) no-repeat center center / cover",
+          }}
         >
-           Nu am putut gasi pagina pe care o cutati.
+          Despre comanda coming soon
         </div>
       </div>
       <Footer color={BACKGROUND_COLOR_GREEN}></Footer>

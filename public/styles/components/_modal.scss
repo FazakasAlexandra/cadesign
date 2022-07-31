@@ -1,0 +1,34 @@
+/* The Modal (background) */
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+  z-index: 3;
+
+  .cancel {
+      color: white;
+      position: absolute;
+      right: 4%;
+      top: 4%;
+      cursor: pointer;
+  }
+  .cancel:hover {
+    opacity: 0.7;
+
+  }
+}
+
+/* Modal Content (image) */
+.modal-content {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
+}

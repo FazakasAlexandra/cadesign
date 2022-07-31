@@ -23,6 +23,11 @@
       height: 100%;
     }
   }
+  .card-gallery:hover {
+    opacity: 0.7;
+    cursor: zoom-in;
+  }
+
   .card-details {
     flex: 1 1 0;
     background-color: white;

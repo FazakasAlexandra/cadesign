@@ -1,6 +1,10 @@
 import { Img } from "../Img";
 import { useState } from "react";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import {
+  faTimes,
+  faAngleLeft,
+  faAngleRight,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function View({ data, isEven, background, type }) {
@@ -49,11 +53,10 @@ export default function View({ data, isEven, background, type }) {
       <div
         className="modal"
         onClick={(e) => {
-         
           if (e.target === e.currentTarget) {
             setZoom(false);
             return true;
-        }
+          }
         }}
         style={{
           display: zoom ? "block" : "none",
@@ -66,11 +69,30 @@ export default function View({ data, isEven, background, type }) {
           onClick={() => setZoom(false)}
         />
         <div className="modal-content">
-          <Img
+          <FontAwesomeIcon
+            className="arrow-left"
+            icon={faAngleLeft}
+            size="3x"
+            color="white"
             onClick={changeImage}
-            src={data.gallery[current].formats.medium.url}
-            alt={data.name}
-          ></Img>
+          />
+          <div className="gallery">
+            <span className="gallery-counter">
+              {current + 1}/{data.gallery.length}
+            </span>
+            <Img
+              onClick={changeImage}
+              src={data.gallery[current].formats.medium.url}
+              alt={data.name}
+            ></Img>
+          </div>
+          <FontAwesomeIcon
+            className="arrow-right"
+            icon={faAngleRight}
+            size="3x"
+            color="white"
+            onClick={changeImage}
+          />
         </div>
       </div>
     </div>

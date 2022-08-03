@@ -1,3 +1,13 @@
+.gallery-counter {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  color: $fontMedium;
+  background: white;
+  border-bottom-right-radius: 100%;
+  padding: 0.5rem 1.4rem 1.4rem 0.5rem;
+}
+
 .card.horizontal,
 .card.vertical {
   display: flex;
@@ -7,16 +17,6 @@
   .card-gallery {
     flex: 1 1 0;
     position: relative;
-
-    .gallery-counter {
-      position: absolute;
-      top: 0%;
-      left: 0%;
-      color: $fontMedium;
-      background: white;
-      border-bottom-right-radius: 100%;
-      padding: 0.5rem 1.4rem 1.4rem 0.5rem;
-    }
 
     .image {
       width: 100%;
@@ -58,14 +58,66 @@
   }
 }
 
-.card.vertical {
-  flex-direction: column;
-  overflow: hidden;
-  width: 400px;
-  max-height: 800px;
-  .card-details {
-    .wraper {
-      padding: 30px 40px;
+@media (max-width: 700px) {
+  .card.horizontal,
+  .card.vertical {
+    flex-direction: column;
+    min-height: auto;
+    height: 100%;
+    width: 100%;
+    .card-gallery {
+      overflow: hidden;
+    }
+    .card-details {
+      .wraper {
+        p {
+          font-size: 14px;
+          margin: 30px 0px;
+        }
+
+        h3 {
+          font-size: 30px;
+        }
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .nav {
+    .logo {
+      display: none;
+    }
+    .menu-circle {
+      width: 130px;
+      height: 130px;
+      .title {
+        background-size: 50px;
+        background-position-y: 31%;
+      }
+    }
+  }
+}
+.gallery-counter {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  color: $fontMedium;
+  background: white;
+  border-bottom-right-radius: 100%;
+  padding: 0.5rem 1.4rem 1.4rem 0.5rem;
+}
+@media (max-width: 370px) {
+  .card.horizontal,
+  .card.vertical {
+    .card-details {
+      .wraper {
+        padding: 2.5rem;
+        padding-bottom: 0.5rem;
+      }
     }
   }
 }

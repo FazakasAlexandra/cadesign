@@ -66,6 +66,16 @@ li {
   margin-top: 1rem;
 }
 
+.gallery-counter {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  color: #4D4D4D;
+  background: white;
+  border-bottom-right-radius: 100%;
+  padding: 0.5rem 1.4rem 1.4rem 0.5rem;
+}
+
 .card.horizontal,
 .card.vertical {
   display: flex;
@@ -76,16 +86,6 @@ li {
 .card.vertical .card-gallery {
   flex: 1 1 0;
   position: relative;
-}
-.card.horizontal .card-gallery .gallery-counter,
-.card.vertical .card-gallery .gallery-counter {
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  color: #4D4D4D;
-  background: white;
-  border-bottom-right-radius: 100%;
-  padding: 0.5rem 1.4rem 1.4rem 0.5rem;
 }
 .card.horizontal .card-gallery .image,
 .card.vertical .card-gallery .image {
@@ -128,22 +128,69 @@ li {
   margin: 50px 0px;
 }
 
+@media (max-width: 700px) {
+  .card.horizontal,
 .card.vertical {
-  flex-direction: column;
-  overflow: hidden;
-  width: 400px;
-  max-height: 800px;
+    flex-direction: column;
+    min-height: auto;
+    height: 100%;
+    width: 100%;
+  }
+  .card.horizontal .card-gallery,
+.card.vertical .card-gallery {
+    overflow: hidden;
+  }
+  .card.horizontal .card-details .wraper p,
+.card.vertical .card-details .wraper p {
+    font-size: 14px;
+    margin: 30px 0px;
+  }
+  .card.horizontal .card-details .wraper h3,
+.card.vertical .card-details .wraper h3 {
+    font-size: 30px;
+  }
+  .card.horizontal .card-details .wraper span,
+.card.vertical .card-details .wraper span {
+    font-size: 12px;
+  }
 }
-.card.vertical .card-details .wraper {
-  padding: 30px 40px;
+@media (max-width: 700px) {
+  .nav .logo {
+    display: none;
+  }
+  .nav .menu-circle {
+    width: 130px;
+    height: 130px;
+  }
+  .nav .menu-circle .title {
+    background-size: 50px;
+    background-position-y: 31%;
+  }
+}
+.gallery-counter {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  color: #4D4D4D;
+  background: white;
+  border-bottom-right-radius: 100%;
+  padding: 0.5rem 1.4rem 1.4rem 0.5rem;
 }
 
+@media (max-width: 370px) {
+  .card.horizontal .card-details .wraper,
+.card.vertical .card-details .wraper {
+    padding: 2.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
 .bars_icon {
   position: absolute;
   top: 2%;
   left: 3%;
   color: rgb(81, 81, 81);
   display: none;
+  z-index: 2;
 }
 
 .nav {
@@ -466,14 +513,12 @@ footer .sections .section p span {
 .modal {
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+  background: rgba(28, 28, 28, 0.925);
   z-index: 3;
 }
 .modal .cancel {
@@ -481,20 +526,50 @@ footer .sections .section p span {
   position: absolute;
   right: 4%;
   top: 4%;
+  z-index: 1;
   cursor: pointer;
 }
 .modal .cancel:hover {
   opacity: 0.7;
 }
 
+.gallery {
+  position: relative;
+}
+
 /* Modal Content (image) */
 .modal-content {
+  position: relative;
   display: flex;
   height: 100vh;
+  align-items: center;
   justify-content: center;
   width: 100%;
 }
+.modal-content .arrow-left {
+  margin-right: 2rem;
+}
+.modal-content .arrow-right {
+  margin-left: 2rem;
+}
 
+@media (max-width: 700px) {
+  .modal .arrow-left {
+    left: 0;
+    z-index: 1;
+    padding-right: 0px;
+    position: absolute;
+  }
+  .modal .arrow-right {
+    right: 0;
+    padding-left: 0px;
+    position: absolute;
+  }
+  .modal img {
+    object-fit: contain;
+    width: 100%;
+  }
+}
 .scroll-snap-page.papetarie .options-wraper {
   max-width: 750px;
   display: flex;

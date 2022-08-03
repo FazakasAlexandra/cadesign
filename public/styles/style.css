@@ -218,6 +218,7 @@ li {
   margin: 10% 0px;
 }
 .nav .logo {
+  display: flex;
   width: 170px;
 }
 .nav .menu-circle {
@@ -320,7 +321,7 @@ li {
 }
 @media (max-width: 700px) {
   .nav .logo {
-    display: none;
+    width: 100px;
   }
   .nav .menu-circle {
     width: 130px;
@@ -329,6 +330,25 @@ li {
   .nav .menu-circle .title {
     background-size: 50px;
     background-position-y: 31%;
+  }
+}
+@media (max-width: 700px) {
+  .nav .logo {
+    width: 100px;
+  }
+  .nav .menu-circle {
+    width: 130px;
+    height: 130px;
+  }
+  .nav .menu-circle .title {
+    background-size: 50px;
+    background-position-y: 31%;
+  }
+}
+@media (max-width: 340px) {
+  .nav .menu-circle {
+    width: 110px;
+    height: 110px;
   }
 }
 .placeholder {

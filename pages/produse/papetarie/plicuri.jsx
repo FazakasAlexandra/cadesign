@@ -24,13 +24,11 @@ export async function getServerSideProps(_context) {
 
 export default function Modele({ data }) {
   const BACKGROUND_COLOR_GREEN = "#647058";
-
   const colors = data.map((envelope) => envelope.hex);
-  console.log("COLORS", colors);
-
   const [color, setColor] = useState(colors[0]);
 
   const envelope = data.find((envelope) => envelope.hex === color);
+  console.log(envelope);
 
   return (
     <Layout>
@@ -42,7 +40,10 @@ export default function Modele({ data }) {
           }}
         >
           <div className="seals-container">
-            <Img className="selected-seal" src={envelope?.picture.formats.medium.url}/>
+            <Img
+              className="selected-seal"
+              src={envelope?.picture.formats.medium.url}
+            />
             <div className="wraper">
               <span>Culori</span>
               <div className="color-box-container">
@@ -57,9 +58,22 @@ export default function Modele({ data }) {
                   ></div>
                 ))}
               </div>
-              <small>* Plicurile pot sa vina si in alte culori in functie de cerere</small>
-              <br/>
+              <small>
+                * Plicurile pot sa vina si in alte culori in functie de cerere
+              </small>
+              <br />
               <small>* Culoarea poate sa difere in functie de lumina</small>
+            </div>
+            <div className="wraper">
+              <p className="description">{envelope.description}</p>
+              <p>
+                Pret dimensiune mare <small>{envelope.sizeLarge} cm</small>{" "}
+                {envelope.priceLarge} Lei
+              </p>
+              <p>
+                Pret dimensiune mica <small>{envelope.sizeSmall} cm</small>{" "}
+                {envelope.priceSmall} Lei
+              </p>
             </div>
           </div>
         </div>

@@ -70,6 +70,7 @@ export default function Modele({ data }) {
                     />
                   ))}
               </div>
+              <small style={{marginTop: "30px"}}>* La cerere se poate creea o inscriptie personalizata</small>
             </div>
             <div className="wraper">
               <span>Culori</span>
@@ -85,6 +86,9 @@ export default function Modele({ data }) {
                   ></div>
                 ))}
               </div>
+              <small>* Sigiliul poate sa vina si in alte culori la de cerere</small>
+              <br/>
+              <small>* Culoarea poate sa difere in functie de lumina</small>
             </div>
           </div>
         </div>

@@ -471,6 +471,10 @@ footer .sections .section p span {
   grid-row-gap: 80px;
   min-width: 500px;
 }
+.seals-container small {
+  color: rgb(97, 97, 97);
+  font-family: "Open Sans", sans-serif;
+}
 .seals-container span {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
@@ -491,6 +495,7 @@ footer .sections .section p span {
 }
 .seals-container .seals-box {
   display: flex;
+  margin-bottom: 30px;
   grid-column-gap: 20px;
   margin-top: 20px;
   max-width: 750px;

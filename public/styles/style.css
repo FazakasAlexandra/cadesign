@@ -414,15 +414,12 @@ footer .sections .section strong {
 footer .sections .section ul li {
   font-size: 14px;
   font-weight: 100;
-  text-decoration-line: underline;
   line-height: 30.79px;
-  list-style: circle;
   cursor: pointer;
 }
 footer .sections .section p {
   font-size: 14px;
   font-weight: 300;
-  text-decoration-line: underline;
   line-height: 27.79px;
 }
 footer .sections .section p strong,

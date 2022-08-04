@@ -28,7 +28,6 @@ export default function Modele({ data }) {
   const [color, setColor] = useState(colors[0]);
 
   const envelope = data.find((envelope) => envelope.hex === color);
-  console.log(envelope);
 
   return (
     <Layout>
@@ -67,11 +66,11 @@ export default function Modele({ data }) {
             <div className="wraper">
               <p className="description">{envelope.description}</p>
               <p>
-                Pret dimensiune mare <small>{envelope.sizeLarge} cm</small>{" "}
+                Pret dimensiune mare <small>{envelope.sizeLarge} cm</small>
                 {envelope.priceLarge} Lei
               </p>
               <p>
-                Pret dimensiune mica <small>{envelope.sizeSmall} cm</small>{" "}
+                Pret dimensiune mica <small>{envelope.sizeSmall} cm</small>
                 {envelope.priceSmall} Lei
               </p>
             </div>

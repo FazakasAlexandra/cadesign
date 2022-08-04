@@ -1,22 +1,9 @@
 import { Img } from "../Img";
 import { useState } from "react";
-import {
-  faTimes,
-  faAngleLeft,
-  faAngleRight,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Gallery from "./Gallery";
 
 export default function View({ data, isEven, background, type }) {
-  const [current, setCurrent] = useState(0);
-  const [zoom, setZoom] = useState(false);
-
-  const changeImage = () => {
-    if (data.gallery.length > 1) {
-      const next = current + 1 === data.gallery.length ? 0 : current + 1;
-      setCurrent(next);
-    }
-  };
+  const [isGalleryOpened, setGalleryOpened] = useState(false);
 
   return (
     <div
@@ -37,64 +24,18 @@ export default function View({ data, isEven, background, type }) {
             <span className="card-price">{data.price} Lei </span>
           </div>
         </div>
-
-        <div
-          className="card-gallery"
-          onClick={() => {
-            setZoom(true);
-          }}
-        >
+        <div className="card-gallery" onClick={() => setGalleryOpened(true)}>
           <span className="gallery-counter">
-            {current + 1}/{data.gallery.length}
+            {1}/{data.gallery.length}
           </span>
-          <Img src={data.gallery[current].formats.medium.url} alt={data.name} />
+          <Img src={data.gallery[0].formats.medium.url} alt={data.name} />
         </div>
       </div>
-      <div
-        className="modal"
-        onClick={(e) => {
-          if (e.target === e.currentTarget) {
-            setZoom(false);
-            return true;
-          }
-        }}
-        style={{
-          display: zoom ? "block" : "none",
-        }}
-      >
-        <FontAwesomeIcon
-          className="cancel"
-          icon={faTimes}
-          size="2x"
-          onClick={() => setZoom(false)}
-        />
-        <div className="modal-content">
-          <FontAwesomeIcon
-            className="arrow-left"
-            icon={faAngleLeft}
-            size="3x"
-            color="white"
-            onClick={changeImage}
-          />
-          <div className="gallery">
-            <span className="gallery-counter">
-              {current + 1}/{data.gallery.length}
-            </span>
-            <Img
-              onClick={changeImage}
-              src={data.gallery[current].formats.medium.url}
-              alt={data.name}
-            ></Img>
-          </div>
-          <FontAwesomeIcon
-            className="arrow-right"
-            icon={faAngleRight}
-            size="3x"
-            color="white"
-            onClick={changeImage}
-          />
-        </div>
-      </div>
+      <Gallery
+        gallery={data.gallery}
+        isOpen={isGalleryOpened}
+        onClose={() => setGalleryOpened(false)}
+      />
     </div>
   );
 }

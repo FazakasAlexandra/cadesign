@@ -53,7 +53,7 @@ export default function Layout({color}) {
           <h3>Contacteaza-ne</h3>
           <p>
             <strong>Email</strong>
-            <span>cadesign@gmail.com</span>
+            <span>designca18@gmail.com</span>
           </p>
           <p>
             <strong>Telefon</strong>

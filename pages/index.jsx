@@ -1,67 +1,88 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
-import OrderStepCard from '../components/OrderStepCard'
-import Image from 'next/image'
-import useTranslation from '../hooks/useTranslation';
+import Layout from "../components/Layout";
+import Footer from "../components/Footer";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 
 export default function HomePage() {
-  const { t } = useTranslation();
-
   return (
     <Layout>
-      <div className="page home">
-        <div className="slogan-container">
-          <Image
-            src={`/assets/envelopes_details/interiordecorat_plic_2ron.png`}
-            height={585}
-            width={450}
-            alt="plic invitatie nunta"
-          />
-          <div className="slogan">
-            <i>CAdesign</i>
-            <h1>{t("HOMEPAGE_h1")}</h1>
-            <a  target="_blank" href="/assets/catalog2021.pdf">{t("HOMEPAGE_CATALOG")}</a>
+      <div className="page scroll-snap-page home">
+        <div
+          className="box"
+          style={{
+            background:
+              "url(assets/home/pink_bg.png) no-repeat center center / cover",
+          }}
+        >
+          <img className="img" src="/assets/pink-ball.png" />
+        </div>
+        <div
+          className="box left"
+          style={{
+            background:
+              "url(assets/home/black_bg.png) no-repeat center center / cover",
+          }}
+        >
+          <div className="text center">
+            <div>
+            <h1>Promotii</h1>
+            <p>
+            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book. It usually begins with:
+            </p>
+            <Link href="/oferte">
+              <i>
+                Vezi oferte{" "}
+                <FontAwesomeIcon
+                    icon={faArrowRight}
+                    size="1x"
+                    color="white"
+                  />{" "}
+              </i>
+            </Link>
+            </div>
+          </div>
+          <img src="/assets/home/black.png"/>
+        </div>
+        <div
+          className="box"
+          style={{
+            background:
+              "url(assets/home/blue_bg.png) no-repeat center center / cover",
+          }}
+        >
+          <img src="/assets/home/blue.png" />
+        </div>
+        <div
+          className="box col"
+          style={{
+            background:
+              "url(assets/home/green_bg.png) no-repeat center center / cover",
+          }}
+        >
+          <div>
+            <div className="text">
+              <h1>Personalizeaza-ti invitatia!</h1>
+              <p>
+                Transforma-ti paleta de culori preferate intr-o invitatie de
+                vis!
+              </p>
+              <Link href="/personalizare">
+                <i>
+                  Vezi ghidul de personalizare{" "}
+                  <FontAwesomeIcon
+                    icon={faArrowRight}
+                    size="1x"
+                    color="white"
+                  />{" "}
+                </i>
+              </Link>
+            </div>
+            <img src="/assets/home/green.png" style={{marginTop: "30px"}}/>
           </div>
         </div>
-        <div className="order-steps-cards" id="procedura">
-          <OrderStepCard
-            text={
-              <>
-                <p>{t("DELIVERY_STEP1_p1")}</p>
-                <p>{t("DELIVERY_STEP1_p2a")} <Link href="/produse/modele"><a target="_blank">{t("DELIVERY_STEP1_p2b")}</a></Link></p>
-                <p>{t("DELIVERY_STEP1_p3a")} <i>{t("DELIVERY_STEP1_p3b")}</i></p>
-                <p>{t("DELIVERY_STEP1_p4")}</p>
-                <p>{t("DELIVERY_STEP1_p5a")}<Link href="/personalizare#invitatii"><a target="_blank">{t("DELIVERY_STEP1_p5b")}</a></Link></p>
-              </>
-            }
-
-            number={1}
-            title={t("DELIVERY_STEP1_TITLE")}
-          />
-          <OrderStepCard
-            text={
-              <>
-                <p>{t("DELIVERY_STEP2_p1")}</p>
-                <p>{t("DELIVERY_STEP2_p2a")} <a target="_blank" href="/assets/contract.pdf">{t("DELIVERY_STEP2_p2b")}</a> {t("DELIVERY_STEP2_p2c")}</p>
-              </>
-            }
-            number={2}
-            title={"Contract"}
-          />
-          <OrderStepCard
-            text={
-              <>
-                <p>{t("DELIVERY_STEP3_p1")}</p>
-                <p>{t("DELIVERY_STEP3_p2")} <b>{t("DELIVERY_STEP3_p2a")} </b>{t("DELIVERY_STEP3_p2b")}</p>
-                <p>{t("DELIVERY_STEP3_p3")} <b>{t("DELIVERY_STEP3_p3a")}</b></p>
-              </>
-            }
-            number={3}
-            title={t("DELIVERY_STEP3_TITLE")}
-            id="livrare"
-          />
-        </div>
+        <Footer />
       </div>
-      </Layout>
-  )
+    </Layout>
+  );
 }

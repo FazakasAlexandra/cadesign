@@ -2,7 +2,7 @@ import Layout from "../components/Layout";
 import Footer from "../components/Footer";
 
 export default function despreCAdesign() {
-    const BACKGROUND_COLOR_GREEN = "#647058"
+  const BACKGROUND_COLOR_GREEN = "#647058";
 
   return (
     <Layout>
@@ -11,10 +11,10 @@ export default function despreCAdesign() {
           className="box"
           style={{
             background:
-            "url(assets/green-flower-bg.png) no-repeat center center / cover",
-        }}
+              "url(assets/green-flower-bg.png) no-repeat center center / cover",
+          }}
         >
-          Personalizare coming soon
+          Despre comanda coming soon
         </div>
       </div>
       <Footer color={BACKGROUND_COLOR_GREEN}></Footer>
